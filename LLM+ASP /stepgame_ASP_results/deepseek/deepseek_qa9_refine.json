@@ -1,0 +1,5 @@
+[
+    {
+        "story": "B is lower left to L.\nT is sitting at the 3:00 position to A.\nS is over there and Z is directly above it.\nT is at a 45 degree angle to L, in the upper lefthand corner.\nY is positioned in the lower right corner of W.\nF and A are parallel, and F on the right of A.\nF is diagonally to the upper left of N.\nY is at a 45 degree angle to S, in the upper righthand corner.\nB is to the bottom left of Z.",
+        "question": "What is the relation of the agent B to the agent N?",
+        "predicted_ASP": 

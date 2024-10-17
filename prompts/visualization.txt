@@ -1,0 +1,19 @@
+" Given the {context} and {question}, please choose the best answer from the {choices}.
+To assist the question answering, follow the steps to create a simple 2D layout ASCII diagram of the described spatial scene:
+1. Identify the main components:
+   - List all blocks (e.g., A, B, C)
+   - List all objects within each block
+2. Create a basic structure:
+   - Draw rectangular outlines for each block
+   - Order the blocks (eg, top to bottom, or from left to right)
+3. Add objects to each block:
+   - Use symbols for shapes: ○ for circle, △ for triangle, ■ for square, ▭ for rectangle
+   - Include color and size information (e.g., "red small ○")
+4. Position objects within blocks:
+   - Place objects according to described locations (top, bottom, left, right, etc.)
+5. Review and refine:
+   - Ensure all described elements are included
+   - Check that spatial relationships are correctly represented
+   - Adjust spacing for clarity if needed
+
+Finally, based on the refined ASCII diagram, answer the question by choosing the best answer or answers from the choices.

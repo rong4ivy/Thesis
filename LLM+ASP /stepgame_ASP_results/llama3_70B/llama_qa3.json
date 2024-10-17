@@ -1,0 +1,702 @@
+[
+    {
+        "story": "U is slightly off center to the top left and S is slightly off center to the bottom right.\nK is diagonally above Z to the left at a 45 degree angle.\nK and U are in a vertical line with U below K.",
+        "question": "What is the relation of the agent S to the agent U?",
+        "predicted_ASP": "is(\"U\",top_left,\"S\").\nis(\"K\",top_left,\"Z\").\nis(\"K\",top,\"U\").\nquery(\"S\",\"U\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_right",
+        "actual_answer": "lower-right"
+    },
+    {
+        "story": "X is on the top side to P.\nJ is to the right of Z horizontally.\nX is to the bottom right of Z.",
+        "question": "What is the relation of the agent X to the agent Z?",
+        "predicted_ASP": "is(\"X\", top, \"P\").\nis(\"J\", right, \"Z\").\nis(\"X\", down_right, \"Z\").\nquery(\"X\", \"Z\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_right",
+        "actual_answer": "lower-right"
+    },
+    {
+        "story": "The object F is upper and slightly to the left of the object O.\nF is over P.\nThe object labeled P is positioned to the left of the object labeled U.",
+        "question": "What is the relation of the agent U to the agent O?",
+        "predicted_ASP": "is(\"F\",top,\"O\").\nis(\"F\",top_left,\"O\").\nis(\"F\",top,\"P\").\nis(\"P\",left,\"U\").\nquery(\"U\",\"O\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right, overlap, left",
+        "actual_answer": "overlap"
+    },
+    {
+        "story": "H is at the bottom and B is on the top.\nH is at O's 6 o'clock.\nThe object G and O are there. The object O is above and slightly to the left of the object G.",
+        "question": "What is the relation of the agent O to the agent H?",
+        "predicted_ASP": "is(\"B\",top,\"H\").\nis(\"O\",top_left,\"H\").\nis(\"O\",top_left,\"G\").\nquery(\"O\",\"H\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_left",
+        "actual_answer": "above"
+    },
+    {
+        "story": "J is over there and Z is directly below it.\nZ is to the right of U.\nC is above and to the right of U.",
+        "question": "What is the relation of the agent J to the agent Z?",
+        "predicted_ASP": "is(\"J\", top, \"Z\").\nis(\"Z\", right, \"U\").\nis(\"C\", top_right, \"U\").\nquery(\"J\", \"Z\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top",
+        "actual_answer": "above"
+    },
+    {
+        "story": "F is above W and to the left of W.\nF and H are parallel, and F is over H.\nG is over there and W is directly above it.",
+        "question": "What is the relation of the agent W to the agent H?",
+        "predicted_ASP": "is(\"F\",top,\"W\").\nis(\"F\",left,\"W\").\nis(\"F\",top,\"H\").\nis(\"W\",top,\"G\").\nquery(\"W\",\"H\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_right, overlap, down_left",
+        "actual_answer": "right"
+    },
+    {
+        "story": "E is at a 45 degree angle to C, in the upper righthand corner.\nC is diagonally left and below R.\nZ is lower right of E.",
+        "question": "What is the relation of the agent Z to the agent C?",
+        "predicted_ASP": "is(\"E\",top_right,\"C\").\nis(\"C\",down_left,\"R\").\nis(\"Z\",down_right,\"E\").\nquery(\"Z\",\"C\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right",
+        "actual_answer": "right"
+    },
+    {
+        "story": "L is at Q\u2019s 9 o'clock.\nL is on the left side to X.\nQ is below and to the left of V.",
+        "question": "What is the relation of the agent L to the agent Q?",
+        "predicted_ASP": "is(\"L\",left,\"Q\").\nis(\"L\",left,\"X\").\nis(\"Q\",down_left,\"V\").\nquery(\"L\",\"Q\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "left",
+        "actual_answer": "left"
+    },
+    {
+        "story": "Y is directly south west of E.\nObject J is above object F and to the right of it, too.\nJ is positioned down and to the left of E.",
+        "question": "What is the relation of the agent J to the agent Y?",
+        "predicted_ASP": "is(\"Y\",down_left,\"E\").\nis(\"J\",top_right,\"F\").\nis(\"J\",down_left,\"E\").\nquery(\"J\",\"Y\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "overlap",
+        "actual_answer": "overlap"
+    },
+    {
+        "story": "F is to the left of K and is on the same horizontal plane.\nThe object B and F are there. The object B is below and slightly to the right of the object F.\nE is to the left of B and below B at approximately a 45 degree angle.",
+        "question": "What is the relation of the agent E to the agent K?",
+        "predicted_ASP": "is(\"F\",left,\"K\").\nis(\"B\",down_right,\"F\").\nis(\"E\",left,\"B\").\nis(\"E\",down_left,\"B\").\nquery(\"E\",\"K\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_left, left, top_left",
+        "actual_answer": "lower-left"
+    },
+    {
+        "story": "H is positioned above U.\nU is at F's 6 o'clock.\nF and P are parallel, and F is on top of P.",
+        "question": "What is the relation of the agent H to the agent P?",
+        "predicted_ASP": "is(\"H\", top, \"U\").\nis(\"U\", down, \"F\").\nis(\"F\", top, \"P\").\nquery(\"H\", \"P\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top",
+        "actual_answer": "above"
+    },
+    {
+        "story": "The object labeled U is positioned to the right of the object labeled S.\nS is over D.\nU is on the lower right of W.",
+        "question": "What is the relation of the agent U to the agent D?",
+        "predicted_ASP": "is(\"S\", left, \"U\").\nis(\"D\", down, \"S\").\nis(\"W\", top_left, \"U\").\nquery(\"U\", \"D\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_right",
+        "actual_answer": "upper-right"
+    },
+    {
+        "story": "P is sitting at the top position to J.\nX is at a 45 degree angle to U, in the upper righthand corner.\nU and J are side by side with U on the top and J at the bottom.",
+        "question": "What is the relation of the agent X to the agent U?",
+        "predicted_ASP": "is(\"P\",top,\"J\").\nis(\"X\",top_right,\"U\").\nis(\"U\",top,\"J\").\nquery(\"X\",\"U\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_right",
+        "actual_answer": "upper-right"
+    },
+    {
+        "story": "S is below W with a small gap between them.\nThe object L is lower and slightly to the right of the object K.\nL is to the bottom-right of W.",
+        "question": "What is the relation of the agent S to the agent L?",
+        "predicted_ASP": "is(\"S\", down, \"W\").\nis(\"L\", down_right, \"K\").\nis(\"L\", down_right, \"W\").\nquery(\"S\", \"L\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "left",
+        "actual_answer": "left"
+    },
+    {
+        "story": "L and P are parallel, and L on the right of P.\nThe object B is positioned below and to the right of the object V.\nP is sitting in the left direction of V.",
+        "question": "What is the relation of the agent L to the agent P?",
+        "predicted_ASP": "is(\"L\",right,\"P\").\nis(\"B\",down_right,\"V\").\nis(\"P\",left,\"V\").\nquery(\"L\",\"P\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right",
+        "actual_answer": "left"
+    },
+    {
+        "story": "M and Y are parallel, and M on the right of Y.\nE is on the right side to M.\nY is to the bottom-right of U.",
+        "question": "What is the relation of the agent M to the agent U?",
+        "predicted_ASP": "is(\"M\",right,\"Y\").\nis(\"E\",right,\"M\").\nis(\"Y\",down_right,\"U\").\nquery(\"M\",\"U\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_right",
+        "actual_answer": "below"
+    },
+    {
+        "story": "Q and L are next to each other with L at the bottom Q on the top.\nL is placed in the right direction of G.\nZ is placed at the lower right of Q.",
+        "question": "What is the relation of the agent Z to the agent Q?",
+        "predicted_ASP": "is(\"L\",down,\"Q\").\nis(\"L\",right,\"G\").\nis(\"Z\",down_right,\"Q\").\nquery(\"Z\",\"Q\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_right",
+        "actual_answer": "lower-right"
+    },
+    {
+        "story": "O is to the top right of M.\nM and H are in a horizontal line with M on the left.\nY is to the top-right of O.",
+        "question": "What is the relation of the agent O to the agent M?",
+        "predicted_ASP": "is(\"O\", top_right, \"M\").\nis(\"M\", left, \"H\").\nis(\"Y\", top_right, \"O\").\nquery(\"O\", \"M\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_right",
+        "actual_answer": "upper-right"
+    },
+    {
+        "story": "K is to the top of P vertically.\nU and K are next to each other with K on the right and U on the left.\nG is on the left side of and below U.",
+        "question": "What is the relation of the agent U to the agent G?",
+        "predicted_ASP": "is(\"K\",top,\"P\").\nis(\"K\",right,\"U\").\nis(\"U\",left,\"K\").\nis(\"G\",down,\"U\").\nis(\"G\",left,\"U\").\nquery(\"U\",\"G\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right, top, down_right, top_left",
+        "actual_answer": "upper-right"
+    },
+    {
+        "story": "T is over there and E is at the bottom of it.\nH is over there and T is at the bottom of it.\nH is there and G is at the 10 position of a clock face.",
+        "question": "What is the relation of the agent E to the agent H?",
+        "predicted_ASP": "is(\"E\", down, \"T\").\nis(\"T\", down, \"H\").\nis(\"G\", top_left, \"H\").\nquery(\"E\", \"H\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down",
+        "actual_answer": "below"
+    },
+    {
+        "story": "B is to the left of N horizontally.\nA is upper right to B.\nA is to the top-right of G.",
+        "question": "What is the relation of the agent A to the agent B?",
+        "predicted_ASP": "is(\"B\", left, \"N\").\nis(\"A\", top_right, \"B\").\nis(\"A\", top_right, \"G\").\nquery(\"A\", \"B\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_right",
+        "actual_answer": "upper-right"
+    },
+    {
+        "story": "Q is directly below R.\nP is on the left and R is on the right.\nC presents over Q.",
+        "question": "What is the relation of the agent C to the agent Q?",
+        "predicted_ASP": "is(\"Q\", down, \"R\").\nis(\"P\", left, \"R\").\nis(\"C\", top, \"Q\").\nquery(\"C\", \"Q\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top",
+        "actual_answer": "above"
+    },
+    {
+        "story": "Z is north west of I.\nO is upper right to I.\nObject Z is above object A and to the left of it, too.",
+        "question": "What is the relation of the agent O to the agent A?",
+        "predicted_ASP": "is(\"Z\",top_left,\"I\").\nis(\"O\",top_right,\"I\").\nis(\"Z\",top,\"A\").\nis(\"Z\",left,\"A\").\nquery(\"O\",\"A\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_right, right, down, down_left",
+        "actual_answer": "upper-right"
+    },
+    {
+        "story": "J is on the same horizontal plane directly left to L.\nP is diagonally above J to the right at a 45 degree.\nX is at the bottom of P and is on the same vertical plane.",
+        "question": "What is the relation of the agent X to the agent J?",
+        "predicted_ASP": "is(\"J\",left,\"L\").\nis(\"P\",top_right,\"J\").\nis(\"X\",down,\"P\").\nquery(\"X\",\"J\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right",
+        "actual_answer": "right"
+    },
+    {
+        "story": "Y and I are both there with the object Y is to the left of object I.\nThe object Y is positioned below and to the right of the object U.\nI presents left to T.",
+        "question": "What is the relation of the agent Y to the agent T?",
+        "predicted_ASP": "is(\"Y\", left, \"I\").\nis(\"Y\", down_right, \"U\").\nis(\"I\", left, \"T\").\nquery(\"Y\", \"T\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "left",
+        "actual_answer": "left"
+    },
+    {
+        "story": "The object labeled F is positioned to the right of the object labeled I.\nG is above V at 2 o'clock.\nI and G are parallel, and I on the left of G.",
+        "question": "What is the relation of the agent G to the agent F?",
+        "predicted_ASP": "is(\"F\",left,\"I\").\nis(\"G\",top,\"V\").\nis(\"I\",left,\"G\").\nquery(\"G\",\"F\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right",
+        "actual_answer": "overlap"
+    },
+    {
+        "story": "F is south west of B.\nB is on the left side to K.\nK presents lower left to L.",
+        "question": "What is the relation of the agent K to the agent B?",
+        "predicted_ASP": "is(\"F\",down_left,\"B\").\nis(\"B\",left,\"K\").\nis(\"K\",down_left,\"L\").\nquery(\"K\",\"B\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right",
+        "actual_answer": "right"
+    },
+    {
+        "story": "W presents over L.\nB and W are parallel, and B is to the right of W.\nV is on the lower left of B.",
+        "question": "What is the relation of the agent B to the agent V?",
+        "predicted_ASP": "is(\"W\",top,\"L\").\nis(\"B\",right,\"W\").\nis(\"V\",down_left,\"B\").\nquery(\"B\",\"V\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_right",
+        "actual_answer": "upper-right"
+    },
+    {
+        "story": "G is positioned in the lower right corner of Q.\nM presents right to Q.\nM and H are vertical and M is above H.",
+        "question": "What is the relation of the agent Q to the agent G?",
+        "predicted_ASP": "is(\"G\",down_right,\"Q\").\nis(\"M\",right,\"Q\").\nis(\"M\",top,\"H\").\nquery(\"Q\",\"G\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_left",
+        "actual_answer": "upper-left"
+    },
+    {
+        "story": "N is below P and to the left of P.\nM is placed at the lower right of P.\nI and M are parallel, and M is below I.",
+        "question": "What is the relation of the agent I to the agent P?",
+        "predicted_ASP": "is(\"N\", down, \"P\").\nis(\"N\", left, \"P\").\nis(\"M\", down_right, \"P\").\nis(\"M\", down, \"I\").\nquery(\"I\", \"P\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right, top, down_right, top_left",
+        "actual_answer": "right"
+    },
+    {
+        "story": "M is on the same vertical plane directly above F.\nN is above M at 10 o'clock.\nN is above Q at 10 o'clock.",
+        "question": "What is the relation of the agent Q to the agent F?",
+        "predicted_ASP": "is(\"M\",top,\"F\").\nis(\"N\",top_left,\"M\").\nis(\"N\",top_left,\"Q\").\n\nQuery:\n\nquery(\"Q\",\"F\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "Error: parsing failed",
+        "actual_answer": "above"
+    },
+    {
+        "story": "Z is over G.\nZ is to the top right of H.\nX is directly north east of H.",
+        "question": "What is the relation of the agent G to the agent X?",
+        "predicted_ASP": "is(\"Z\",top,\"G\").\nis(\"Z\",top_right,\"H\").\nis(\"X\",top_right,\"H\").\nquery(\"G\",\"X\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down",
+        "actual_answer": "below"
+    },
+    {
+        "story": "W is under J.\nS is placed in the right direction of U.\nW is positioned above S.",
+        "question": "What is the relation of the agent W to the agent S?",
+        "predicted_ASP": "is(\"W\",down,\"J\").\nis(\"S\",right,\"U\").\nis(\"W\",top,\"S\").\nquery(\"W\",\"S\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top",
+        "actual_answer": "above"
+    },
+    {
+        "story": "D is on the left side to V.\nS and V are in a horizontal line with V on the right.\nS is at W\u2019s 9 o'clock.",
+        "question": "What is the relation of the agent V to the agent D?",
+        "predicted_ASP": "is(\"D\", left, \"V\").\nis(\"S\", left, \"V\").\nis(\"S\", left, \"W\").\nquery(\"V\", \"D\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right",
+        "actual_answer": "right"
+    },
+    {
+        "story": "G is to the right and above L at an angle of about 45 degrees.\nG is sitting at the lower position to Z.\nX is at a 45 degree angle to Z, in the lower lefthand corner.",
+        "question": "What is the relation of the agent X to the agent L?",
+        "predicted_ASP": "is(\"G\", top_right, \"L\").\nis(\"G\", down, \"Z\").\nis(\"X\", down_left, \"Z\").\nquery(\"X\", \"L\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top",
+        "actual_answer": "below"
+    },
+    {
+        "story": "Y is directly south west of R.\nB is at the 3 o'clock position relative to Y.\nThe object R is upper and slightly to the left of the object F.",
+        "question": "What is the relation of the agent F to the agent B?",
+        "predicted_ASP": "is(\"Y\",down_left,\"R\").\nis(\"B\",right,\"Y\").\nis(\"R\",top_left,\"F\").\nquery(\"F\",\"B\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right",
+        "actual_answer": "right"
+    },
+    {
+        "story": "The object X and P are there. The object P is above and slightly to the left of the object X.\nIf P is the center of a clock face, D is located between 7 and 8.\nX is positioned in the lower right corner of A.",
+        "question": "What is the relation of the agent D to the agent X?",
+        "predicted_ASP": "is(\"P\",top_left,\"X\").\nis(\"D\",down_left,\"P\").\nis(\"X\",down_right,\"A\").\nquery(\"D\",\"X\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "left",
+        "actual_answer": "left"
+    },
+    {
+        "story": "N and Y are parallel, and N is over Y.\nY is above R and to the right of R.\nA is on top of N.",
+        "question": "What is the relation of the agent A to the agent N?",
+        "predicted_ASP": "is(\"N\",top,\"Y\").\nis(\"Y\",top,\"R\").\nis(\"Y\",right,\"R\").\nis(\"A\",top,\"N\").\nquery(\"A\",\"N\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top, right, top_left, down_right",
+        "actual_answer": "above"
+    },
+    {
+        "story": "T is sitting at the 3:00 position to D.\nT is at the lower side of X.\nP is to the left of D.",
+        "question": "What is the relation of the agent T to the agent D?",
+        "predicted_ASP": "is(\"T\",right,\"D\").\nis(\"T\",down,\"X\").\nis(\"P\",left,\"D\").\nquery(\"T\",\"D\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right",
+        "actual_answer": "right"
+    },
+    {
+        "story": "Z is slightly off center to the top left and N is slightly off center to the bottom right.\nH is on the same horizontal plane directly right to Z.\nA is on the same horizontal plane directly left to N.",
+        "question": "What is the relation of the agent N to the agent A?",
+        "predicted_ASP": "is(\"Z\",top_left,\"center\").\nis(\"N\",down_right,\"center\").\nis(\"H\",right,\"Z\").\nis(\"A\",left,\"N\").\nquery(\"N\",\"A\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right",
+        "actual_answer": "right"
+    },
+    {
+        "story": "The object A is positioned below and to the left of the object I.\nThe object A and Q are there. The object Q is above and slightly to the left of the object A.\nQ presents below V.",
+        "question": "What is the relation of the agent V to the agent A?",
+        "predicted_ASP": "is(\"A\", down_left, \"I\").\nis(\"Q\", top_left, \"A\").\nis(\"Q\", down, \"V\").\nquery(\"V\", \"A\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_left",
+        "actual_answer": "upper-left"
+    },
+    {
+        "story": "O is sitting in the left direction of L.\nL is on the left and M is on the right.\nO is to the right of G.",
+        "question": "What is the relation of the agent M to the agent O?",
+        "predicted_ASP": "is(\"O\", left, \"L\").\nis(\"L\", left, \"M\").\nis(\"O\", right, \"G\").\nquery(\"M\", \"O\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right",
+        "actual_answer": "right"
+    },
+    {
+        "story": "If H is the center of a clock face, W is located between 10 and 11.\nH is sitting at the 9:00 position of X.\nG is to the right of W and is on the same horizontal plane.",
+        "question": "What is the relation of the agent W to the agent X?",
+        "predicted_ASP": "is(\"W\",top_left,\"H\").\nis(\"H\",left,\"X\").\nis(\"G\",right,\"W\").\nquery(\"W\",\"X\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_left",
+        "actual_answer": "upper-left"
+    },
+    {
+        "story": "Object L is above object G and to the right of it, too.\nH is positioned above and to the left of M.\nM is diagonally below G to the left at a 45 degree angle.",
+        "question": "What is the relation of the agent G to the agent M?",
+        "predicted_ASP": "is(\"L\", top, \"G\").\nis(\"L\", right, \"G\").\nis(\"H\", top, \"M\").\nis(\"H\", left, \"M\").\nis(\"M\", down_left, \"G\").\nquery(\"G\", \"M\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_right, overlap, right, top, down_left, down_right, top_left, down, left",
+        "actual_answer": "upper-right"
+    },
+    {
+        "story": "Z is below Y and to the left of Y.\nA is over there and B is on the left.\nA and Y are parallel, and A is over Y.",
+        "question": "What is the relation of the agent B to the agent Y?",
+        "predicted_ASP": "is(\"Z\",down,\"Y\").\nis(\"Z\",left,\"Y\").\nis(\"B\",left,\"A\").\nis(\"A\",top,\"Y\").\nquery(\"B\",\"Y\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_left, overlap, down_right",
+        "actual_answer": "upper-left"
+    },
+    {
+        "story": "P and R are parallel, and P on the right of R.\nC is above L and to the right of L.\nR is at the bottom of C.",
+        "question": "What is the relation of the agent L to the agent R?",
+        "predicted_ASP": "is(\"R\",left,\"P\").\nis(\"L\",down,\"C\").\nis(\"L\",left,\"C\").\nis(\"C\",top,\"R\").\nquery(\"L\",\"R\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "overlap, top_left, down_right",
+        "actual_answer": "left"
+    },
+    {
+        "story": "J is above T and to the left of T.\nThe object R is positioned directly below the object J.\nP and R are side by side with P to the right and R to the left.",
+        "question": "What is the relation of the agent P to the agent T?",
+        "predicted_ASP": "is(\"J\", top, \"T\").\nis(\"J\", left, \"T\").\nis(\"R\", down, \"J\").\nis(\"P\", right, \"R\").\nquery(\"P\", \"T\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right, down, top_right, down_left",
+        "actual_answer": "overlap"
+    },
+    {
+        "story": "A is at the bottom of Y vertically.\nJ is over there and F is on the right of it.\nJ is at the bottom of Y and is on the same vertical plane.",
+        "question": "What is the relation of the agent J to the agent Y?",
+        "predicted_ASP": "is(\"A\", down, \"Y\").\nis(\"F\", right, \"J\").\nis(\"J\", down, \"Y\").\nquery(\"J\", \"Y\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down",
+        "actual_answer": "below"
+    },
+    {
+        "story": "M is on the left and F is on the right.\nI is positioned below F and to the left.\nM is placed on the top of D.",
+        "question": "What is the relation of the agent D to the agent M?",
+        "predicted_ASP": "is(\"M\",left,\"F\").\nis(\"I\",down_left,\"F\").\nis(\"M\",top,\"D\").\nquery(\"D\",\"M\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down",
+        "actual_answer": "below"
+    },
+    {
+        "story": "T is positioned up and to the right of I.\nG is diagonally to the upper left of N.\nG is on the same vertical plane directly below T.",
+        "question": "What is the relation of the agent T to the agent I?",
+        "predicted_ASP": "is(\"T\",top_right,\"I\").\nis(\"G\",top_left,\"N\").\nis(\"G\",down,\"T\").\nquery(\"T\",\"I\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_right",
+        "actual_answer": "upper-right"
+    },
+    {
+        "story": "F is at N\u2019s 9 o'clock.\nY is placed at the lower right of W.\nY is sitting at the lower position to N.",
+        "question": "What is the relation of the agent F to the agent N?",
+        "predicted_ASP": "is(\"F\",left,\"N\").\nis(\"Y\",down_right,\"W\").\nis(\"Y\",down,\"N\").\nquery(\"F\",\"N\").\n\nNote that we have carefully reviewed and refined the generated facts to ensure completeness, syntax, and safety.\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "Error: parsing failed",
+        "actual_answer": "left"
+    },
+    {
+        "story": "W is above L and to the left of L.\nJ is on the right side and below L.\nI is over J.",
+        "question": "What is the relation of the agent W to the agent J?",
+        "predicted_ASP": "is(\"W\", top, \"L\").\nis(\"W\", left, \"L\").\nis(\"J\", right, \"L\").\nis(\"J\", down, \"L\").\nis(\"I\", top, \"J\").\nquery(\"W\", \"J\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_left, left, top, down_left, top_right",
+        "actual_answer": "upper-left"
+    },
+    {
+        "story": "L and O are vertical and L is above O.\nB is placed at the lower right of O.\nThe object X is positioned below and to the right of the object L.",
+        "question": "What is the relation of the agent B to the agent L?",
+        "predicted_ASP": "is(\"L\",top,\"O\").\nis(\"B\",down_right,\"O\").\nis(\"X\",down_right,\"L\").\nquery(\"B\",\"L\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_right",
+        "actual_answer": "lower-right"
+    },
+    {
+        "story": "W and A are side by side with A at the bottom and W on the top.\nG is at A's 12 o'clock.\nC is to the left of W and is on the same horizontal plane.",
+        "question": "What is the relation of the agent A to the agent C?",
+        "predicted_ASP": "is(\"W\",top,\"A\").\nis(\"G\",top,\"A\").\nis(\"C\",left,\"W\").\nis(\"C\",left,\"A\").\nquery(\"A\",\"C\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right, down_right, top_right",
+        "actual_answer": "lower-right"
+    },
+    {
+        "story": "The object E and P are there. The object E is below and slightly to the right of the object P.\nG is over there and A is directly above it.\nP is there and G is at the 2 position of a clock face.",
+        "question": "What is the relation of the agent P to the agent A?",
+        "predicted_ASP": "is(\"E\", down_right, \"P\").\nis(\"A\", top, \"G\").\nis(\"G\", down_right, \"P\").\nquery(\"P\", \"A\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "left",
+        "actual_answer": "lower-left"
+    },
+    {
+        "story": "V is at Q's 12 o'clock.\nI presents upper right to Z.\nQ is above and to the right of Z.",
+        "question": "What is the relation of the agent V to the agent Q?",
+        "predicted_ASP": "is(\"V\",top,\"Q\").\nis(\"I\",top_right,\"Z\").\nis(\"Q\",top_right,\"Z\").\nquery(\"V\",\"Q\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top",
+        "actual_answer": "above"
+    },
+    {
+        "story": "W presents right to H.\nH is at a 45 degree angle to R, in the lower lefthand corner.\nZ is positioned in the lower right corner of W.",
+        "question": "What is the relation of the agent Z to the agent W?",
+        "predicted_ASP": "is(\"W\",right,\"H\").\nis(\"R\",down_left,\"H\").\nis(\"Z\",down_right,\"W\").\nquery(\"Z\",\"W\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_right",
+        "actual_answer": "lower-right"
+    },
+    {
+        "story": "U presents lower left to Z.\nM is to the bottom right of J.\nM is below and to the right of U.",
+        "question": "What is the relation of the agent Z to the agent M?",
+        "predicted_ASP": "is(\"Z\",top_right,\"U\").\nis(\"J\",top_left,\"M\").\nis(\"U\",top_left,\"M\").\nquery(\"Z\",\"M\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top",
+        "actual_answer": "above"
+    },
+    {
+        "story": "V is sitting in the right direction of X.\nG is below V.\nA is over there with G above.",
+        "question": "What is the relation of the agent V to the agent A?",
+        "predicted_ASP": "is(\"V\",right,\"X\").\nis(\"G\",down,\"V\").\nis(\"A\",top,\"G\").\nquery(\"V\",\"A\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "overlap",
+        "actual_answer": "above"
+    },
+    {
+        "story": "X is positioned in the lower left corner of C.\nJ is on the top of X and is on the same vertical plane.\nT is diagonally right and above J.",
+        "question": "What is the relation of the agent J to the agent C?",
+        "predicted_ASP": "is(\"X\",down_left,\"C\").\nis(\"J\",top,\"X\").\nis(\"J\",left,\"C\").\nis(\"T\",top_right,\"J\").\nis(\"T\",top_right,\"X\").\nis(\"T\",top_right,\"C\").\nquery(\"J\",\"C\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "left, overlap, down_left, top, top_left, right, down, top_right, down_right",
+        "actual_answer": "left"
+    },
+    {
+        "story": "The object I is upper and slightly to the left of the object Z.\nB is directly south east of F.\nI is to the bottom-left of F.",
+        "question": "What is the relation of the agent B to the agent F?",
+        "predicted_ASP": "is(\"I\",top_left,\"Z\").\nis(\"B\",down_right,\"F\").\nis(\"I\",down_left,\"F\").\nquery(\"B\",\"F\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_right",
+        "actual_answer": "lower-right"
+    },
+    {
+        "story": "R is positioned in the lower left corner of U.\nV is directly south west of Y.\nY and U are parallel, and Y is to the left of U.",
+        "question": "What is the relation of the agent U to the agent V?",
+        "predicted_ASP": "is(\"R\",down_left,\"U\").\nis(\"V\",down_left,\"Y\").\nis(\"Y\",left,\"U\").\nquery(\"U\",\"V\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_right",
+        "actual_answer": "upper-right"
+    },
+    {
+        "story": "K is on the right side and top of B.\nG is on the left side to V.\nV and K are parallel, and V on the left of K.",
+        "question": "What is the relation of the agent B to the agent V?",
+        "predicted_ASP": "is(\"K\",right,\"B\").\nis(\"K\",top,\"B\").\nis(\"G\",left,\"V\").\nis(\"V\",left,\"K\").\nquery(\"B\",\"V\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_right, overlap, top_left",
+        "actual_answer": "below"
+    },
+    {
+        "story": "Z and R are vertical and Z is below R.\nThe objects P and Z are over there. The object P is above and slightly to the right of the object Z.\nK and P are vertical and K is below P.",
+        "question": "What is the relation of the agent K to the agent R?",
+        "predicted_ASP": "is(\"Z\", down, \"R\").\nis(\"P\", top_right, \"Z\").\nis(\"K\", down, \"P\").\nquery(\"K\", \"R\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_right",
+        "actual_answer": "lower-right"
+    },
+    {
+        "story": "Object Y is below object O and to the left of it, too.\nH is at a 45 degree angle to V, in the lower lefthand corner.\nO is diagonally above H to the left at a 45 degree angle.",
+        "question": "What is the relation of the agent H to the agent V?",
+        "predicted_ASP": "is(\"Y\", down_left, \"O\").\nis(\"H\", down_left, \"V\").\nis(\"O\", top_left, \"H\").\nquery(\"H\", \"V\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_left",
+        "actual_answer": "lower-left"
+    },
+    {
+        "story": "Object Q is below object J and to the left of it, too.\nH is at J\u2019s 9 o'clock.\nH is to the right of C horizontally.",
+        "question": "What is the relation of the agent Q to the agent C?",
+        "predicted_ASP": "is(\"Q\", down_left, \"J\").\nis(\"H\", left, \"J\").\nis(\"H\", right, \"C\").\nquery(\"Q\", \"C\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_right",
+        "actual_answer": "lower-right"
+    },
+    {
+        "story": "The object labeled X is positioned to the right of the object labeled Z.\nZ and R are in a vertical line with Z on top.\nR is above B.",
+        "question": "What is the relation of the agent B to the agent Z?",
+        "predicted_ASP": "is(\"Z\",left,\"X\").\nis(\"Z\",top,\"R\").\nis(\"R\",top,\"B\").\nquery(\"B\",\"Z\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down",
+        "actual_answer": "below"
+    },
+    {
+        "story": "R is below F and to the left of F.\nIf A is the center of a clock face, R is located between 10 and 11.\nL is sitting in the right direction of A.",
+        "question": "What is the relation of the agent A to the agent R?",
+        "predicted_ASP": "is(\"R\",down_left,\"F\").\nis(\"R\",top_left,\"A\").\nis(\"L\",right,\"A\").\nquery(\"A\",\"R\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_right",
+        "actual_answer": "lower-right"
+    },
+    {
+        "story": "A is above and to the right of O.\nC is at the 6 o'clock position relative to A.\nO is sitting in the right direction of Z.",
+        "question": "What is the relation of the agent Z to the agent O?",
+        "predicted_ASP": "is(\"A\", top_right, \"O\").\nis(\"C\", down, \"A\").\nis(\"O\", right, \"Z\").\nquery(\"Z\", \"O\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "left",
+        "actual_answer": "left"
+    },
+    {
+        "story": "N is positioned right to P.\nW is placed at the upper left of B.\nP is at the 9 o'clock position relative to W.",
+        "question": "What is the relation of the agent B to the agent N?",
+        "predicted_ASP": "is(\"N\",right,\"P\").\nis(\"W\",top_left,\"B\").\nis(\"P\",left,\"W\").\nquery(\"B\",\"N\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_right",
+        "actual_answer": "lower-right"
+    },
+    {
+        "story": "W is positioned in the lower left corner of J.\nB is positioned in the lower right corner of G.\nW is sitting at the lower right position to B.",
+        "question": "What is the relation of the agent G to the agent B?",
+        "predicted_ASP": "is(\"W\", down_left, \"J\").\nis(\"B\", down_right, \"G\").\nis(\"W\", down_right, \"B\").\nquery(\"G\", \"B\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_left",
+        "actual_answer": "upper-left"
+    },
+    {
+        "story": "H is sitting in the left direction of V.\nK and N are side by side with K on the top and N at the bottom.\nH is to the right of N horizontally.",
+        "question": "What is the relation of the agent K to the agent N?",
+        "predicted_ASP": "is(\"H\",left,\"V\").\nis(\"K\",top,\"N\").\nis(\"H\",right,\"N\").\nquery(\"K\",\"N\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top",
+        "actual_answer": "above"
+    },
+    {
+        "story": "The objects C and F are over there. The object C is lower and slightly to the left of the object F.\nG is sitting at the upper right position to F.\nP is at the lower side of G.",
+        "question": "What is the relation of the agent F to the agent C?",
+        "predicted_ASP": "is(\"C\",down_left,\"F\").\nis(\"G\",top_right,\"F\").\nis(\"P\",down,\"G\").\nquery(\"F\",\"C\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_right",
+        "actual_answer": "upper-right"
+    },
+    {
+        "story": "M is below H and to the left of H.\nJ is positioned up and to the right of H.\nJ is to the right of X and is on the same horizontal plane.",
+        "question": "What is the relation of the agent J to the agent H?",
+        "predicted_ASP": "is(\"M\",down,\"H\").\nis(\"M\",left,\"H\").\nis(\"J\",top_right,\"H\").\nis(\"J\",right,\"X\").\nquery(\"J\",\"H\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_right, right, top, down_right, top_left",
+        "actual_answer": "upper-right"
+    },
+    {
+        "story": "X is on the same vertical plane directly above M.\nM is directly north east of B.\nJ and B are horizontal and J is to the right of B.",
+        "question": "What is the relation of the agent J to the agent X?",
+        "predicted_ASP": "is(\"X\",top,\"M\").\nis(\"M\",top_right,\"B\").\nis(\"J\",right,\"B\").\nquery(\"J\",\"X\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down",
+        "actual_answer": "lower-left"
+    },
+    {
+        "story": "The object M is lower and slightly to the left of the object F.\nI is to the right of B with a small gap between them.\nI is placed on the top of M.",
+        "question": "What is the relation of the agent B to the agent I?",
+        "predicted_ASP": "is(\"M\", down_left, \"F\").\nis(\"I\", right, \"B\").\nis(\"I\", top, \"M\").\nquery(\"B\", \"I\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "left",
+        "actual_answer": "left"
+    },
+    {
+        "story": "S is to the left of H.\nW is to the bottom right of X.\nX is at the 3 o'clock position relative to H.",
+        "question": "What is the relation of the agent X to the agent S?",
+        "predicted_ASP": "is(\"S\", left, \"H\").\nis(\"W\", down_right, \"X\").\nis(\"X\", right, \"H\").\nquery(\"X\", \"S\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right",
+        "actual_answer": "right"
+    },
+    {
+        "story": "O is to the left of H and is on the same horizontal plane.\nThe object Q is lower and slightly to the right of the object H.\nQ is directly south west of X.",
+        "question": "What is the relation of the agent Q to the agent X?",
+        "predicted_ASP": "is(\"O\",left,\"H\").\nis(\"Q\",down_right,\"H\").\nis(\"Q\",down_left,\"X\").\nquery(\"Q\",\"X\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_left",
+        "actual_answer": "lower-left"
+    },
+    {
+        "story": "E is positioned right to S.\nObject V is above object E and to the right of it, too.\nS is diagonally to the upper right of P.",
+        "question": "What is the relation of the agent S to the agent E?",
+        "predicted_ASP": "is(\"S\",left,\"E\").\nis(\"V\",top_right,\"E\").\nis(\"P\",down_left,\"S\").\nquery(\"S\",\"E\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "left",
+        "actual_answer": "left"
+    },
+    {
+        "story": "H is on the right and E is on the left.\nJ is to the top of E vertically.\nY presents over H.",
+        "question": "What is the relation of the agent Y to the agent E?",
+        "predicted_ASP": "is(\"E\",left,\"H\").\nis(\"J\",top,\"E\").\nis(\"Y\",top,\"H\").\nquery(\"Y\",\"E\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_right",
+        "actual_answer": "upper-right"
+    },
+    {
+        "story": "D and G are parallel, and D on the left of G.\nG and M are side by side with M at the bottom and G on the top.\nA and D are horizontal and A is to the right of D.",
+        "question": "What is the relation of the agent G to the agent D?",
+        "predicted_ASP": "is(\"D\",left,\"G\").\nis(\"M\",down,\"G\").\nis(\"A\",right,\"D\").\nquery(\"G\",\"D\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right",
+        "actual_answer": "right"
+    },
+    {
+        "story": "X is to the left of F with a small gap between them.\nR is positioned above and to the left of S.\nX is at the bottom of S and is on the same vertical plane.",
+        "question": "What is the relation of the agent F to the agent X?",
+        "predicted_ASP": "is(\"X\", left, \"F\").\nis(\"R\", top_left, \"S\").\nis(\"X\", down, \"S\").\nquery(\"F\", \"X\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right",
+        "actual_answer": "right"
+    },
+    {
+        "story": "D is above O with a small gap between them.\nH is at the lower side of D.\nM presents lower left to H.",
+        "question": "What is the relation of the agent O to the agent H?",
+        "predicted_ASP": "is(\"D\", top, \"O\").\nis(\"H\", down, \"D\").\nis(\"M\", down_left, \"H\").\nis(\"O\", top, \"H\").\nquery(\"O\", \"H\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top, overlap, down",
+        "actual_answer": "overlap"
+    },
+    {
+        "story": "T is diagonally above J to the left at a 45 degree angle.\nO is to the right of J horizontally.\nO is on the same vertical plane directly above R.",
+        "question": "What is the relation of the agent O to the agent J?",
+        "predicted_ASP": "is(\"T\",top_left,\"J\").\nis(\"O\",right,\"J\").\nis(\"O\",top,\"R\").\nquery(\"O\",\"J\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right",
+        "actual_answer": "right"
+    },
+    {
+        "story": "Q is positioned above B.\nT is on the lower left of S.\nB is over there with S above.",
+        "question": "What is the relation of the agent Q to the agent B?",
+        "predicted_ASP": "is(\"Q\",top,\"B\").\nis(\"T\",down_left,\"S\").\nis(\"B\",down,\"S\").\nquery(\"Q\",\"B\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top",
+        "actual_answer": "above"
+    },
+    {
+        "story": "T is sitting at the upper right position to I.\nX and T are vertical and X is above T.\nM is above X at 10 o'clock.",
+        "question": "What is the relation of the agent M to the agent X?",
+        "predicted_ASP": "is(\"T\",top_right,\"I\").\nis(\"X\",top,\"T\").\nis(\"M\",top,\"X\").\nquery(\"M\",\"X\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top",
+        "actual_answer": "upper-left"
+    },
+    {
+        "story": "L is to the upper left of R.\nY is placed in the right direction of R.\nM is diagonally above Y to the left at a 45 degree angle.",
+        "question": "What is the relation of the agent Y to the agent L?",
+        "predicted_ASP": "is(\"L\",top_left,\"R\").\nis(\"Y\",right,\"R\").\nis(\"M\",top_left,\"Y\").\nquery(\"Y\",\"L\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_right",
+        "actual_answer": "lower-right"
+    },
+    {
+        "story": "P is below and to the right of F.\nThe object Q is lower and slightly to the left of the object A.\nF and Q are side by side with F to the left and Q to the right.",
+        "question": "What is the relation of the agent Q to the agent P?",
+        "predicted_ASP": "is(\"P\", down_right, \"F\").\nis(\"Q\", down_left, \"A\").\nis(\"F\", left, \"Q\").\nquery(\"Q\", \"P\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top",
+        "actual_answer": "above"
+    },
+    {
+        "story": "X is positioned in the front right corner of K.\nW is diagonally below U to the right at a 45 degree angle.\nW is above X.",
+        "question": "What is the relation of the agent U to the agent W?",
+        "predicted_ASP": "is(\"X\",top_right,\"K\").\nis(\"W\",down_right,\"U\").\nis(\"W\",top,\"X\").\nquery(\"U\",\"W\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_left",
+        "actual_answer": "upper-left"
+    },
+    {
+        "story": "Object I is above object W and to the left of it, too.\nX is at I's 12 o'clock.\nC and W are side by side with W at the bottom and C on the top.",
+        "question": "What is the relation of the agent W to the agent C?",
+        "predicted_ASP": "is(\"I\",top,\"W\").\nis(\"I\",left,\"W\").\nis(\"X\",top,\"I\").\nis(\"C\",top,\"W\").\nquery(\"W\",\"C\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down, down_left, right, top_right",
+        "actual_answer": "below"
+    },
+    {
+        "story": "I is positioned up and to the right of A.\nN is to the right and above I at an angle of about 45 degrees.\nA and Z are side by side with A to the right and Z to the left.",
+        "question": "What is the relation of the agent N to the agent A?",
+        "predicted_ASP": "is(\"I\",top_right,\"A\").\nis(\"N\",top_right,\"I\").\nis(\"A\",right,\"Z\").\nquery(\"N\",\"A\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_right",
+        "actual_answer": "upper-right"
+    },
+    {
+        "story": "F is on the right and W is on the left.\nL is positioned above and to the left of U.\nW is at U's 6 o'clock.",
+        "question": "What is the relation of the agent F to the agent W?",
+        "predicted_ASP": "is(\"W\",left,\"F\").\nis(\"L\",top,\"U\").\nis(\"L\",left,\"U\").\nis(\"W\",down,\"U\").\nquery(\"F\",\"W\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "right, down, top_right, down_left",
+        "actual_answer": "right"
+    },
+    {
+        "story": "The object N is positioned below and to the right of the object P.\nJ is on the left and V is on the right.\nN and V are vertical and N is above V.",
+        "question": "What is the relation of the agent N to the agent P?",
+        "predicted_ASP": "is(\"N\", down_right, \"P\").\nis(\"J\", left, \"P\").\nis(\"V\", right, \"P\").\nis(\"N\", top, \"V\").\nquery(\"N\", \"P\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_right, top_right",
+        "actual_answer": "lower-right"
+    },
+    {
+        "story": "T is to the right and above O at an angle of about 45 degrees.\nT is positioned below S and to the left.\nD is below and to the right of O.",
+        "question": "What is the relation of the agent O to the agent D?",
+        "predicted_ASP": "is(\"T\",top_right,\"O\").\nis(\"T\",down_left,\"S\").\nis(\"D\",down_right,\"O\").\nquery(\"O\",\"D\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_left",
+        "actual_answer": "upper-left"
+    },
+    {
+        "story": "F is positioned down and to the left of N.\nQ is at N's 3 o'clock.\nY is to the top-left of Q.",
+        "question": "What is the relation of the agent F to the agent Y?",
+        "predicted_ASP": "is(\"F\", down_left, \"N\").\nis(\"Q\", right, \"N\").\nis(\"Y\", top_left, \"Q\").\nquery(\"F\", \"Y\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_left",
+        "actual_answer": "lower-left"
+    },
+    {
+        "story": "M is on the top of N and is on the same vertical plane.\nQ is lower left to N.\nM is south west of S.",
+        "question": "What is the relation of the agent Q to the agent N?",
+        "predicted_ASP": "is(\"M\",top,\"N\").\nis(\"Q\",down_left,\"N\").\nis(\"M\",down_left,\"S\").\nquery(\"Q\",\"N\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down_left",
+        "actual_answer": "lower-left"
+    },
+    {
+        "story": "G presents lower right to C.\nM presents right to K.\nIf G is the center of a clock face, K is located between 2 and 3.",
+        "question": "What is the relation of the agent K to the agent G?",
+        "predicted_ASP": "is(\"C\",top_left,\"G\").\nis(\"K\",left,\"M\").\nis(\"K\",top_right,\"G\").\nquery(\"K\",\"G\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_right",
+        "actual_answer": "upper-right"
+    },
+    {
+        "story": "B and L are side by side with B on the top and L at the bottom.\nL is sitting in the left direction of T.\nV and T are next to each other with V on the top and T at the bottom.",
+        "question": "What is the relation of the agent B to the agent T?",
+        "predicted_ASP": "is(\"B\",top,\"L\").\nis(\"L\",left,\"T\").\nis(\"V\",top,\"T\").\nquery(\"B\",\"T\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "top_left",
+        "actual_answer": "upper-left"
+    },
+    {
+        "story": "K is on the right and W is on the left.\nY and N are both there with the object Y is to the right of object N.\nW is positioned in the front right corner of Y.",
+        "question": "What is the relation of the agent K to the agent Y?",
+        "predicted_ASP": "is(\"K\",right,\"W\").\nis(\"W\",left,\"K\").\nis(\"Y\",right,\"N\").\nis(\"W\",down_left,\"Y\").\nquery(\"K\",\"Y\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "down",
+        "actual_answer": "upper-right"
+    },
+    {
+        "story": "X is directly north east of B.\nF is over there and X is on the left of it.\nObject J is above object B and to the right of it, too.",
+        "question": "What is the relation of the agent J to the agent F?",
+        "predicted_ASP": "is(\"X\",top_right,\"B\").\nis(\"X\",left,\"F\").\nis(\"J\",top_right,\"B\").\n\nQuery:\n\nquery(\"J\",\"F\").\n% assume the 2nd queried object is at location (0,0)\nlocation(Q2, 0, 0) :- query(_, Q2).\n% extract answer relation R such that the offset (Ox,Oy) of R is in the same direction of (X,Y)\nanswer(R) :- query(Q1, _), location(Q1, X, Y), offset(R, Ox, Oy),\n    Ox=-1: X<0; Ox=0: X=0; Ox=1: X>0;\n    Oy=-1: Y<0; Oy=0: Y=0; Oy=1: Y>0.\n% define the offsets of 8 spacial relations\noffset(overlap,0,0; top,0,1; down,0,-1; left,-1,0; right,1,0; \n    top_left,-1,1; top_right,1,1; down_left,-1,-1; down_right,1,-1).\n% derive the kind of spacial relation from  offset\nis(A, R1, B) :- is(B, R2, A), offset(R2,X,Y), offset(R1,-X,-Y).\nnums(-100..100).\nlocation(A, Xa, Ya) :-\n    location(B, Xb, Yb), nums(Xa), nums(Ya),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.\nlocation(B, Xb, Yb) :-\n    location(A, Xa, Ya), nums(Xb), nums(Yb),\n    is(A, Kind, B), offset(Kind, Dx, Dy),\n    Xa-Xb=Dx, Ya-Yb=Dy.   \n#show answer/1.",
+        "asp_result": "Error: parsing failed",
+        "actual_answer": "left"
+    }
+]

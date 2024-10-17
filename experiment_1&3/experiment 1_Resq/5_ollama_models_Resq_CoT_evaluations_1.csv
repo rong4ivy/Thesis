@@ -1,0 +1,1125 @@
+Context_id,Story,Question,Question_Type,Answer,Candidate_Answers,Steps_of_Reasoning,Is_Commonsense_Question,ollama/openchat,ollama/llama3,ollama/mistral,ollama/phi3:mini,ollama/gemma:2b
+annotations/00/861.eng,"a dark-skinned , dark-haired girl in a blue sweater with a pink nametag is standing in a classroom",Is the pink thing contain the blue thing?,YN,No,"Yes, No",,True,no,"based on my spatial reasoning skills, i will carefully analyze the context and question.
+
+key objects and their attributes:
+
+* the girl has dark skin and dark hair.
+* she is wearing a blue sweater.
+* there is a pink nametag.
+
+spatial relations mentioned in the question:
+
+* the pink thing (nametag) contains the blue thing (sweater).
+
+step-by-step reasoning:
+
+1. the pink nametag is attached to the girl's clothing, which is the blue sweater.
+2. therefore, the pink nametag does not contain the blue sweater; it is simply a label on top of the sweater.
+
+answer: no",no,no,"**step 1: read the context and question**
+
+the context describes a dark-skinned, dark-haired girl in a blue sweater with a pink nametag standing in a classroom. the question is asking if the pink thing is contained within the blue thing.
+
+**step 2: identify the key objects and their attributes**
+
+* girl: dark-skinned, dark-haired
+* blue sweater: blue
+* nametag: pink
+
+**step 3: based on step by step reasoning, answer the question with yes or no**
+
+yes, the pink thing is contained within the blue thing."
+images/01/1197.jpg,a three-storey house made of red bricks with green ornaments and a yellow corner with a sign saying La Posada del Conde . all levels have arched windows . there is a jeep in front of the house on the left .,Is the jeep inside the front of the house?,YN,Yes,"Yes, No",,,no,no,no,no,"**step 1:** read the context and question carefully.
+
+**step 2:** identify the key objects and their attributes:
+
+* house: three-storey, red brick, green ornaments, yellow corner with a sign.
+* jeep: vehicle, parked in front of the house on the left.
+
+**step 3:** based on the information gathered, we can conclude that the jeep is inside the front of the house.
+
+**answer: yes**"
+annotations/01/1369.eng,"a room with a double bed made of dark wood , a blue and white chequered bedcover , white pillows , a door on the left , a fancy lamp and a fridge on the right",Is the lamp left of the chequered thing?,YN,No,"Yes, No",,False,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes:
+	* the lamp is a fancy one.
+	* the bedcover is blue and white chequered.
+3. spatial relations mentioned in the question: 
+	* the lamp is on the right side of the room, while the bedcover is on the bed.
+
+answer: no",yes,no,"**step 1:** read the context and question.
+
+the room has a double bed made of dark wood, a blue and white chequered bedcover, white pillows, a door on the left, a fancy lamp, and a fridge on the right.
+
+**step 2:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* **lamp:** it is a piece of furniture that is left of the chequered thing.
+* **chequered bedcover:** it is a bedspread that is blue and white.
+* **pillows:** they are white.
+* **door:** it is on the left side of the room.
+* **lamp:** it is a fancy lamp.
+* **fridge:** it is on the right side of the room.
+
+**step 3:** based on step by step reasoning, answer the question with yes or no.
+
+**answer: yes**"
+annotations/01/1216.eng,"a bungalow with two hammocks in front of the entrance and two trees next to it there are people at the entrance , and a meadow and a forest in the background",Is the bungalow in front of the hammocks?,YN,No,"Yes, No",,False,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the bungalow is the main object.
+	* there are two hammocks in front of the entrance (implying they are closer to the entrance than the bungalow).
+3. based on step-by-step reasoning: no
+
+candidate_answer: no",yes,yes,"**step 1:** read the context and question.
+
+the context describes a bungalow with two hammocks in front of the entrance and two trees next to it there are people at the entrance. the meadow and forest are also mentioned in the background.
+
+**step 2:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* **bungalow:** it is the main object of interest.
+* **hammocks:** they are two pieces of furniture placed in front of the entrance.
+* **trees:** they are two trees located next to the entrance.
+* **people:** they are present at the entrance.
+* **meadow:** it is a large area of grass.
+* **forest:** it is a large area of trees.
+
+**step 3:** based on step by step reasoning, answer the question with yes or no.
+
+the bungalow is located in front of the hammocks, so it is in front of the hammocks.
+
+**answer: yes**"
+images/00/754.jpg,Tourists are standing on a wet sidewalk and are carrying bags of food . people are wearing rain coats and jackets . a house with brick walls and two garage doors behind them .,Is the food touching the sidewalk?,YN,No,"Yes, No",1.0,,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* tourists are standing on a wet sidewalk.
+	* they are carrying bags of food.
+	* people are wearing rain coats and jackets.
+	* a house with brick walls and two garage doors is behind them.
+
+3. based on step-by-step reasoning:
+
+the tourists are standing on the sidewalk, which means their feet (and possibly the bags) are in contact with the ground. the question asks if the food is touching the sidewalk. since the tourists are carrying the bags of food, it's likely that the bags are not directly touching the sidewalk. however, considering the wet surface and the possibility of some liquid or moisture on the bags, there might be a small amount of contact between the bags and the sidewalk.
+
+answer: **no**",no,no,"**step 1:** read the context and question.
+
+the context describes a scene with tourists, people wearing rain coats and jackets, a house with brick walls, and two garage doors behind it.
+
+**step 2:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* **objects:** tourists, people, house, sidewalk
+* **attributes:** none
+* **spatial relations:**
+    * tourists are standing on the sidewalk.
+    * the house is located behind the sidewalk.
+
+**step 3:** based on step by step reasoning, answer the question with yes or no.
+
+**answer: yes**"
+annotations/00/844.eng,"a dark-skinned , dark-haired boy in a black pullover and light brown shirt in a classroom two more boys in the background",Is the black thing in the boy?,YN,No,"Yes, No",,True,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes:
+	* the dark-skinned, dark-haired boy
+	* the black pullover
+	* the light brown shirt
+3. based on spatial relations mentioned in the question:
+	* the black thing is likely referring to the black pullover
+
+answer: yes",no,no,"**step 1: read the context and question**
+
+the context describes a dark-skinned, dark-haired boy in a black pullover and light brown shirt in a classroom. the question asks if the black thing is in the boy.
+
+**step 2: identify the key objects and their attributes**
+
+* the key object is the black thing.
+* the object is in the boy.
+* the object is dark-skinned, dark-haired.
+
+**step 3: based on step by step reasoning, answer the question with yes or no**
+
+yes, the black thing is in the boy."
+images/00/686.jpg,six kids are sitting around a table and playing with toy cars . one kid is standing next to the table . a woman is holding a black plastic bag on the left . three tourists in the background are talking to each other .,Is the kid above the table?,YN,No,"Yes, No",1.0,True,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the kid is standing next to the table (not above it).
+3. answer the question with yes or no:
+candidate_answers: no",yes,no,"**step 1:** identify the key objects and their attributes.
+
+* kid: yes
+* table: no
+* woman: yes
+* toy cars: yes
+* tourists: yes
+
+**step 2:** based on the step 1, the kid is standing next to the table.
+
+**step 3:** answer: yes"
+annotations/01/1208.eng,"a room with white walls , a double bed made of wood , a light blue and white chequered bedcover and white towels and a black chimney in the back corner",Is the black thing in front of the light blue and white thing?,YN,No,"Yes, No",2.0,False,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify key objects and their attributes:
+	* black thing: chimney (located in the back corner)
+	* light blue and white thing: chequered bedcover (on the double bed)
+3. spatial relations mentioned:
+	* the black thing is located in the back corner
+4. based on step-by-step reasoning, answer:
+
+candidate_answers: no",no,no,"**step 1:**
+
+* the context describes a room with white walls, a double bed made of wood, a light blue and white bedcover, and white towels.
+* the black thing is not mentioned in the context, so we can assume it is not present.
+
+**step 2:**
+
+* based on the context, the key objects are the bed, the bedcover, and the black chimney.
+* the black thing is not mentioned among these objects, so it cannot be in front of the bed.
+
+**answer: no**"
+annotations/01/1339.eng,"A room with an unmade bed ( just the mattress ) , a wooden door on the right , a separate bathroom on the left white tiles on the floor walls look like marmol",Is the door close to the marmol thing?,YN,Yes,"Yes, No",,True,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes:
+	* room with an unmade bed (just the mattress)
+	* wooden door on the right
+	* separate bathroom on the left with white tiles on the floor and walls that look like marble
+3. based on step-by-step reasoning:
+
+the marmol thing refers to the walls of the bathroom, which are described as looking like marble.
+
+the wooden door is located on the right side of the room, while the bathroom is on the left side.
+
+since the door is not near the bathroom walls (which look like marble), i would answer:
+
+candidate_answers: no",yes,no,"**step 1:** read the context and question.
+
+the context describes a room with an unmade bed, a wooden door, a separate bathroom, and white tiles on the floor walls.
+
+**step 2:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* **objects:** bed, door, bathroom
+* **attributes:** unmade, wooden, separate, white tiles
+* **spatial relations:** close to, on the left, separate from
+
+**step 3:** based on step by step reasoning, answer the question with yes or no.
+
+**answer: yes**"
+images/00/935.jpg,"a dark-skinned , dark-haired boy wearing a black and grey NY cap , a black and grey chequered shirt and a red and green jacket that is black on the inside . grey wall of a house on the right , reddish house with some wood on the left in the background .",Are the red thing and green thing touching?,YN,Yes,"Yes, No",2.0,True,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the boy's jacket is red and green, but it's black on the inside.
+	* there are two houses in the background: a reddish house with some wood on the left, and a grey wall of a house on the right.
+3. based on step-by-step reasoning:
+
+the question asks about the ""red thing"" and ""green thing"". since the boy's jacket is red and green, it's likely that the question refers to the colors of his jacket.
+
+given that the jacket has black on the inside, it's not possible for the red and green parts to be touching each other (since they're separated by the black interior).
+
+therefore, my answer is: **no**",no,no,"**step 1: identify the key objects and their attributes**
+
+* red thing: red color, rectangular shape
+* green thing: green color, rectangular shape
+
+**step 2: analyze spatial relations**
+
+* the red thing and green thing are side by side, but they are not touching.
+
+**answer: no**"
+images/01/1039.jpg,inside photograph of a room with a red carpet . inside photograph of a room with a red carpet. There is a wooden table and a wooden commode to the left . inside photograph of a room with a red carpet. There is a wooden table and a wooden commode to the left. A bed to the right . inside photograph of a room with a red carpet. There is a wooden table and a wooden commode to the left. A bed to the right. Two red armchairs with a round table on the left at the back . inside photograph of a room with a red carpet. There is a wooden table and a wooden commode to the left. A bed to the right. Two red armchairs with a round table on the left at the back. Further curtains and a standard lamp .,Is the red thing inside the room?,YN,Yes,"Yes, No",,True,yes,yes,yes,yes,"**answer: yes**
+
+**explanation:**
+
+* the context describes a room with a red carpet.
+* the question asks if the red thing is inside the room.
+* based on the context, the red thing is clearly visible in the photographs.
+* therefore, the answer is yes."
+annotations/00/818.eng,"a dark-skinned , dark-haired girl in red vest is sitting outside boulders in background",Are the boulders in front of the red thing?,YN,No,"Yes, No",2.0,False,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the boulders are in the background.
+	* the red thing is a vest worn by the girl.
+3. answer the question with yes or no:
+the boulders are behind the girl, not in front of her. therefore, the answer is:
+
+candidate_answers: no",yes,no,"**step 1:**
+
+* read the context: a dark-skinned, dark-haired girl is sitting outside boulders in the background.
+* identify key objects: the main object is the girl. the other objects are the boulders.
+
+**step 2:**
+
+* analyze spatial relations: the girl is sitting outside the boulders.
+* based on the context, the girl is sitting in front of the red thing.
+
+**answer: yes**"
+images/00/779.jpg,"a dark-skinned , dark-haired boy wearing a blue tee-shirt ( one sleeve green , the other one pink ) is standing in a classroom . a teacher and other kids in the background , and aB26:E140lso a large window ( thus the picture is not very well exposed ) .",Is the blue shirt behind the window?,YN,No,"Yes, No",,True,no,no,no,no,"**step 1: read the context and question**
+
+the context describes a dark-skinned, dark-haired boy wearing a blue tee-shirt. the question is whether the blue shirt is behind the window.
+
+**step 2: identify the key objects and their attributes**
+
+* the key object is the blue shirt.
+* the key attribute is the color of the shirt.
+* the other objects in the picture are the teacher and other kids in the background, and the large window.
+
+**step 3: based on step by step reasoning, answer the question with yes or no**
+
+yes, the blue shirt is behind the window."
+annotations/01/1358.eng,"a multi-storey frame house on the left , a snowcovered mountain in the background on the right behind a couple of trees , and in the foreground a wall decorated with flowers , a garden and a lawn",Is the house to the left of the mountain?,YN,Yes,"Yes, No",2.0,False,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the house is to the left of the scene.
+	* the mountain is behind a couple of trees, which means it's not directly adjacent to the house.
+3. based on step-by-step reasoning: yes",yes,yes,"**step 1:**
+
+* read the context carefully. the question is asking if the house is to the left of the mountain.
+* identify the key objects:
+    * house
+    * mountain
+* identify spatial relations:
+    * house is to the left of the mountain.
+
+**answer: yes**"
+annotations/00/800.eng,"a dark-skinned , dark-haired girl in a light brown jumper with orange edges is standing in front of a desk pictures on a wooden wall in the background",Is the desk behind the light brown thing?,YN,Yes,"Yes, No",2.0,False,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes:
+	* the girl is dark-skinned and has dark hair.
+	* she's wearing a light brown jumper with orange edges.
+	* there's a desk in front of which she's standing.
+	* in the background, there's a wooden wall with pictures on it.
+3. based on step-by-step reasoning:
+the question asks if the desk is behind the light brown thing (the jumper). since the girl is standing in front of the desk, and the jumper is what she's wearing, it's clear that the desk is not behind the jumper. it's actually in front of her.
+
+answer: no",yes,no,"**step 1:**
+
+* read the context and question carefully.
+* the context describes a dark-skinned, dark-haired girl in a light brown jumper with orange edges standing in front of a desk.
+* the question asks if the desk is behind the light brown thing.
+
+**step 2:**
+
+* identify the key objects and their attributes:
+    * dark-skinned, dark-haired girl: this is the main character.
+    * light brown jumper with orange edges: this is the object the girl is standing in front of.
+    * desk: this is the object behind the light brown thing.
+
+**step 3:**
+
+* based on the information gathered, we can conclude that the desk is behind the light brown thing.
+
+**answer: yes**"
+annotations/01/1361.eng,"a white house with two large windows with wooden frames , two wooden pillars at the terrace with wooden benches and a wooden table there are mountains in the background on the right",Are the benches far from the terrace?,YN,No,"Yes, No",1.0,True,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the white house with two large windows with wooden frames
+	* two wooden pillars at the terrace
+	* wooden benches and a wooden table at the terrace
+	* mountains in the background on the right
+3. based on step-by-step reasoning:
+
+the benches are located at the wooden pillars, which are part of the same structure (the terrace). therefore, the benches are not far from the terrace.
+
+answer: no",no,no,"**step 1:** read the context and question.
+
+the context describes a white house with two large windows, two wooden pillars at the terrace with wooden benches and a wooden table there are mountains in the background on the right.
+
+**step 2:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* **objects:** white house, two large windows, two wooden pillars, wooden benches, wooden table, mountains
+* **attributes:** white color, two windows, two pillars, wooden, benches, wooden table, mountains
+* **spatial relations:** white house is located on the terrace, two pillars are located at the terrace, two benches are located on the terrace, and mountains are located in the background
+
+**step 3:** based on step by step reasoning, answer the question with yes or no.
+
+yes, the benches are far from the terrace."
+annotations/01/1387.eng,"a room with two double beds and a night table with a lamp and a phone in between , a painting above it on the white wall , a light blue ornamental strip and a dark green on the left",Is the phone to the right of the light blue thing?,YN,Yes,"Yes, No",2.0,False,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the phone is located between two double beds.
+	* there's a night table with a lamp and a phone in between.
+	* a painting is above it on the white wall.
+	* a light blue ornamental strip and a dark green one are present.
+3. based on step-by-step reasoning, answer the question:
+the phone is located between two double beds, which means it's not directly to the right of anything, including the light blue thing. therefore:
+
+candidate_answers: no","yes (if we consider the night table with the lamp and phone as the ""light blue thing"")",no,"**step 1:** identify the key objects and their attributes.
+
+* two double beds
+* night table with a lamp and a phone in between
+* painting above it on the white wall
+* light blue ornamental strip
+* dark green on the left
+
+**step 2:** based on the information, we can deduce the following spatial relationships:
+
+* the phone is closer to the light blue thing than it is to the painting.
+* the light blue thing is closer to the phone than it is to the painting.
+
+**step 3:** answer the question with no.
+
+the phone is to the right of the light blue thing, but it is not closer to the light blue thing than it is to the painting."
+images/01/1049.jpg,"exterior view of a light brown house , with stairs rising to the entrance of the second floor on the left , a tower with two small windows in the centre . there is an arch below the stairs leading to the entrance of the first floor . Exterior view of a light brown house , with stairs rising to the entrance of the second floor on the left , a tower with two small windows in the centre . There is an arch below the stairs leading to the entrance of the first floor. attached houses on the right . attached houses on the right. blue sky in the background .",Is the arch above the entrance?,YN,No,"Yes, No",1.0,True,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the arch is below the stairs.
+	* the entrance of the first floor is under the arch.
+3. answer the question with yes or no:
+	* no (the arch is not above the entrance)",yes,no,"**step 1:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* **objects:** light brown house, stairs, tower, arch, attached houses.
+* **attributes:** light brown color, stairs, tower, arch, attached houses.
+* **spatial relations:** the arch is above the entrance to the first floor.
+
+**step 2:** based on step by step reasoning, answer the question with yes or no.
+
+**answer: yes**"
+annotations/01/1425.eng,two single beds made of wood with white bedcovers in a room with white walls and a window with brownish green curtains,Are the bedcovers near the bed?,YN,Yes,"Yes, No",1.0,True,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes: two single beds made of wood with white bedcovers in a room with white walls and a window with brownish green curtains.
+3. key spatial relation mentioned: the bedcovers are on top of the beds.
+
+answer: yes",yes,yes,"**step 1: read the context and question**
+
+the context describes two single beds made of wood with white bedcovers in a room with white walls and a window with brownish green curtains. the question asks if the bedcovers are near the bed.
+
+**step 2: identify the key objects and their attributes**
+
+* two single beds
+* white bedcovers
+* white walls
+* window with brownish green curtains
+
+**step 3: based on step by step reasoning, answer the question with yes or no**
+
+yes, the bedcovers are near the bed. they are located on the bed, which is placed near the window."
+annotations/01/1235.eng,"a room with grey walls , a single bed with green , yellow and purple stripes and a bed table on both sides",Is the table near the bed?,YN,Yes,"Yes, No",1.0,False,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes: room with grey walls, single bed with green, yellow, and purple stripes, and two tables (one on each side of the bed).
+3. based on spatial relations mentioned in the question: ""near"" implies proximity to the bed.
+
+answer: yes",yes,"based on step by step reasoning:
+
+1. read context carefully (a room with grey walls, single bed with green, yellow and purple stripes, a table on both sides).
+2. identify key objects - the bed and tables; their attributes are color of the bed's stripes and that there is a table near each side of the bed. 
+3. answer question based on reasoning: yes","**step 1: read the context and question**
+
+the context describes a room with grey walls. the bed has green, yellow, and purple stripes. there is a bed table on both sides of the bed.
+
+**step 2: identify the key objects and their attributes**
+
+* grey walls
+* single bed with green, yellow, and purple stripes
+* bed table on both sides of the bed
+
+**step 3: based on step by step reasoning, answer the question with yes or no**
+
+the table is not near the bed. therefore, the answer is no."
+annotations/01/1335.eng,"Front view of a house made of red bricks , with large wooden windows and white curtains",Is the red thing touching the house?,YN,Yes,"Yes, No",1.0,True,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes:
+	* the house is made of red bricks.
+	* there are large wooden windows.
+	* there are white curtains.
+3. spatial relations mentioned in the question: none.
+
+answer: no",yes,"based on step by step reasoning:
+
+1. read context - a front view of a brick-made house with large wooden windows and white curtains is given.
+2. identify key objects/attributes & spatial relations in the question - the red thing (likely referring to something within or related to the house) touching it? 
+3. answer based on reasoning: no, because there's no mention of a ""red"" object that could be physically touching the brick-made structure of the house itself. it might refer to curtains if they are red in color but not necessarily 'touching'. so without further context it is safer to assume no.","**step 1: read the context and question**
+
+the context describes a front view of a house made of red bricks, with large wooden windows and white curtains. the question is asking if the red thing is touching the house.
+
+**step 2: identify the key objects and their attributes**
+
+* red thing: this could be a window, a door, a chimney, or any other object that is red and touches the house.
+* house: this is the main object of the question.
+* wooden windows and white curtains: these are the two main objects that are touching the house.
+
+**step 3: based on step by step reasoning, answer the question with yes or no**
+
+yes, the red thing is touching the house. the red thing is a window, and the house is the main object of the question."
+images/01/1172.jpg,"a room with a grey and turquoise wall and a single bed on the left and on the right , with a white mattress and a blue and grey blanket on top of it . there is also a sleeping bag on the bed on the left and a backpack next to it . there is a fireplace with some ash in between .",Is the ash contain the fireplace?,YN,No,"Yes, No",,,no,no,no,answer: yes,"**step 1:** read the context and question.
+
+the context describes a room with a grey and turquoise wall, a single bed, a white mattress, a blue and grey blanket, a sleeping bag, and a backpack.
+
+**step 2:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* **objects:** bed, fireplace, ash
+* **attributes:** colour (grey and turquoise), shape (single bed), material (mattress, blanket, sleeping bag, fireplace)
+* **spatial relations:** bed is next to the fireplace, fireplace is next to the bed
+
+**step 3:** based on step by step reasoning, answer the question with yes or no.
+
+the ash is a part of the fireplace, so it is contained by the fireplace. therefore, the answer is **yes**."
+annotations/01/1355.eng,"a grey car in front of a three-storey building with white walls and wide windows there is a thatched roof above the entrance on the ground floor , and there are a few people in front of the house",Are the people behind the windows?,YN,No,"Yes, No",2.0,False,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes:
+	* grey car in front of a three-storey building with white walls and wide windows.
+	* thatched roof above the entrance on the ground floor.
+	* a few people in front of the house.
+3. based on step-by-step reasoning:
+
+the question asks if the people are behind the windows. since the people are standing in front of the house, not inside or behind the windows, the answer is:
+
+candidate_answers: no",no,no,"**step 1:** read the context and question.
+
+the context describes a grey car in front of a three-storey building with white walls and wide windows. there is a thatched roof above the entrance on the ground floor, and there are a few people in front of the house.
+
+**step 2:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* key object: grey car
+* attributes: colour, shape, size
+* spatial relations: in front of, above
+
+**step 3:** based on step by step reasoning, answer the question with yes or no.
+
+**answer: yes**
+
+the people are behind the windows, as they are located in front of the building."
+annotations/00/848.eng,"a dark-skinned , dark-haired boy in a blue , white and orange striped jumper is standing in a classroom a girl is sitting at a desk behind him two comic figures on the wall in the background",Is the boy have the blue thing?,YN,No,"Yes, No",,True,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes:
+	* the boy has a blue, white, and orange striped jumper (not a ""blue thing"").
+3. spatial relations mentioned in the question: none.
+
+answer: no",yes,yes,"**step 1:** read the context and question carefully.
+
+the context describes a dark-skinned, dark-haired boy in a blue, white, and orange striped jumper standing in a classroom. two comic figures are also on the wall in the background.
+
+**step 2:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* **object:** boy
+* **color:** blue, white, and orange
+* **shape:** no specific shape mentioned
+* **spatial relation:** standing in a classroom
+
+**step 3:** based on step by step reasoning, answer the question with yes or no.
+
+**answer: yes**"
+annotations/01/1215.eng,"a room with white walls , ( red with blue squares behind the ) two single beds with white and blue striped bedcover",Is the red thing in front of the striped things?,YN,Yes,"Yes, No",,False,yes,"i'll follow the steps to answer the question.
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes:
+	* red thing (unknown shape or size)
+	* striped things (bedcovers on single beds)
+3. based on step-by-step reasoning:
+	* the red thing is mentioned as being behind the blue squares, which are presumably a wall or a screen.
+	* the striped things are bedcovers on single beds, and they're not explicitly mentioned to be in front of anything.
+
+answer: no",no,no,"**step 1:** read the context and question.
+
+the context describes a room with white walls. the question asks if the red thing is in front of the striped things.
+
+**step 2:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* red thing: the red thing is not specified in the context, so it is not a key object.
+* striped things: the striped things are also not specified in the context, so they are also not key objects.
+* white walls: the white walls are a key object, as they are mentioned in the context.
+* two single beds: the two single beds are also key objects, as they are mentioned in the context.
+
+**step 3:** based on step by step reasoning, answer the question with yes or no.
+
+the red thing is not in front of the striped things, so the answer is no."
+annotations/00/828.eng,"a dark-skinned , dark-haired boy wearing a grey pullover is sitting at his desk in his classroom there are some of his classmates in the background",Are the classmates in front of the grey thing?,YN,No,"Yes, No",2.0,False,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the boy is sitting at his desk with a grey pullover.
+	* there are classmates in the background.
+3. answer the question based on spatial reasoning:
+	* since the classmates are in the background, they cannot be in front of the grey thing (the pullover).
+
+answer: no",yes,no,"**step 1:** read the context and question carefully.
+
+the context describes a dark-skinned, dark-haired boy sitting at his desk in his classroom. there are some classmates in the background.
+
+**step 2:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* **objects:** the key object is the dark-skinned, dark-haired boy.
+* **attributes:** the boy is wearing a grey pullover.
+* **spatial relations:** the boy is sitting at his desk, which is located in the classroom.
+
+**step 3:** based on step by step reasoning, answer the question with yes or no.
+
+**answer: yes**"
+images/00/719.jpg,"a volunteer , squatting down and browsing through a school book . school children around her , looking at the book too . in the background there is a table with school equipment on it . the kid in the foreground is holding a pencil .",Are the other boys above the book?,YN,No,"Yes, No",1.0,,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the volunteer is squatting down and browsing through a school book.
+	* school children are around her, looking at the book too.
+	* in the background, there is a table with school equipment on it.
+	* the kid in the foreground is holding a pencil.
+
+3. based on step-by-step reasoning:
+	* since the volunteer is squatting down and browsing through the book, she is likely below the level of the book.
+	* the other boys are around her, looking at the book too, which means they are also likely to be below the level of the book, since they are standing or sitting near the volunteer.
+
+answer: no",no,no,"**step 1:**
+
+* read the context and question carefully.
+* identify the key objects and their attributes:
+    * book
+    * table with school equipment
+    * kids around the book
+    * pencil
+* the pencil is the object that is being held and is above the book.
+
+**step 2:**
+
+* based on the key objects and their attributes, we can conclude that the other boys are above the book.
+
+**answer: yes**"
+annotations/01/1353.eng,"White , three story building flat roof upper level has balcony wooden roof over entrance",Is the wooden thing over the entrance?,YN,Yes,"Yes, No",,True,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes:
+	* the building has a flat roof (upper level).
+	* there is a balcony with a wooden roof over the entrance.
+3. based on spatial relations mentioned in the question:
+	* the wooden roof is over the entrance.
+
+answer: yes",yes,yes,"**step 1: read the context and question**
+
+the context describes a white building with a three-story flat roof. the upper level of the building has a balcony with a wooden roof over the entrance.
+
+**step 2: identify the key objects and their attributes**
+
+* white building
+* three-story flat roof
+* balcony
+* wooden roof
+
+**step 3: based on step by step reasoning, answer the question with yes or no**
+
+yes, the wooden roof is over the entrance."
+annotations/01/1389.eng,"a bald room with white walls , two bunk beds made of wood with white bedcovers , towels and pillows ( white and orange )",Is the white and orange things contain the beds?,YN,Yes,"Yes, No",,True,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the white and orange things are towels and pillows.
+	* the beds are two bunk beds made of wood with white bedcovers.
+3. based on step-by-step reasoning:
+
+the white and orange things (towels and pillows) are not contained within the beds. they are separate objects placed in the room.
+
+answer: **no**",yes,no,"**step 1: read the context and question**
+
+the context describes a room with white walls and white bedcovers, towels, and pillows. the question asks if the white and orange things contain the beds.
+
+**step 2: identify the key objects and their attributes**
+
+* white walls
+* two bunk beds made of wood with white bedcovers, towels, and pillows (white and orange)
+
+**step 3: based on step by step reasoning, answer the question with yes or no**
+
+the white and orange things are part of the beds, so the answer is yes."
+annotations/01/1361.eng,"a white house with two large windows with wooden frames , two wooden pillars at the terrace with wooden benches and a wooden table there are mountains in the background on the right",Are the mountains to the left of the windows?,YN,No,"Yes, No",2.0,False,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the white house with two large windows with wooden frames.
+	* the mountains are in the background on the right.
+3. answer the question based on step-by-step reasoning:
+	* since the mountains are in the background on the right, they cannot be to the left of the windows.
+
+answer: no","""no""",no,"**step 1:** read the context and question.
+
+the context describes a white house with two large windows, two wooden pillars at the terrace with wooden benches and a wooden table, and mountains in the background on the right.
+
+**step 2:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* **objects:** white house, windows, pillars, terrace, table, mountains
+* **attributes:** wooden, two, large, wooden, two, wooden, wooden, mountains
+
+**step 3:** based on step by step reasoning, answer the question with yes or no.
+
+**answer: yes**
+
+the mountains are to the left of the windows."
+images/01/1040.jpg,arched entrance to a hotel with a revolving glass door and a well exposed flower pot on each side of the entrance .,Is the Pot above the hotel?,YN,No,"Yes, No",3.0,,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the arched entrance to a hotel with a revolving glass door.
+	* well-exposed flower pots on each side of the entrance.
+3. based on step-by-step reasoning:
+
+the pots are located on either side of the entrance, which means they are below the level of the entrance and the hotel itself.
+
+answer: **no**",no,no,"**step 1: read the context and question**
+
+the context describes an arched entrance to a hotel with a revolving glass door and flower pots on either side of the entrance. the question asks if the pot is above the hotel.
+
+**step 2: identify the key objects and their attributes**
+
+* **objects:** hotel, glass door, flower pot
+* **attributes:** shape (arched), material (glass), size (large)
+
+**step 3: based on step by step reasoning, answer the question with yes or no**
+
+yes, the pot is above the hotel."
+annotations/00/818.eng,"a dark-skinned , dark-haired girl in red vest is sitting outside boulders in background",Is the hair behind the boulders?,YN,Yes,"Yes, No",,False,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes: girl, hair, boulders.
+3. spatial relations mentioned in the question: ""outside"" (implies the boulders are behind the girl).
+
+answer: no",no,no,"**step 1: read the context and question**
+
+the context describes a dark-skinned, dark-haired girl in a red vest sitting outside boulders. the question is asking if her hair is behind the boulders.
+
+**step 2: identify the key objects and their attributes**
+
+* girl: dark-skinned, dark-haired
+* boulders: not specified in the context
+
+**step 3: based on step by step reasoning, answer the question with yes or no**
+
+yes, the hair is behind the boulders."
+images/00/943.jpg,"a dark-skinned boy wearing a black Nike cap , a chequered shirt and a red jacket ( that is black inside ) is standing in the meadow behind a house . a dark-skinned boy wearing a black Nike cap , a chequered shirt and a red jacket ( that is black inside ) is standing in the meadow behind a house .. some rocks and stones in the background .",Is the cap in front of the rocks?,YN,Yes,"Yes, No",,True,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the dark- skinned boy wearing a black nike cap, chequered shirt, and red jacket (black inside) is standing in the meadow behind a house.
+	* some rocks and stones are in the background.
+3. based on step-by-step reasoning:
+
+the question asks if the cap is in front of the rocks. since the boy is standing behind the house, it's likely that the rocks are behind him as well.
+
+answer: no",no,no,"**step 1:** identify the key objects and their attributes.
+
+* dark-skinned boy: yes
+* black nike cap: yes
+* checkered shirt: yes
+* red jacket: yes
+* rocks and stones: no
+
+**step 2:** based on step by step reasoning, answer the question with yes or no.
+
+**answer: yes**"
+annotations/01/1357.eng,"a room with walls painted in green and red , a double bed with a light and dark brown striped blanket , a night table with a lamp on the left and a door and two windows in the background",Is the door behind the table?,YN,Yes,"Yes, No",,False,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify key objects and their attributes:
+	* room with green and red walls
+	* double bed with light and dark brown striped blanket
+	* night table with lamp on left side
+	* door and two windows in background
+3. answer the question based on spatial reasoning:
+the night table is described as having a lamp on its left side, which implies that it's positioned near the door and windows. the door and windows are mentioned to be in the background, which suggests they're farther away from the bed and night table.
+conclusion: the door is not behind the table.
+
+answer: no",no,no,"**step 1:**
+
+* read the context and question carefully.
+* the room has walls painted in green and red.
+* the double bed has a light and dark brown striped blanket.
+* the night table has a lamp on the left and a door and two windows in the background.
+
+**step 2:**
+
+* identify the key objects and their attributes:
+    * walls: green and red paint
+    * bed: light and dark brown striped blanket
+    * night table: lamp on the left
+    * door: present
+    * windows: two
+
+**step 3:**
+
+* based on the information gathered, the door is located behind the table.
+* therefore, the answer is **yes**."
+annotations/01/1205.eng,"a brown house with large windows and flags above the entrance , and the white writing Hotel Peregrino",Is the entrance under the large things?,YN,Yes,"Yes, No",,False,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the brown house with large windows and flags above the entrance.
+3. answer the question based on spatial reasoning:
+the entrance is not under the large things (flags). therefore, the answer is:
+
+candidate_answers: no",yes,no,"**step 1: read the context and question**
+
+the context describes a brown house with large windows and flags above the entrance. the question asks if the entrance is under the large things.
+
+**step 2: identify the key objects and their attributes**
+
+* brown house: this is the main object in the context.
+* large windows: these are objects that are part of the house and have large windows.
+* flags: these are objects that are attached to the entrance and are large.
+* hotel peregrino: this is the name of the hotel.
+
+**step 3: based on step by step reasoning, answer the question with yes or no**
+
+yes, the entrance is under the large things."
+images/01/1126.jpg,"a room with walls made of wood and a large window with white curtains on the left . there is a double bed with a red bedcover in the centre , with an orange mosquito net above it .",Is the red thing over the net?,YN,No,"Yes, No",,,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes:
+	* the room has walls made of wood.
+	* there is a large window with white curtains on the left.
+	* there is a double bed with a red bedcover in the center.
+	* above the bed, there is an orange mosquito net.
+3. answer the question based on spatial reasoning:
+
+the red thing (bedcover) is not directly over the net; it's below the net.
+
+answer: no",yes,answer: no,"**step 1:**
+
+* read the context and question carefully.
+* the context describes a room with walls made of wood, a large window with white curtains, a double bed with a red bedcover, and an orange mosquito net above it.
+* the question asks if the red thing is over the net.
+
+**step 2:**
+
+* identify the key objects and their attributes:
+    * walls: made of wood
+    * window: large, white curtains
+    * bed: double, red bedcover
+    * mosquito net: orange
+
+**step 3:**
+
+* based on the information gathered, the red thing is located on the bed, which is placed on the window sill.
+* therefore, the red thing is over the net.
+
+**answer: yes**"
+annotations/01/1220.eng,"a white , brown and green four-storey building with a Peruvian flag and the writing Hotel San Miguel on the roof there are two street lamps and three small palm trees in the foreground",Is the lamps in front of the flag?,YN,Yes,"Yes, No",,False,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the peruvian flag is located on the roof of the building.
+	* there are two street lamps in the foreground.
+3. based on step-by-step reasoning: 
+	* the lamps are in front of the palm trees (since they are in the foreground).
+	* the flag is on the roof, which means it's above the lamps and palm trees.
+
+answer: no","yes (or no, depending on the specific layout and arrangement in the scene)",no,"**step 1:** read the context and question carefully.
+
+the context describes a white, brown, and green four-storey building with a peruvian flag on the roof. there are two street lamps and three small palm trees in the foreground.
+
+**step 2:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* **objects:**
+    * building
+    * flag
+    * street lamps
+    * palm trees
+* **attributes:**
+    * building: color (white, brown, green), four-storey
+    * flag: peruvian flag
+    * street lamps: number (2), type (street)
+    * palm trees: number (3), type (tree)
+
+**step 3:** based on step by step reasoning, answer the question with yes or no.
+
+**answer: yes**
+
+the lamps are in front of the flag."
+annotations/00/859.eng,"a dark-skinned , dark-haired boy wearing a grey jacket is standing in a classroom a girl is sitting at her desk in the background comic characters on the wall at the back",Is the grey thing touching the boy?,YN,Yes,"Yes, No",1.0,True,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes:
+	* the boy is wearing a grey jacket.
+3. spatial relations mentioned in the question:
+	* the boy is standing in a classroom.
+4. based on step-by-step reasoning, answer the question:
+the grey thing refers to the grey jacket worn by the boy. since the boy is standing, his jacket is not touching anything (like the desk or floor). therefore, i answer:
+
+candidate_answers: no",no,no,"**step 1:** read the context and question.
+
+the context describes a dark-skinned, dark-haired boy wearing a grey jacket standing in a classroom. the girl is sitting at her desk in the background, and comic characters are on the wall at the back.
+
+**step 2:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* **key object:** grey jacket
+* **attributes:** dark-skinned, dark-haired
+* **spatial relations:** touching the boy
+
+**step 3:** based on step by step reasoning, answer the question with yes or no.
+
+**answer: yes**"
+annotations/01/1202.eng,"a king-sized bed with a white and grey bedcover there is a night table to the left and a chair in front of a mirror on the right , and a painting of a half-naked woman above the bed",Is the mirror left of the table?,YN,No,"Yes, No",,False,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the king-sized bed with a white and grey bedcover.
+	* a night table to the left of the bed.
+	* a chair in front of the mirror on the right side of the bed.
+	* a painting of a half-naked woman above the bed.
+3. based on step-by-step reasoning:
+the question asks if the mirror is left of the table. however, there is no table mentioned in the context. the only object mentioned that could be considered ""left"" or ""right"" is the chair, which is in front of the mirror.
+
+answer: no",no,no,"**step 1:** read the context and question carefully.
+
+the context describes a room with a bed, a table, a chair, and a mirror. the question asks if the mirror is left of the table.
+
+**step 2:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* **objects:** bed, table, chair, mirror, painting
+* **attributes:** color (white and grey), shape (rectangular), location (to the left of the table)
+* **spatial relations:** the mirror is adjacent to the table, and the table is adjacent to the chair.
+
+**step 3:** based on step by step reasoning, answer the question with yes or no.
+
+**answer: yes**"
+annotations/00/817.eng,"a dark-skinned , dark-haired girl in a blue-and-yellow jumper is sitting outside boulders in the background",Is the boulders in front of the hair?,YN,No,"Yes, No",,False,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the boulders are outside, in the background.
+	* the girl is sitting, with dark hair.
+3. answer the question based on spatial reasoning:
+	* the boulders are behind the girl (in the background), not in front of her hair.
+
+answer: no",no,no,"**step 1:**
+
+* read the context: a dark-skinned, dark-haired girl is sitting outside boulders in the background.
+* identify key objects: the main object is the girl. the other objects are the boulders.
+
+**step 2:**
+
+* analyze spatial relations:
+    * the girl is sitting outside the boulders.
+    * the boulders are in front of the girl.
+
+**step 3:**
+
+* based on the analysis, answer: yes."
+annotations/01/1203.eng,"the entrance of a hotel there is a lamp on the left and on the right , an ornament above the entrance , a man on the way to the stairs next to a flower pot behind the entrance",Is the pot close to the man?,YN,Yes,"Yes, No",,False,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* entrance of a hotel with lamp on left and right
+	* ornament above entrance
+	* man on way to stairs next to flower pot behind entrance
+3. answer the question based on step-by-step reasoning:
+
+the man is standing next to the flower pot, which means they are physically close together. therefore, the answer is:
+
+candidate_answers: yes",yes,no,"**step 1: identify the key objects and their attributes**
+
+* lamp: color: white, shape: round
+* ornament: material: glass, color: clear
+* flower pot: material: ceramic, color: brown
+* man: gender: male, age: unknown
+
+**step 2: analyze spatial relations between objects**
+
+* the lamp is on the left side of the entrance.
+* the ornament is above the entrance.
+* the flower pot is behind the entrance.
+* the man is next to a flower pot.
+
+**step 3: answer the question**
+
+yes, the pot is close to the man."
+annotations/01/1348.eng,"Cobbled street , greenish hotel on the right a few people on the sidewalk car in the street",Is the car to the left of the green thing?,YN,Yes,"Yes, No",2.0,False,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the car is in the street.
+	* the greenish hotel is on the right side of the street.
+	* a few people are on the sidewalk.
+3. based on step-by-step reasoning:
+
+the car is not explicitly stated to be left or right of anything, but since the hotel is mentioned as being ""on the right"", it implies that the car must be somewhere in front of the hotel.
+
+answer: no",no,no,"**step 1: read the context and question**
+
+the context describes a cobbled street with a green hotel on the right side of the street with a few people walking by. the question asks if the car is to the left of the green thing.
+
+**step 2: identify the key objects and their attributes**
+
+* green thing: the green thing is the hotel.
+* location: the car is located on the sidewalk.
+
+**step 3: based on step by step reasoning, answer the question with yes or no**
+
+yes, the car is to the left of the green thing."
+images/00/950.jpg,"a dark-haired girl wearing a black hat , a yellow tee-shirt and a white vest underneath a green vest , and a necklace with white and green glass beads .",Is the hat under the beads?,YN,No,"Yes, No",,True,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes:
+	* the girl has a black hat.
+	* she wears a necklace with white and green glass beads.
+3. spatial relations mentioned in the question: ""is the hat under the beads?""
+4. answer based on step-by-step reasoning: no
+
+candidate_answers: no",no,no,"**step 1:** read the context and question.
+
+the context describes a dark-haired girl wearing a black hat, a yellow tee-shirt and a white vest underneath a green vest, and a necklace with white and green glass beads.
+
+**step 2:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* **key object:** hat
+* **attributes:** dark hair, black color
+* **spatial relations:** underneath the necklace
+
+**step 3:** based on step by step reasoning, answer the question with yes or no.
+
+**answer: yes**"
+images/01/1108.jpg,Corner view of a large building . front is mainly made of glass .,Is the glass below the front?,YN,No,"Yes, No",,,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes: the building has a front made mainly of glass.
+3. spatial relations mentioned in the question: below.
+
+answer: no",yes,no,"**step 1:** carefully read the context and question.
+
+the context describes a corner view of a large building, and the front is mainly made of glass.
+
+**step 2:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* **objects:** building, front
+* **attributes:** glass
+* **spatial relations:** below
+
+**step 3:** based on step by step reasoning, answer the question with yes or no.
+
+**answer: yes**"
+annotations/00/804.eng,"a dark-skinned , dark-haired girl in a coloured shirt is standing in front of a blue wall",Is the girl touching the shirt?,YN,Yes,"Yes, No",1.0,True,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes: the girl is dark-skinned and dark-haired, wearing a colored shirt. the blue wall is mentioned as well.
+3. based on spatial relations: since the girl is standing in front of the blue wall, it's likely that her body (including her hands) is between the wall and the shirt.
+
+answer: yes",yes,no,"**step 1: read the context and question**
+
+the context describes a dark-skinned, dark-haired girl standing in front of a blue wall. the question asks if she is touching the shirt.
+
+**step 2: identify the key objects and their attributes**
+
+* girl: dark-skinned, dark-haired
+* shirt: colourful
+* wall: blue
+
+**step 3: based on step by step reasoning, answer the question with yes or no**
+
+yes, the girl is touching the shirt."
+images/01/1090.jpg,"exterior view of a three story building . entrance and arched windows on ground floor , a coop with a rail , a balcony with several arches and columns on the second floor , balcony with columns on the third floor .",Is the coop below the balconies?,YN,Yes,"Yes, No",,,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the coop has a rail.
+	* there are balconies with arches and columns on the second floor.
+	* there is another balcony with columns on the third floor.
+3. based on step-by-step reasoning:
+
+the coop is located below the balconies because it's on the ground floor, while the balconies are on the upper floors (second and third). therefore, the answer is:
+
+candidate_answers: yes",no,no,"**step 1: identify the key objects and their attributes**
+
+* the coop has a roof.
+* the coop has walls and a door.
+* the coop has a rail.
+
+**step 2: based on step by step reasoning, answer the question with yes or no**
+
+the coop is below the balconies, so it is below the balconies.
+
+**answer: yes**"
+annotations/01/1337.eng,a room with a king-sized bed and a night table and a bedside lamp on both sides of the bed behind it a wall made of red bricks,Is the lamps behind the bricks?,YN,No,"Yes, No",,False,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the room has a king-sized bed with a night table and a bedside lamp on both sides of the bed.
+	* the lamps are behind the wall made of red bricks.
+3. based on step-by-step reasoning:
+
+the lamps are behind the bed, not directly behind the bricks. therefore, the answer is:
+candidate_answers: no",yes,no,"**step 1: read the context and question**
+
+the context describes a room with a bed, a night table, and a bedside lamp on both sides of the bed behind it. the wall is made of red bricks.
+
+**step 2: identify the key objects and their attributes**
+
+* king-sized bed
+* night table
+* bedside lamp
+* wall made of red bricks
+
+**step 3: based on step by step reasoning, answer the question with yes or no**
+
+yes, the lamps are behind the wall."
+annotations/01/1205.eng,"a brown house with large windows and flags above the entrance , and the white writing Hotel Peregrino",Is the flags under the entrance?,YN,No,"Yes, No",,False,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes, and spatial relations mentioned in the question:
+	* the flags are above the entrance.
+3. answer the question with yes or no:
+candidate_answers: no",yes,yes,"**step 1:** read the context and question carefully.
+
+the context describes a brown house with large windows and flags above the entrance.
+
+**step 2:** identify the key objects and their attributes, and spatial relations mentioned in the question.
+
+* **objects:** brown house, flags
+* **attributes:** large windows, flags
+* **spatial relations:** under the entrance
+
+**step 3:** based on step by step reasoning, answer the question with yes or no.
+
+**answer: yes**"
+annotations/00/812.eng,"a dark-skinned , dark-haired girl in a grey T-Shirt is standing in a classroom a wall made of red bricks in the background",Is the grey thing behind the red thing?,YN,No,"Yes, No",2.0,False,no,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes:
+	* the girl has dark skin and dark hair.
+	* she is wearing a grey t-shirt.
+	* the wall behind her is made of red bricks.
+3. based on spatial relations mentioned in the question:
+	* the grey thing (t-shirt) is worn by the girl.
+	* the red thing (bricks) is the background.
+
+answer: yes",yes,no,"**step 1: read the context and question**
+
+the context describes a dark-skinned, dark-haired girl standing in a classroom. the wall is made of red bricks. the question is asking if the grey thing is behind the red thing.
+
+**step 2: identify the key objects and their attributes**
+
+* girl: dark-skinned, dark-haired
+* wall: red bricks
+
+**step 3: based on step by step reasoning, answer the question with yes or no**
+
+yes, the grey thing is behind the red thing."
+images/00/960.jpg,"a dark-skinned , dark-haired boy wearing a grey cap and a dark and light grey jumper with a black zip , in front of a white wall .",Is the black thing above the white thing?,YN,No,"Yes, No",1.0,True,yes,"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes:
+	* the boy has a black zip on his jumper.
+	* there is a white wall in the background.
+3. spatial relations mentioned: none explicitly, but we can infer that the boy is standing in front of the wall.
+
+answer: yes",no,no,"**step 1:**
+
+* the context describes a dark-skinned , dark-haired boy wearing a grey cap and a dark and light grey jumper with a black zip.
+* the question asks if the black thing is above the white thing.
+
+**step 2:**
+
+* based on the context, the key objects are the boy, the cap, the jumper, and the wall.
+* the black thing is not mentioned in the context, so it is not relevant to the question.
+* the white thing is also not mentioned in the context, so it is also not relevant to the question.
+
+**step 3:**
+
+* therefore, based on the context and reasoning, the answer is **no**."

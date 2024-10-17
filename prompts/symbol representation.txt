@@ -1,0 +1,4 @@
+ Given the {context} and {question}, please choose the best answer from the {choices}.
+ To assist question answering, please first identify main components (blocks and objects), then use color_size_shape to describe each object. 
+ Use the symbols for relationship, touching:=, near: ~, far:!~, adjacent:|, between: ↔, inside: ⊂, contains: ⊃, up: ↑, down: ↓, left: ←, right: →; 
+ Restate the question using symbols, and provide the best answer or answers based on the symbolic representation of context and question. 

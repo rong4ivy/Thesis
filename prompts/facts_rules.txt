@@ -1,0 +1,28 @@
+Fact_Rule_prompt = """
+   Your are tasked with analyzing with a given context to answer a specific spatial question. Please follow the following instructions:
+ 1. identify ALL FACTS in EVERY SETENCE of context, and represent every sentence as facts, convert the question into query.
+    Use only three predicates with the exact number of arguments, "block/1, relation/2, and object/5" to represent the facts.
+        - block(name), eg. block(a). block(a;b;c).
+        - object(distinct_name,block_located), eg. object(large_blue_triangle,  a). object(blue_oval,, b).
+        - relation(object1, object2), eg. left(large_blue_triangle, blue_oval), above(a, b).
+2. Analyze the given facts, highlight and explain the key information in the facts of the context that directly relate to the query. 
+3. Draw connections between the query and facts. If the query can be solved by the given facts, answer the question directly. 
+4. If query can not be solved by the facts, apply relevant spatiail logical rules to infer new spatial relation and choose the best answer from the choices. 
+   You may find the following logical rules is helpful for you to answer the questions.
+   % Inverse Relations: If A [Relation1] B, then B [Relation2] A.
+  - Examples: 
+     * front <-> behind * in <-> contain * cover <-> covered_by * above <-> below * left_of <-> right_of * near <-> far
+     * on <-> under * inside <-> outside * up <-> down * far <-> close
+  % Symmetric Relations: If A [Relation] B, then B [Relation] A.
+   - Examples: near, far, touching, adjacent, next_to, disconnected, alongside
+  % Transitive Relations: If A [Relation] B and B [Relation] C, then A [Relation] C.
+   - Examples: above, below, left, right, contain, in, on, inside
+  % Inter-block Object Relationships: If Object1 is in Block1, Object2 is in Block2, and Block1 [Relation] Block2, 
+     then Object1 [Relation] Object2.
+5.	Verify:  Cross-check your answer and explanation against the original context, referencing facts and the logical rules. 
+6.	Output your response in the following JSON format.
+{ "facts": "your fact representation ",
+  "answer": "Your final answer to the question",
+  "reasoning": "A brief explanation of your reasoning, referencing the logical rules",}
+Critical: Adhere strictly to the output json format. Do not include any additional explanation or text outside of the specified sections.
+"""

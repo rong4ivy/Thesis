@@ -1,0 +1,1679 @@
+Story,Question,Q_type,Candidate_Answers,Answer,Reasoning_type,ollama/openchat,ollama/llama3,ollama/mistral,ollama/phi3:mini,ollama/gemma:2b
+"There is a block called A. Inside there's a red oval that is above a blue triangle. The blue triangle is touching the right edge of A and the top of a large black square. Touching the bottom edge of A is  a small orange square. The is a block called B Which is to the right and touching A. Inside B there are 5 triangles, a red one, a green one, a large yellow one, a brown one, and an orange one. The red and orange triangles are touching the left edge of B and the orange triangle is above the red triangle. The large yellow triangle is touching the top edge of B. The green triangle is touching the right edge of B. The brown triangle is below all of the other triangles and is touching the bottom of B.",Is the green thing above the yellow thing?,YN,"['Yes', 'No', 'DK']",['No'],['Symmetry'],no,"based on step-by-step reasoning:
+
+* the large yellow triangle is touching the top edge of b.
+* the green triangle is touching the right edge of b.
+* since the green triangle is touching the right edge, it cannot be above the yellow triangle.
+
+therefore, the answer is:
+
+['no']",'no',no,"**step 1:** identify the key objects and their attributes:
+
+- block a: red oval, blue triangle, large black square, small orange square.
+- block b: 5 triangles (red, green, yellow, brown, orange).
+
+**step 2:** based on the context, the green thing is above the yellow thing.
+
+**answer: yes**"
+"There is a block named A. In A, there is a pink triangle that touches the bottom of A. There is also a white triangle that touches the left edge of A, a red triangle that touches the top of A, and a green triangle that touches the right edge of A. Below A there is a block called B. In B, there is a small square, a large square, and a yellow circle. The large square is to the right of and near the yellow circle. The yellow circe is to the right of and above the small square. Below B there is a blocked named C. In C, there is a brown oval that is on top of a blue rectangle.",Is the small thing to the left of the yellow thing?,YN,"['Yes', 'No', 'DK']",['Yes'],['Converse'],yes,"based on step-by-step reasoning:
+
+* the yellow circle is above and to the right of the small square.
+* there are no other objects mentioned that could be considered ""left"" of the yellow circle, as it's already described in relation to the small square.
+
+therefore, i choose:
+
+['yes']",'no',no,"**step 1:** identify the key objects and their attributes:
+
+- block a:
+    - pink triangle that touches the bottom
+    - white triangle that touches the left edge
+    - red triangle that touches the top
+    - green triangle that touches the right edge
+
+- block b:
+    - small square
+    - large square
+    - yellow circle
+
+- block c:
+    - brown oval on top of a blue rectangle
+
+**step 2:** based on"
+"There is a block called A. In A, there is a medium black triangle that is near and below a medium blue triangle. The medium blue triangle is far below a large blue circle. The large circle is near and below a small blue triangle. There is a block called B, Which is to the right of A. In B, there is a small yellow circle far above a large yellow square. There is also a large blue triangle near and to the right of large yellow square. There is another block called C, Which is to the right of B. In C, there is a large black triangle that is far below a large blue triangle. The large blue triangle is far below a small blue triangle.",Is the large yellow thing far below a small yellow thing?,YN,"['Yes', 'No', 'DK']",['Yes'],"['Symmetry', ' Converse']",no,"based on step-by-step reasoning:
+
+* in block b, there is a large yellow square and a small yellow circle. the small yellow circle is far above the large yellow square.
+* there is no mention of any other yellow objects in blocks a or c.
+
+therefore, the answer is:
+
+['yes']",yes,no,"**step 1:** identify the key objects and their attributes:
+
+- block a:
+    - medium black triangle
+    - medium blue triangle (far below a large blue circle)
+    - large blue triangle (near and to the right of the large yellow square)
+- block b:
+    - small yellow circle (far above a large yellow square)
+    - large yellow square
+- block c:
+    - large black triangle (far below a large blue triangle)"
+"There is three blocks called A, B, C. Block A has two big blue shapes to the left of a big yellow triangle. There is also a little triangle to the left of blue objects. there is a big black triangle touching the bottom edge of block B. A medium circle is at top of the block B and a small blue circle is near to it. Block C is left to the blocks A and B. It has two medium triangles. one of them is to the right of the other.",Which block has a triangle to the right of another triangle?,FB,"['A', 'B', 'C']","['A', 'B', 'C']","['Converse', ' Lists/Sets']",c,"based on step-by-step reasoning:
+
+* block a has a little triangle to the left of blue objects.
+* block b has a big black triangle touching the bottom edge, and two triangles (medium circle at top).
+* block c has two medium triangles, one to the right of the other.
+
+answer: ['c']",'c',c,"**step 1:** identify the key objects and their attributes:
+
+- block a: two big blue shapes, big yellow triangle, a little triangle to the left of blue objects.
+- block b: big black triangle touching the bottom edge of block b, a medium circle at the top, and a small blue circle near to it.
+- block c: two medium triangles.
+
+**step 2:** based on the context, the block with a triangle to the right of another triangle"
+"There is three blocks called A, B, C. Block A has two big blue shapes to the left of a big yellow triangle. There is also a little triangle to the left of blue objects. there is a big black triangle touching the bottom edge of block B. A medium circle is at top of the block B and a small blue circle is near to it. Block C is left to the blocks A and B. It has two medium triangles. one of them is to the right of the other.",Is small blue circle in block B at the top of block B?,YN,"['Yes', 'No', 'DK']",['Yes'],,no,"based on step-by-step reasoning:
+
+* block a has a big yellow triangle to the left of two big blue shapes.
+* there is a little triangle to the left of the blue objects, which means it's not near the big yellow triangle.
+* block b has a medium circle at the top and a small blue circle near it. the big black triangle touches the bottom edge of block b.
+* block c is to the left of blocks a and b and has two medium triangles, one right of",'no',no,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- block a: two big blue shapes to the left of a big yellow triangle.
+- block b: a little triangle to the left of blue objects.
+- block c: two medium triangles.
+- big circle: at top of block b.
+- small blue circle: near to the big circle.
+
+**step 2:** based on step by step reasoning, choose the appropriate answer("
+There is a block called A. It has a big blue circle and a red square. The big blue circle is below the red square. There is another block called B Which is above block A. There are a small blue circle and a yellow square in this block. The small blue circle is to the left of the yellow square.,What is above the circle that is below a circle? the yellow square  or  the red square?,CO,"[' the yellow square ', ' the red square', 'both of them', 'none of them']",['both of them'],"['Lists/Sets', ' Converse']",'the red square',"based on step-by-step reasoning:
+
+1. carefully read the context and question.
+2. identify the key objects and their attributes mentioned in the question:
+	* block a has a big blue circle below a red square.
+	* block b is above block a, with a small blue circle to the left of a yellow square.
+3. based on step-by-step reasoning:
+
+the question asks what is above the circle that is below a circle. the ""circle"" refers to the big blue circle",'the red square',both of them,"**step 1:** identify the key objects and their attributes.
+
+- block a:
+    - big blue circle: has a big blue circle and a red square below it.
+    - red square: has a big blue circle and a red square below it.
+
+- block b:
+    - small blue circle: to the left of the yellow square.
+    - yellow square: has a small blue circle and a yellow square below it.
+
+**step 2:** based"
+"There are three blocks called A, B and C. B is to the left of A and C is to the left of B. In A, there is a large blue triangle that is near and to the right of a medium yellow circle. There is also a large black square near and to the left of the medium yellow circle. In B, there is a medium yellow triangle that is near and above a large black square. Near and below the black square is a medium blue circle. In C, there is a small blue triangle to the right of a small black triangle. Near and to the left of the of the small black triangle is a large blue triangle.",What is the relation between the large black thing in B and the medium yellow thing in B?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']","['below', 'near to']","['Converse', ' Symmetry']",near to,"based on step-by-step reasoning:
+
+* in b, there is a large black square near and above a medium yellow triangle.
+* the relation between the large black thing (square) and the medium yellow thing (triangle) is ""above"".
+
+answer: ['above']",above,below,"**step 1:** identify the key objects and their attributes:
+
+- b:
+    - medium yellow triangle
+    - large black square
+    - medium blue circle
+
+- a:
+    - large blue triangle
+    - medium yellow circle
+
+- c:
+    - small blue triangle
+    - small black triangle
+
+**step 2:** based on the context, the large black thing in b and the medium yellow thing in b are related as they are both located in the"
+"There are two blocks called A and B. A is to the right of B. In A, there is a blue triangle, Which is above a orange rectangle, Which is above a black circle. The black circle is touching the bottom of A. In B there are four squares. A yellow square is above a white square and to the left of a green square. A large purple square is touching the bottom of B and is to the left and near of the white square. The green square is on top of the purple square.",What is the relation between the purple objects and green objects?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']",['below'],['Converse'],"['near to', 'touching']","[left, near to]",'near to',near to,"**step 1:** identify the key objects and their attributes.
+
+- purple objects: large, purple square
+- green objects: large, purple square
+- black circle: touching the bottom of a, above the orange rectangle, above the white square
+
+**step 2:** based on step by step reasoning, select the appropriate answer(s) from the given candidate answers.
+
+- the purple objects and green objects are touching, therefore they are related.
+
+**answer: ['touch"
+"There are three blocks called A, B, and C. A is to the left of B Which is to the left of C. In A, there is a large black triangle near and above a large black square. To the right of the black triangle is a large blue triangle. In B, there is a medium yellow square near and below a small blue circle. In C, there is a small blue square far above a small yellow square. There is a small blue circle to the right of the small yellow square. There is a medium yellow circle near and to the right of the small blue circle. There is also a medium blue circle below the medium yellow circle.",What block does not have any yellow objects inside?,FB,"['A', 'B', 'C']",['A'],"['Negation', ' Quantifier']",b,[a],'c',b,"**step 1:** identify the key objects and their attributes:
+
+- a: large black triangle near and above a large black square
+- b: medium yellow square near and below a small blue circle
+- c: small blue square far above a small yellow square
+- a: small blue circle to the right of the small yellow square
+
+**step 2:** based on the context, the block that does not have any yellow objects inside is **c**.
+
+**answer: c**"
+"There are three blocks called A, B, and C. A is to the right of B and B is to the right of C. In A, there is a small blue triangle. In B, there is a large blue circle near and to the right of a small yellow square. The yellow square is near and to the right of a small black circle. In C, there is a small yellow circle near and below a medium black triangle. There is a small blue square near and above the black triangle.",Is medium black thing near and above a small yellow thing?,YN,"['Yes', 'No', 'DK']",['Yes'],"['Converse', ' Symmetry']",yes,"based on step-by-step reasoning:
+
+* c is to the left of b and a.
+* in c, there is a medium black triangle near and above a small yellow circle.
+* there is no mention of any other small yellow thing in the context.
+
+therefore, the answer is:
+
+['yes']",yes,yes,"**step 1:** identify the key objects and their attributes:
+
+- a: small blue triangle
+- b: large blue circle
+- c: small yellow circle
+- c: medium black triangle
+
+**step 2:** based on the context, the medium black thing is located near and above a small yellow thing.
+
+**answer: yes**"
+"There are three blocks called A, B, and C. In A, there is a large blue circle that is near and to the left of a large yellow circle. There is also a medium black triangle below the blue circle. In B, Which is to the right of A, there are three small blue circles far above two small black triangles. C is to the right of B. In C, there is a large blue triangle that is near and to the left of a medium black circle. There is also a large black triangle near and below the large blue triangle.",What block does not have a large object inside of it?,FB,"['A', 'B', 'C']",['B'],['Negation'],b,"based on step-by-step reasoning:
+
+* block a has a large blue circle and a medium black triangle.
+* block b has three small blue circles and two small black triangles.
+* block c has a large blue triangle, a medium black circle, and a large black triangle.
+
+therefore, the answer is: ['b']","'dk' (don't know). the question asks for the block that does not have a large object inside of it. however, in the given context, we are only told about the objects within each block but not their sizes. therefore, without knowing the size of the objects, it is impossible to determine which block does not contain a large object.",b,"**step 1:** identify the key objects and their attributes:
+
+- block a:
+    - large blue circle near and to the left of a large yellow circle
+    - medium black triangle below the blue circle
+- block b:
+    - three small blue circles far above two small black triangles
+- block c:
+    - large blue triangle near and to the left of a medium black circle
+    - large black triangle near and below the large blue triangle
+
+**step"
+"There is a block called A. In A, there is a medium black triangle that is near and below a medium blue triangle. The medium blue triangle is far below a large blue circle. The large circle is near and below a small blue triangle. There is a block called B, Which is to the right of A. In B, there is a small yellow circle far above a large yellow square. There is also a large blue triangle near and to the right of large yellow square. There is another block called C, Which is to the right of B. In C, there is a large black triangle that is far below a large blue triangle. The large blue triangle is far below a small blue triangle.",What is the relation between the large yellow thing and the small yellow thing?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']","['below', 'far from']","['Symmetry', ' Converse']",'dk',"based on step-by-step reasoning:
+
+* the large yellow thing is a square.
+* the small yellow thing is a circle.
+* in block b, the small yellow circle is far above a large yellow square.
+
+therefore, the relation between the large yellow thing and the small yellow thing is:
+
+['above']",'far from',below,"**step 1:** identify the key objects and their attributes:
+
+- large blue circle: large, circular, far from a and b.
+- small yellow circle: small, circular, far above a and b.
+- large yellow square: large, square, far from a and c.
+- large blue triangle: large, triangular, near and to the right of large yellow square.
+- small blue triangle: small, triangular, far below a large blue triangle.
+
+**"
+"There is a block called A. In A, there is a small black square near and to the left of a large blue triangle. The large blue triangle is also to the left of and below a small yellow circle. In a block called B, Which is to the left of A, there a large blue square that is near and above a small blue circle. The small blue circle is near and above a medium yellow square. There is another block called C, Which is to the left of B. In C, there is a large yellow square that is near and to the left of a large yellow circle.",Is the small blue thing to the right of the large blue thing in B?,YN,"['Yes', 'No', 'DK']",['DK'],['No Data'],no,"based on step-by-step reasoning:
+
+* in block b, there is a large blue square and a small blue circle.
+* the small blue circle is near and above a medium yellow square.
+* since the small blue circle is above the medium yellow square, it cannot be to the right of the large blue square.
+
+therefore, the answer is: ['no']",'yes',no,"**step 1:** identify the key objects and their attributes:
+
+- a: large blue triangle
+- b: large blue square
+- c: large yellow square
+
+**step 2:** based on the context, the small blue thing is located near and to the left of the large blue thing in b.
+
+**step 3:** the answer is **yes**."
+"There are three blocks called A, B, and C. B is to the right of A and C is to the right of B. In A, there is a small yellow circle that is near and to the left of a medium blue triangle. Touching the top of the triangle is a large yellow square. In B, there is a large blue circle near and below a small blue square. There is a large black triangle far to the right of the small blue square. In C, there is a small blue triangle that is far below a medium black triangle. The black triangle was near and below a medium blue triangle.",What is the relation between the large yellow thing and the medium black thing?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']","['left', 'far from']","['Lists/Sets', ' Transitivity']",far from,"based on step-by-step reasoning:
+
+* the large yellow thing is the square in a.
+* the medium black thing is the triangle in c, which is near and below a medium blue triangle.
+
+the relation between the large yellow thing (square) and the medium black thing (triangle) is:
+
+answer: ['below']",'touching',far from,"**step 1:** identify the key objects and their attributes:
+
+- a: small yellow circle
+- b: large blue circle
+- c: small blue triangle
+
+**step 2:** analyze the relationships between the objects:
+
+- b is to the right of a
+- c is to the right of b
+
+**step 3:** based on the relationships identified, we can deduce the following:
+
+- the large yellow thing is to the left of the medium black triangle."
+"There are three blocks called A, B, and C. A is to the left of B and B is to the left of C. In A, there is a small yellow square near and to the left of a large yellow circle. The large circle is near and to the left of a large blue triangle. In B, there is a small yellow square near and below a large blue triangle. There is a medium black triangle near and above the large blue triangle. In C, there is a small black square far to the left and above a small blue circle. The blue circle is near and to the left of a large yellow square.",Is the small black thing to the right of medium black thing?,YN,"['Yes', 'No', 'DK']",['Yes'],"['Lists/Sets', ' Converse']",no,"based on step-by-step reasoning:
+
+* in a, there is a small yellow square near and to the left of a large yellow circle.
+* in b, there is a medium black triangle near and above the large blue triangle.
+* in c, there is a small black square far to the left and above a small blue circle.
+
+answer: ['yes']",'dk',no,"**step 1:** identify the key objects and their attributes:
+
+- a: small yellow square near and to the left of a large yellow circle.
+- b: small yellow square near and below a large blue triangle.
+- c: small black square far to the left and above a small blue circle.
+
+**step 2:** based on the context, the small black thing is located to the right of the medium black triangle.
+
+**answer: yes**"
+"There are three blocks called A, B and C. A is to the left of B and B is to the left of C. In A, there is a small blue circle. In B, there is a large blue triangle that is touching the top of a small yellow triangle. In C, there are four circles, a large yellow one, a small blue one, a small black one, and a large black one. The large yellow circle is touching the large black circle and is above and near the small blue circle. The small black circle is near and to the right of the small blue circle. The large black circle is above and near the small black circle.",What is the relation between the blue thing in A and the large black thing?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']","['left', 'far from']","['Lists/Sets', ' Transitivity']",near to,"[right, near to]",'near to',below,"**step 1:** identify the key objects and their attributes.
+
+* a: small blue circle
+* b: large blue triangle touching the top of a small yellow triangle
+* c: four circles, a large yellow one, a small blue one, a small black one, and a large black one
+
+**step 2:** based on step by step reasoning, the relation between the blue thing in a and the large black thing is:
+
+**answer: touching**
+
+**explanation"
+"There are three blocks called A, B, and C. A is to the left of B and B is to the left of C. In A, there is a medium yellow circle near and above a medium blue circle. There is also a large black square near and below the medium blue circle. In B, there is a medium yellow triangle near and to the left of a small blue triangle. The small blue triangle is above a medium blue triangle. The medium blue triangle is to the right of the medium yellow triangle and above a large black circle. In C, there is a medium black triangle that is near and to the left of a large blue triangle. There is a large black square near and to the right of large blue triangle.","What object is to the right of the medium blue thing in B, the large blue triangle or the large black square? the large blue triangle  or  the large black square ?",CO,"[' the large blue triangle ', ' the large black square ', 'both of them', 'none of them']",['both of them'],"['Lists/Sets', ' Converse']",'the large blue triangle',"the correct answer is:
+
+['the large blue triangle']
+
+reasoning:
+
+* in b, there are three triangles: a small blue triangle, a medium blue triangle, and a medium yellow triangle.
+* the medium blue thing mentioned in the question refers to the medium blue triangle.
+* according to the context, the medium blue triangle is above the large black circle and to the right of the medium yellow triangle.
+* therefore, the object to the right of the medium blue thing (medium blue triangle) is",'the large black square',both of them,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- a: medium yellow circle near and above a medium blue circle.
+- b: medium yellow triangle near and to the left of a small blue triangle.
+- c: medium black triangle that is near and to the left of a large blue triangle.
+- large black square near and to the right of large blue triangle.
+
+**step 2:** based on step by step reasoning, select the"
+"There are three blocks called A, B, and C. B is to the right of A and C is to the right of B. In A, there is a medium blue circle Which is near and above a small blue circle. In B, there is a large yellow triangle Which is to the right and touching a large blue triangle. There is also a small yellow triangle to the left of the large blue triangle. In C, there is a small blue circle that is far above a blue triangle. The blue triangle is to the left of a black triangle.",Is the large blue thing to the left of the large yellow thing?,YN,"['Yes', 'No', 'DK']",['Yes'],['Converse'],no,"based on step-by-step reasoning:
+
+* b is to the right of a.
+* in b, there is a large blue triangle and a small yellow triangle. the small yellow triangle is to the left of the large blue triangle.
+* therefore, the large blue thing (triangle) is to the left of the large yellow thing (triangle).
+
+answer: ['yes']",'yes',no,"**step 1:** identify the key objects and their attributes:
+
+- a: medium blue circle
+- b: large yellow triangle
+- c: small yellow triangle
+- d: large blue triangle
+
+**step 2:** based on the context, the large blue thing is located to the left of the large yellow thing.
+
+**step 3:** the correct answer is: **yes**"
+"There are three blocks called A, B, and C. In A, there is a large blue circle that is near and to the left of a large yellow circle. There is also a medium black triangle below the blue circle. In B, Which is to the right of A, there are three small blue circles far above two small black triangles. C is to the right of B. In C, there is a large blue triangle that is near and to the left of a medium black circle. There is also a large black triangle near and below the large blue triangle.",What is the relation between the large yellow thing and the medium black thing in A?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']","['above', 'near to']","['Transitivity', ' Converse']",near to,"[left, near to]",'near to',left,"**step 1:** identify the key objects and their attributes:
+
+- large blue circle in a
+- large yellow circle in a
+- medium black triangle in a
+- three small blue circles in b
+- two small black triangles in b
+- large blue triangle in c
+- large black triangle in c
+
+**step 2:** based on the context, the large yellow thing and the medium black thing in a are located next to each other in a.
+
+**answer: left"
+"There are three blocks called A, B, and C. A is to the left of B and B is to the left of C. In A, there is a small yellow square near and to the left of a large yellow circle. The large circle is near and to the left of a large blue triangle. In B, there is a small yellow square near and below a large blue triangle. There is a medium black triangle near and above the large blue triangle. In C, there is a small black square far to the left and above a small blue circle. The blue circle is near and to the left of a large yellow square.","What object is near the small black thing, the small blue circle or the large yellow square? the small blue circle  or  the large yellow square ?",CO,"[' the small blue circle ', ' the large yellow square ', 'both of them', 'none of them']",['none of them'],['Symmetry'],both of them,"the correct answer is: ['the small blue circle', 'the large yellow square']
+
+note: i've followed the steps as instructed, carefully reading the context and question, identifying key objects and their attributes, and selecting the appropriate answer based on step-by-step reasoning.",'the small blue circle',both of them,"**step 1:** identify the key objects and their attributes.
+
+- a: small yellow square near and to the left of a large yellow circle.
+- b: small yellow square near and below a large blue triangle.
+- c: small black square far to the left and above a small blue circle.
+- large yellow square.
+- large blue triangle.
+- large blue circle.
+
+**step 2:** based on step by step reasoning, the small blue circle is"
+There is a block called A. It has a big blue circle and a red square. The big blue circle is below the red square. There is another block called B Which is above block A. There are a small blue circle and a yellow square in this block. The small blue circle is to the left of the yellow square.,Where is the the square which is above a square regarding to the small object?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']",['right'],"['Lists/Sets', ' Converse']",above,"based on step-by-step reasoning:
+
+* block b is above block a.
+* the red square is in block a, below the big blue circle.
+* the yellow square is in block b, with the small blue circle to its right.
+
+the question asks about a square that is above a square regarding to the small object. since the small object is the small blue circle, and it's in block b, we need to find the square that is above it.
+
+* in block a, there is",'above',below,"**step 1:** identify the key objects and their attributes.
+
+- block a:
+    - big blue circle: has a big blue circle and a red square.
+    - red square: has a big blue circle and a red square.
+
+- block b:
+    - small blue circle: to the left of the yellow square.
+    - yellow square: has a small blue circle.
+
+**step 2:** based on step by step reasoning, select the appropriate answer"
+"There are three blocks called A, B, and C. A is on top of B and B is on top of C. In A there are 3 circles: a small red one, a green one, and a big blue one. The small red and green circles are above the big blue circle. The big blue circle is touching the bottom edge of A, and the green circle is touching the top edge of A. In B there is a orange triangle, Which is above a purple rectangle. The purple rectangle is touching the bottom edge of B. In C, there are 3 squares, a small white one, a small black one, and a large yellow one. The small white square is touching the left edge of C, while the small black square is touching the right edge of C. The large yellow square is adjacent to the white square, and is touching the bottom edge of C.",Is the red circle above the white square?,YN,"['Yes', 'No', 'DK']",['Yes'],['Transitivity'],no,"based on step-by-step reasoning:
+
+* the small red circle is in block a.
+* block a is on top of block b.
+* the white square is in block c, which is at the bottom.
+* therefore, the red circle cannot be above the white square.
+
+answer: ['no']",'dk',no,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- a: three blocks, one on top of the other two.
+- b: orange triangle.
+- c: three squares, one white, one black, and one yellow.
+
+**step 2:** based on step by step reasoning, select the appropriate answer(s) from the given candidate answers.
+
+- yes: the red circle is above the white square.
+
+**answer: yes"
+"There are three blocks called A, B, and C. A is to the left of B and B is to the left of C. In A, there is a small yellow square near and to the left of a large yellow circle. The large circle is near and to the left of a large blue triangle. In B, there is a small yellow square near and below a large blue triangle. There is a medium black triangle near and above the large blue triangle. In C, there is a small black square far to the left and above a small blue circle. The blue circle is near and to the left of a large yellow square.",What is the relation between the small blue thing and the small black thing?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']","['right', 'below', 'far from']","['Symmetry', ' Converse']",near to,"based on step-by-step reasoning:
+
+* in c, there is a small black square far to the left and above a small blue circle.
+* the blue circle is near and to the left of a large yellow square.
+
+the relation between the small blue thing (circle) and the small black thing (square) is:
+
+* 'above'
+
+answer: ['above']",'dk',left,"**step 1:** identify the key objects and their attributes:
+
+- small yellow square: left of a, near a large yellow circle.
+- small black square: near and below a large blue triangle.
+- small blue circle: near and left of a large yellow square.
+
+**step 2:** based on the context, the small blue thing and the small black thing are located in the following relative positions:
+
+- the small blue thing is to the left of the small black"
+There is a block called A. It has a big blue circle and a red square. The big blue circle is below the red square. There is another block called B Which is above block A. There are a small blue circle and a yellow square in this block. The small blue circle is to the left of the yellow square.,Are all squares above the big shape?,YN,"['Yes', 'No', 'DK']",['Yes'],"['Lists/Sets', ' Quantifire', ' converse']",no,"based on step-by-step reasoning:
+
+* the big blue circle is below the red square in block a.
+* block b is above block a.
+* the yellow square is in block b, which means it is above the big shape (the big blue circle).
+
+therefore, all squares are indeed above the big shape.
+
+answer: ['yes']",'yes',no,"**step 1:** identify the key objects and their attributes:
+
+- block a:
+    - big blue circle: has a big blue circle and a red square below it.
+    - red square: has a big blue circle below it.
+- block b:
+    - small blue circle: to the left of a yellow square.
+    - yellow square: has a small blue circle.
+
+**step 2:** based on the context, the following relationships are established:"
+"There are three blocks called A, B, and C. A is to the left of B and B is to the left of C. In A, there is a small blue square near and below a medium black triangle. Near and above the medium black triangle is a large blue circle. In B, there is a large yellow circle far above a medium black square. The medium black square is to the near and to the left of a small yellow square. In C, there is a large yellow circle far above a small black circle.",What is the relation between the small blue thing and the large blue thing?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']","['below', 'near to']","['Transitivity', ' Symmetry']",below,"[left, near to]",'near to',below,"**step 1:** identify the key objects and their attributes.
+
+- a: small blue square near and below a medium black triangle.
+- b: large yellow circle far above a medium black square.
+- c: large yellow circle far above a small black circle.
+
+**step 2:** based on step by step reasoning, select the appropriate answer(s) from the given candidate answers.
+
+- the small blue thing and the large blue thing are **adjacent** to each other"
+"There are two blocks called A and B. A is to the right of B. In A, there is a blue triangle, Which is above a orange rectangle, Which is above a black circle. The black circle is touching the bottom of A. In B there are four squares. A yellow square is above a white square and to the left of a green square. A large purple square is touching the bottom of B and is to the left and near of the white square. The green square is on top of the purple square.",Is the green thing to the right of a yellow object?,YN,"['Yes', 'No', 'DK']",['Yes'],['Converse'],yes,"based on step-by-step reasoning:
+
+* the green square is above the purple square in block b.
+* the yellow square is below the green square and to its left.
+* since a is to the right of b, there are no objects to the right of the yellow square in this context.
+
+therefore, the answer is: **no**",'yes',no,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- a: blue triangle
+- b: four squares
+- yellow square
+- white square
+- green square
+- purple square
+
+**step 2:** based on the context, the green thing is to the right of a yellow object.
+
+**answer: yes**"
+"There are three blocks called A, B and C. B is to the left of A and C is to the left of B. In A, there is a large blue triangle that is near and to the right of a medium yellow circle. There is also a large black square near and to the left of the medium yellow circle. In B, there is a medium yellow triangle that is near and above a large black square. Near and below the black square is a medium blue circle. In C, there is a small blue triangle to the right of a small black triangle. Near and to the left of the of the small black triangle is a large blue triangle.",What is the relation between medium blue thing in B and the medium yellow thing in B?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']","['below', 'near to']","['Transitivity', ' Symmetry']",near to,"based on step-by-step reasoning:
+
+* in b, there is a medium blue circle near and below the large black square.
+* there is also a medium yellow triangle in b, which is near and above the large black square.
+
+the relation between the medium blue thing (circle) and the medium yellow thing (triangle) in b is:
+
+* 'above'
+
+answer: ['above']",above,below,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- b:
+    - medium yellow triangle
+    - large black square
+    - medium blue circle
+
+- a:
+    - large blue triangle
+    - medium yellow circle
+
+- c:
+    - small blue triangle
+    - small black triangle
+    - large blue triangle
+
+**step 2:** based on step by step reasoning, select the appropriate answer(s) from the given"
+"There are three blocks called A, B, and C. A is to the left of B and B is to the left of C. In A, there is a large yellow square that is near and to the left of a small yellow square. Below the small square is a medium yellow circle. In B, there is a small black triangle that is to the left of a large black square. Far below the black square is a small blue circle. In C, there is a medium blue triangle.",What block does not have any blue objects inside of it?,FB,"['A', 'B', 'C']",['A'],['Negation'],b,"based on step-by-step reasoning:
+
+* block a has a large yellow square and a small yellow square with a medium yellow circle below.
+* no blue objects are mentioned in block a.
+
+* block b has a small black triangle, a large black square, and a small blue circle far below the black square.
+* the small blue circle is the only blue object mentioned in block b.
+
+* block c has a medium blue triangle.
+* this is the only blue object mentioned in block c.
+
+therefore,","'dk' (don't know). the information provided does not specify whether block c has any blue objects inside it. while we can see that there is a medium blue triangle in c, the question asks about objects inside the blocks, and the position of the triangle is on the surface of the block, not inside it.",a,"**step 1:** identify the key objects and their attributes.
+
+- a: large yellow square
+- b: small black triangle
+- c: medium blue triangle
+
+**step 2:** based on the context, the block that does not have any blue objects inside of it is **c**.
+
+**answer: c**"
+"There are three blocks called A, B, and C. A is on top of B and B is on top of C. In A there are 3 circles: a small red one, a green one, and a big blue one. The small red and green circles are above the big blue circle. The big blue circle is touching the bottom edge of A, and the green circle is touching the top edge of A. In B there is a orange triangle, Which is above a purple rectangle. The purple rectangle is touching the bottom edge of B. In C, there are 3 squares, a small white one, a small black one, and a large yellow one. The small white square is touching the left edge of C, while the small black square is touching the right edge of C. The large yellow square is adjacent to the white square, and is touching the bottom edge of C.",Which object is to the left of the yellow square? the white square or  the black square?,CO,"[' the white square', ' the black square', 'both of them', 'none of them']",[' the white square'],['Converse'],the white square,"based on step-by-step reasoning:
+
+* the yellow square is touching the bottom edge of c and is adjacent to the small white square, which is touching the left edge of c.
+* therefore, the white square is to the left of the yellow square.
+
+so, the answer is:
+
+['the white square']",'the white square',both of them,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- a: three blocks, one on top of the other.
+- b: orange triangle.
+- c: three squares, one white, one black, and one large yellow.
+
+**step 2:** based on step by step reasoning, select the appropriate answer(s) from the given candidate answers.
+
+- the answer is **'the white square'**.
+
+**answer: the white"
+"There is a block called A. In A there is a red triangle Which is above a black circle. The black circle is touching the bottom of A. A yellow square is touching the top edge of A and below that there is a red oval is touching the right edge of A. There is a second block call B Which is to the left of A. Inside B there are 3 squares, a brown one, a green one, and a red one. The green square is above the red square and touching the left edge of B. The brown square is touching both the bottom edge and the right edge of B. The red square is touching the left edge of the brown square.",Which block has only squares inside?,FB,"['A', 'B']",['B'],['Quantifier'],b,"based on step-by-step reasoning:
+
+* block a contains a red triangle, black circle, yellow square, and red oval.
+* block b contains three squares: brown, green, and red.
+
+only block b has only squares inside. therefore, the correct answer is:
+
+['b']",'b',b,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- block a: red triangle, black circle, yellow square, red oval, two brown squares, one green square, and one red square.
+
+**step 2:** based on step by step reasoning, select the appropriate answer(s) from the given candidate answers.
+
+- the block with only squares inside is block a.
+
+**answer: a**"
+"There is a block called A. In A there is a small blue circle. There is another block called B Which is to the right of A. In B, there is a large yellow square, Which is near and to the left of a small yellow square. Above both squares there is a black triangle. To the right of B there is a block called C. In C, there is a black square that is to the right and far from a yellow triangle.",What block does not have any triangles inside?,FB,"['A', 'B', 'C']",['A'],"['Quantifier', ' Negation']",b,"based on step-by-step reasoning:
+
+* block a has a small blue circle, but no triangles.
+* block b has a large yellow square and a small yellow square, both with a black triangle above them. however, there is also a yellow triangle in block c, which is separate from the squares.
+* block c has a black square to the right of a yellow triangle.
+
+therefore, the answer is:
+
+['a']",c,c,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- block a: small blue circle
+- block b: large yellow square
+- block c: black square
+
+**step 2:** based on step by step reasoning, we can conclude the following:
+
+- block a has a small blue circle inside.
+- block b has a large yellow square inside.
+- block c has a black square inside.
+
+**step 3:** choose the appropriate"
+"There are three blocks called A, B, and C. B is to the right of and touching the right edge of A and C is above and touching the top of B. In A, there is a blue square touching the left edge of A. A red triangle is next to the blue square and is above a yellow circle is touching the bottom edge of A. In B, there is a purple rectangle and an orange oval. The orange oval is touching the right edge of B and the rectangle is near and to the left of and the oval. In C, there is a small triangle a large triangle and a pink triangle. The small triangle is above the large triangle and is touching the top of C. The pink triangle is touching the bottom of C, with the large triangle to the right of the pink triangle.",Which block has the thing that is below and the red object?,FB,"['A', 'B', 'C']",['A'],['Converse'],b,"based on step-by-step reasoning:
+
+* the question asks for a block that has something below and a red object.
+* in a, there is a yellow circle touching the bottom edge of a. this satisfies the ""something below"" condition.
+* there is also a red triangle in a, which satisfies the ""red object"" condition.
+
+therefore, the correct answer(s) are:
+
+['a']",'c',a,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- block a:
+    - blue square with left edge touching the left edge of a
+    - red triangle next to the blue square
+    - yellow circle touching the bottom edge of a
+
+- block b:
+    - purple rectangle
+    - orange oval touching the right edge of b
+    - rectangle near and to the left of the oval
+
+- block c:
+    - small triangle"
+"There are three blocks named A, B, and C. B is to the right of A and C is to the right of B. In A there is a large black square that is touching left edge of A. In B, there is a large blue square Which is near and to the right of a large blue triangle. Far below the triangle there is a large yellow circle. The large yellow circle is touching the bottom of B. In C, there is a small blue circle that is to the right of a small black triangle.",Is the blue square above the yellow thing?,YN,"['Yes', 'No', 'DK']",['Yes'],"['Converse', ' Transitivity']",yes,"based on step-by-step reasoning:
+
+* the large blue square is in block b.
+* the large yellow circle is at the bottom of block b and touches its bottom edge.
+* since the blue square is near the right edge of the triangle, it must be above the yellow circle.
+
+therefore, the answer is: ['yes']",'dk',no,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- b is to the right of a.
+- c is to the right of b.
+- a has a large black square touching the left edge of a.
+- b has a large blue square near and to the right of a large blue triangle.
+- far below the triangle there is a large yellow circle.
+- the large yellow circle is touching the bottom of b.
+- c"
+"There are three blocks called A, B, and C. B is to the left of A and C is to the left of B. In A, there is a medium blue square near and to the right of a large yellow square. The large yellow square is far to the right of a small blue circle. In B, there is a large black circle is near and above a large blue circle. Far below the blue circle is a large black square. In C, there is a small blue circle that is far below a large blue square.",What is the relation between the small blue thing in A and the small blue thing in C?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']","['right', 'far from']","['Lists/Sets', ' Transitivity']",far from,"[right, below]",'far from',below,"**step 1:** identify the key objects and their attributes:
+
+- a: large yellow square
+- b: large black circle
+- c: small blue circle
+
+**step 2:** analyze the relationships between the objects:
+
+- b is to the left of a
+- c is to the left of b
+
+**step 3:** based on the relationships, we can deduce the following:
+
+- the small blue thing in a is to the left of the small blue thing in"
+"There are three blocks called A, B, and C. A is to the right of B and B is to the right of C. In A, there is a medium black triangle. In B, there is a small blue circle that is far below a medium yellow square. In C, there is a small yellow square near and above a small black triangle. The black triangle is near and to the right of a large black square. There is a medium blue triangle below the large black square.",What object is above the medium blue thing? the small blue circle  or  the large black square?,CO,"[' the small blue circle ', ' the large black square', 'both of them', 'none of them']",[' the large black square'],['Converse'],the large black square,"based on step-by-step reasoning:
+
+* the medium blue triangle is below the large black square.
+* in b, there is a small blue circle that is far below a medium yellow square. this means the small blue circle is below the medium yellow square.
+
+therefore, the correct answer(s) are:
+
+['the large black square']",'the large black square',none of them,"**step 1:** identify the key objects and their attributes.
+
+- a: medium black triangle
+- b: small blue circle
+- c: small yellow square
+- d: large black square
+
+**step 2:** based on the context, the small blue circle is above the medium blue thing.
+
+**answer: the small blue circle**"
+"There are three blocks called A, B, and C. In A, there is a large blue circle that is near and to the left of a large yellow circle. There is also a medium black triangle below the blue circle. In B, Which is to the right of A, there are three small blue circles far above two small black triangles. C is to the right of B. In C, there is a large blue triangle that is near and to the left of a medium black circle. There is also a large black triangle near and below the large blue triangle.",Is the large yellow thing near the large blue thing?,YN,"['Yes', 'No', 'DK']",['Yes'],['Symmetry'],yes,"based on step-by-step reasoning:
+
+* in a, there is a large blue circle near and to the left of a large yellow circle.
+* since the question asks if the large yellow thing is near the large blue thing, i will focus on the relative positions of these two objects in block a.
+* the large blue circle is near and to the left of the large yellow circle, which means they are adjacent to each other.
+
+answer: ['yes']",yes,yes,"**step 1:** identify the key objects and their attributes:
+
+- a: large blue circle
+- b: three small blue circles
+- c: large blue triangle
+
+**step 2:** based on the context, the large yellow thing is located near the large blue thing.
+
+**step 3:** choose the answer: **yes**"
+"There are three blocks called A, B, and C. A is to the right of B and B is to the right of C. In A, there is a small blue triangle. In B, there is a large blue circle near and to the right of a small yellow square. The yellow square is near and to the right of a small black circle. In C, there is a small yellow circle near and below a medium black triangle. There is a small blue square near and above the black triangle.",Is the small yellow thing in C below a small blue thing?,YN,"['Yes', 'No', 'DK']",['Yes'],"['Transitivity', ' Converse']",yes,"based on step-by-step reasoning:
+
+* in c, there is a small yellow circle near and below a medium black triangle.
+* there is a small blue square near and above the black triangle.
+
+therefore, the answer is:
+
+['yes']",'yes',yes,"**step 1:** identify the key objects and their attributes:
+
+- a: small blue triangle
+- b: large blue circle
+- c: small yellow circle
+- c: medium black triangle
+
+**step 2:** based on the context, the small yellow thing in c is located below a small black triangle.
+
+**step 3:** the answer is: **yes**
+
+therefore, the answer is **yes**."
+"There is a block called A. In A, there a large black circle that is far below a large yellow square. There is a block called B, Which is to the right of A. In B, there is a large blue square near and to the left of a large blue triangle. The blue triangle is near and to the right of a small yellow square. There is another block called C, Which is to the right of B. In C, there is a small blue circle that is near and above a small yellow square. Far below the small square is a large blue square.","What object is not far from a large blue thing, the small yellow square or the large yellow square? the small yellow square  or  the large yellow square ?",CO,"[' the small yellow square ', ' the large yellow square ', 'both of them', 'none of them']",[' the small yellow square '],"['Negation', ' Symmetry']",both of them,"based on step-by-step reasoning:
+
+* the small yellow square is near and to the left of a blue triangle in block b.
+* in block c, there is a small blue circle that is near and above the small yellow square. far below this small square is a large blue square.
+* there is no mention of a large yellow square.
+
+therefore, the correct answer(s) are:
+
+['the small yellow square']",'none of them',both of them,"**step 1:** identify the key objects and their attributes:
+
+- block a: large black circle below a large yellow square.
+- block b: large blue square to the right of a.
+- block c: small blue circle above a small yellow square.
+
+**step 2:** based on the context, the small yellow square is far from both the large yellow square and the large blue square.
+
+**answer: the small yellow square**"
+"There are two blocks called A and B. A is to the right of B. In A, there is a blue triangle, Which is above a orange rectangle, Which is above a black circle. The black circle is touching the bottom of A. In B there are four squares. A yellow square is above a white square and to the left of a green square. A large purple square is touching the bottom of B and is to the left and near of the white square. The green square is on top of the purple square.",Is the blue thing above a black thing?,YN,"['Yes', 'No', 'DK']",['Yes'],['Transitivity'],yes,"based on step-by-step reasoning:
+
+* in block a, there is a blue triangle above an orange rectangle, which is above a black circle.
+* the black circle is touching the bottom of a.
+
+therefore, the answer is:
+
+['yes']",yes,yes,"**step 1:** identify the key objects and their attributes:
+
+- a: blue triangle
+- b: four squares
+- yellow square: above a white square
+- green square: on top of the purple square
+- black circle: touching the bottom of a
+
+**step 2:** based on the context, the blue triangle is above the black circle, which is above the orange rectangle. therefore, the blue thing is above a black thing.
+
+**answer: yes**"
+"There are three blocks called A, B, and C. B is to the right of A and C is to the right of B. In A, there is a medium blue circle Which is near and above a small blue circle. In B, there is a large yellow triangle Which is to the right and touching a large blue triangle. There is also a small yellow triangle to the left of the large blue triangle. In C, there is a small blue circle that is far above a blue triangle. The blue triangle is to the left of a black triangle.",What block has all of the black objects inside of it?,FB,"['A', 'B', 'C']",['C'],['Quantifier'],b,"based on step-by-step reasoning:
+
+* block c is described as having a small blue circle and a blue triangle.
+* there is no mention of black objects in block a or b.
+
+therefore, the answer is:
+
+[c]","'dk' (don't know). the question asks for the block that has all the black objects inside of it. however, the context only mentions a black triangle in block c and its location relative to another object, but there is no information about any other black objects within or outside blocks a or b. therefore, we cannot determine which block contains all the black objects based on the given information.",c,"**step 1:** identify the key objects and their attributes:
+
+- a: medium blue circle
+- b: large yellow triangle
+- c: small yellow triangle
+- black triangle
+
+**step 2:** based on the context, the black triangle is located inside block b.
+
+**step 3:** choose the answer: **b**
+
+**answer: b**"
+"There is a block called A. In A there is a red triangle Which is above a black circle. The black circle is touching the bottom of A. A yellow square is touching the top edge of A and below that there is a red oval is touching the right edge of A. There is a second block call B Which is to the left of A. Inside B there are 3 squares, a brown one, a green one, and a red one. The green square is above the red square and touching the left edge of B. The brown square is touching both the bottom edge and the right edge of B. The red square is touching the left edge of the brown square.",Is the red square above the green square?,YN,"['Yes', 'No', 'DK']",['No'],['Symmetry'],yes,"based on step-by-step reasoning:
+
+* the red square is inside block b.
+* the green square is above the red square and touching the left edge of b.
+* since the green square is above the red square, it must be below the brown square (since the brown square touches both the bottom edge and the right edge of b).
+
+answer: ['no']",'no',no,"**step 1:** identify the key objects and their attributes:
+
+- block a: red triangle, black circle, yellow square, red oval
+- block b: 3 squares (brown, green, red)
+
+**step 2:** based on the context, the red square is above the green square.
+
+**answer: yes**"
+"There is a block called A. In A there is a red triangle Which is above a black circle. The black circle is touching the bottom of A. A yellow square is touching the top edge of A and below that there is a red oval is touching the right edge of A. There is a second block call B Which is to the left of A. Inside B there are 3 squares, a brown one, a green one, and a red one. The green square is above the red square and touching the left edge of B. The brown square is touching both the bottom edge and the right edge of B. The red square is touching the left edge of the brown square.",Which object is above the brown square? the green square or  the red square?,CO,"[' the green square', ' the red square', 'both of them', 'none of them']",[' the green square'],['Transitivity'],the green square,"based on step-by-step reasoning:
+
+* the brown square is touching both the bottom edge and the right edge of b.
+* the red square is touching the left edge of the brown square, which means it's below the brown square.
+
+therefore, the answer is:
+
+['the green square']",'the brown square',both of them,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- block a: red triangle, black circle, yellow square, red oval
+- block b: 3 squares (brown, green, red)
+
+**step 2:** based on step by step reasoning, select the appropriate answer(s) from the given candidate answers.
+
+- the green square is above the brown square and touching the left edge of b.
+- therefore, the green square is"
+"There is a block called A. In A, there is a medium black triangle that is near and below a medium blue triangle. The medium blue triangle is far below a large blue circle. The large circle is near and below a small blue triangle. There is a block called B, Which is to the right of A. In B, there is a small yellow circle far above a large yellow square. There is also a large blue triangle near and to the right of large yellow square. There is another block called C, Which is to the right of B. In C, there is a large black triangle that is far below a large blue triangle. The large blue triangle is far below a small blue triangle.",Is the medium black thing near and above a small blue thing?,YN,"['Yes', 'No', 'DK']",['No'],"['Symmetry', ' Transitivity']",no,"based on step-by-step reasoning:
+
+* in block a, there is a medium black triangle near and below a medium blue triangle.
+* the medium blue triangle is far below a large blue circle. this means the medium blue triangle is not near or above any small blue thing (since it's far below the large blue circle).
+* there is no mention of a small blue thing being near or above the medium black triangle in block a.
+
+therefore, i conclude that:
+
+answer: ['no']",'no',no,"**step 1:** identify the key objects and their attributes:
+
+- block a:
+    - medium black triangle
+    - medium blue triangle (far below a large blue circle)
+    - large blue triangle (near and to the right of large yellow square)
+- block b:
+    - small yellow circle
+    - large yellow square
+- block c:
+    - large black triangle
+    - large blue triangle (far below a small blue triangle)
+
+**step"
+"There is a block called A. In A, there a large black circle that is far below a large yellow square. There is a block called B, Which is to the right of A. In B, there is a large blue square near and to the left of a large blue triangle. The blue triangle is near and to the right of a small yellow square. There is another block called C, Which is to the right of B. In C, there is a small blue circle that is near and above a small yellow square. Far below the small square is a large blue square.",What is the relation between the small blue thing and the large blue thing in C?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']","['above', 'far from']","['Transitivity', ' Symmetry']",near to,"based on step-by-step reasoning:
+
+* in block c, there is a small blue circle near and above a small yellow square.
+* far below the small square is a large blue square.
+
+the relation between the small blue thing (circle) and the large blue thing (square) in c is:
+
+* 'above'
+* 'below'
+
+so, the correct answer(s) are: ['above', 'below']",'near to',below,"**step 1:** identify the key objects and their attributes:
+
+- block a: large black circle below a large yellow square.
+- block b: large blue square to the right of a.
+- block c: small blue circle above a small yellow square.
+
+**step 2:** based on the context, the small blue thing and the large blue thing in c are related as they are both large blue things located in the same block (c).
+
+**answer: [right"
+"There is three blocks called A, B, C. Block A has two big blue shapes to the left of a big yellow triangle. There is also a little triangle to the left of blue objects. there is a big black triangle touching the bottom edge of block B. A medium circle is at top of the block B and a small blue circle is near to it. Block C is left to the blocks A and B. It has two medium triangles. one of them is to the right of the other.",Which object is to the left of the medium shape which is near to the small circle? a little triangle  or  a medium triangle?,CO,"[' a little triangle ', ' a medium triangle', 'both of them', 'none of them']",[' a medium triangle'],"['Symmetry', ' Lists/Sets']",a little triangle,"based on step-by-step reasoning:
+
+* block a has two big blue shapes to the left of a big yellow triangle.
+* there is also a little triangle to the left of these blue objects.
+* the medium circle is at the top of block b, and a small blue circle is near it.
+
+answer: ['a little triangle']",'a little triangle',both of them,"**step 1:** identify the key objects and their attributes.
+
+- block a: two big blue shapes to the left of a big yellow triangle.
+- block b: a big black triangle touching the bottom edge of block b.
+- block c: two medium triangles.
+- medium circle: at top of block b.
+- small blue circle: near to the medium circle.
+
+**step 2:** based on the context, the object to the left of the medium shape"
+"There are three blocks called A, B, and C. A is to the left of B and B is to the left of C. In A, there is a large blue triangle that is near and below a medium black triangle. There is also a large black triangle that is near and below the large blue triangle. In B, there are two medium blue circles that are to the left of a medium black circle. The black circle is near and above a large blue circle. In C, there is a large yellow circle that is near and to the left of a small black triangle. There is also a large blue triangle near and to the right of the small black triangle.",Is the small black thing near and to the left of the large blue thing in C?,YN,"['Yes', 'No', 'DK']",['Yes'],"['Converse', ' Symmetry']",no,"based on step-by-step reasoning:
+
+* in c, there is a small black triangle near and to the left of a large blue triangle.
+* the question asks if the small black thing (triangle) is near and to the left of the large blue thing (triangle).
+* therefore, the answer is:
+['yes']",'yes',yes,"**step 1:** identify the key objects and their attributes:
+
+- a: large blue triangle
+- b: two medium blue circles
+- c: large yellow circle
+- d: small black triangle
+
+**step 2:** based on the context, we can deduce the following relationships between the objects:
+
+- a is to the left of b
+- b is to the left of c
+- a is larger than b
+- c is larger than d
+
+**step 3"
+"There are three blocks called A, B and C. A is to the left of B and B is to the left of C. In A, there is a small blue circle. In B, there is a large blue triangle that is touching the top of a small yellow triangle. In C, there are four circles, a large yellow one, a small blue one, a small black one, and a large black one. The large yellow circle is touching the large black circle and is above and near the small blue circle. The small black circle is near and to the right of the small blue circle. The large black circle is above and near the small black circle.",What object is not touching the large blue triangle? the small yellow triangle  or  the large black square?,CO,"[' the small yellow triangle ', ' the large black square', 'both of them', 'none of them']",[' the large black square'],['Negation'],both of them,"based on step-by-step reasoning:
+
+* the large blue triangle is in block b and touches the top of a small yellow triangle.
+* the large black circle is above and near the small black circle, which is near and to the right of the small blue circle.
+
+from this information, i can conclude that:
+
+* the small yellow triangle is touching the large blue triangle (in block b).
+* the large black square does not exist in the context (there are no squares mentioned).
+
+therefore, the correct",'the large black square',both of them,"**step 1:** identify the key objects and their attributes.
+
+- a: small blue circle
+- b: large blue triangle touching the top of a small yellow triangle
+- c: four circles, a large yellow one, a small blue one, a small black one, and a large black one
+
+**step 2:** based on step by step reasoning, the object that is not touching the large blue triangle is the small black circle.
+
+**answer: 'the small black circle"
+"There are three blocks called A, B, and C. B is to the right of A and C is to the right of B. In A, there is a small yellow circle that is near and to the left of a medium blue triangle. Touching the top of the triangle is a large yellow square. In B, there is a large blue circle near and below a small blue square. There is a large black triangle far to the right of the small blue square. In C, there is a small blue triangle that is far below a medium black triangle. The black triangle was near and below a medium blue triangle.",What block has all of the triangles inside of it?,FB,"['A', 'B', 'C']",['C'],['Quantifier'],b,"[a, c]",'c',c,"**step 1:** identify the key objects and their attributes:
+
+- a: small yellow circle near and to the left of a medium blue triangle.
+- b: large blue circle near and below a small blue square.
+- c: small blue triangle far below a medium black triangle.
+
+**step 2:** based on the context, the block with all of the triangles inside of it is:
+
+**answer: b**
+
+**explanation:** b is the block that contains the"
+"There are three blocks A, B and C. A blue triangle is touching the right edge of block A. Block B has four objects. There is a medium black square at the top of this block. There is a big blue square at the top of this block and near to the medium square. Two big black circles are below these objects. one of the circles is touching the bottom edge of its block. block C is above A and block B is above it. Three medium blue triangles and two squares are in this block. the squares are below all triangles. two of the triangles and one of the squares are to the left of the  other square.",Which block has a triangle below a circle?,FB,"['A', 'B', 'C']","['A', ' C']","['Lists/Sets', ' transitivity', ' converse', ' Quantifier']",b,"based on step-by-step reasoning:
+
+* block b has two big black circles below the medium square and the big blue square.
+* one of these circles is touching the bottom edge of its block, which means it's at the bottom of the block.
+* there are three medium blue triangles in this block, with two squares below them.
+* two of the triangles and one of the squares are to the left of the other square.
+
+answer: ['b']",'b',b,"**step 1:** identify the key objects and their attributes.
+
+- block a:
+    - blue triangle touching the right edge.
+    - medium black square at the top.
+    - big blue square near the medium square.
+    - two big black circles below the objects.
+- block b:
+    - four objects.
+    - medium square at the top.
+    - two big black circles below the objects.
+- block c:
+    - three"
+"There are three blocks called A, B, and C. A is to the right of B and B is to the right of C. In A, there is a small blue triangle. In B, there is a large blue circle near and to the right of a small yellow square. The yellow square is near and to the right of a small black circle. In C, there is a small yellow circle near and below a medium black triangle. There is a small blue square near and above the black triangle.",Is the small thing in A to the left of the small blue thing in C?,YN,"['Yes', 'No', 'DK']",['No'],"['Lists/Sets', ' Transitivity']",no,"based on step-by-step reasoning:
+
+* the small blue triangle is in a.
+* the small blue square is near and above the medium black triangle in c.
+
+since the small blue triangle is in a, which is to the right of b, and the small blue square is in c, it means that the small thing (blue triangle) in a is actually to the right of the small blue thing (blue square) in c.
+
+therefore, the answer is:
+
+['no']",'dk',no,"**step 1:** identify the key objects and their attributes:
+
+- a: small blue triangle
+- b: large blue circle
+- c: small yellow circle
+- d: small black circle
+
+**step 2:** based on the context, the small thing in a is located to the left of the small blue thing in c.
+
+**answer: yes**"
+"There are two blocks called A and B. A is to the right of B. In A, there is a blue triangle, Which is above a orange rectangle, Which is above a black circle. The black circle is touching the bottom of A. In B there are four squares. A yellow square is above a white square and to the left of a green square. A large purple square is touching the bottom of B and is to the left and near of the white square. The green square is on top of the purple square.",What block does not have a orange thing inside?,FB,"['A', 'B']",['B'],['Negation'],b,"based on step-by-step reasoning:
+
+* block a has an orange rectangle inside.
+* block b does not have an orange thing mentioned.
+
+therefore, the answer is:
+
+[ 'b' ]",'b',b,"**step 1:** identify the key objects and their attributes:
+
+- a: blue triangle
+- b: four squares
+- yellow square: above a white square
+- green square: on top of the purple square
+- white square: above the green square
+
+**step 2:** based on the context, the orange thing is located inside the blue triangle in block a. therefore, the block that does not have an orange thing inside is **b**.
+
+**answer: b**"
+"There are three blocks called A, B, and C. A is to the left of B and B is to the left of C. In A, there is a medium yellow circle near and above a medium blue circle. There is also a large black square near and below the medium blue circle. In B, there is a medium yellow triangle near and to the left of a small blue triangle. The small blue triangle is above a medium blue triangle. The medium blue triangle is to the right of the medium yellow triangle and above a large black circle. In C, there is a medium black triangle that is near and to the left of a large blue triangle. There is a large black square near and to the right of large blue triangle.",What block does not have any yellow objects inside?,FB,"['A', 'B', 'C']",['C'],"['Negation', ' Quantifier']",b,"based on step-by-step reasoning:
+
+* block a has a medium yellow circle.
+* block b has a medium yellow triangle.
+* block c does not have any yellow objects.
+
+therefore, the answer is:
+
+['c']",'c',b,"**step 1:** identify the key objects and their attributes:
+
+- a: medium yellow circle near and above a medium blue circle
+- b: medium yellow triangle near and to the left of a small blue triangle
+- c: medium black triangle near and to the left of a large blue triangle
+
+**step 2:** based on the context, the block that does not have any yellow objects inside is **c**.
+
+**answer: c**"
+"There are three blocks A, B and C. A blue triangle is touching the right edge of block A. Block B has four objects. There is a medium black square at the top of this block. There is a big blue square at the top of this block and near to the medium square. Two big black circles are below these objects. one of the circles is touching the bottom edge of its block. block C is above A and block B is above it. Three medium blue triangles and two squares are in this block. the squares are below all triangles. two of the triangles and one of the squares are to the left of the  other square.",What is the relation between a square which is above a circle and the square which is below a triangle?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']",['above'],,dk,"based on step-by-step reasoning:
+
+* block c is above a and b.
+* in block b, there are two big black circles below the medium black square and the big blue square.
+* one of the circles touches the bottom edge of its block.
+* the squares in block b are below all triangles.
+* two of the triangles and one of the squares are to the left of the other square.
+
+answer: ['below']",'dk',below,"**step 1:** identify the key objects and their attributes.
+
+- block a:
+    - blue triangle touching the right edge.
+    - medium black square at the top.
+    - big blue square near the medium square.
+    - two big black circles below the objects.
+- block c:
+    - three medium blue triangles and two squares.
+    - squares below all triangles.
+    - two squares to the left of the other square.
+
+**step"
+"There are three blocks called A, B, and C. B is to the right of A and C is to the right of B. In A, there is a medium blue circle Which is near and above a small blue circle. In B, there is a large yellow triangle Which is to the right and touching a large blue triangle. There is also a small yellow triangle to the left of the large blue triangle. In C, there is a small blue circle that is far above a blue triangle. The blue triangle is to the left of a black triangle.",What object is to is not touching a large blue thing? the large yellow triangle  or  the small blue circle?,CO,"[' the large yellow triangle ', ' the small blue circle', 'both of them', 'none of them']",[' the small blue circle'],['Negation'],'the small blue circle',"the correct answer is: ['the large yellow triangle ', 'both of them']
+
+explanation:
+
+* the large yellow triangle is in block b, and it touches a large blue triangle.
+* the small blue circle is in block a or c (not specified), but it's not mentioned to be touching any large blue thing.
+
+note: i did not include ""dk"" as an answer because the question can be answered based on the given context.",'none of them',both of them,"**step 1:** identify the key objects and their attributes.
+
+- a: medium blue circle
+- b: large yellow triangle
+- c: small blue circle
+- b: large blue triangle
+- c: small yellow triangle
+- black triangle
+
+**step 2:** based on the context, the large yellow triangle and the small blue circle are the objects that are not touching the large blue thing.
+
+**answer: 'the large yellow triangle'**"
+"There is a block called A. In A, there a large black circle that is far below a large yellow square. There is a block called B, Which is to the right of A. In B, there is a large blue square near and to the left of a large blue triangle. The blue triangle is near and to the right of a small yellow square. There is another block called C, Which is to the right of B. In C, there is a small blue circle that is near and above a small yellow square. Far below the small square is a large blue square.","What object is above a large yellow thing, a small yellow square or the large blue square? the small yellow square  or  the large blue square ?",CO,"[' the small yellow square ', ' the large blue square ', 'both of them', 'none of them']",['none of them'],['Converse'],'the small yellow square',"based on step-by-step reasoning:
+
+* in block c, there is a small blue circle above a small yellow square.
+* the question asks what object is above a large yellow thing (which is the large yellow square in block a).
+* since the small yellow square is below the large blue square in block c, it cannot be above the large yellow square.
+* therefore, the answer must be the small blue circle.
+
+answer: ['the small blue circle']",'the small yellow square',none of them,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- block a: large black circle that is far below a large yellow square.
+- block b: large blue square near and to the left of a large blue triangle.
+- block c: small blue circle that is near and above a small yellow square.
+
+**step 2:** based on step by step reasoning, we can conclude the following:
+
+- the small yellow square is above the large"
+"There are three blocks called A, B, and C. B is to the left of A and C is to the left of B. In A, there is a small blue circle near and above a medium blue circle. Far to the right of the circles is a large yellow square. In B, there is a small black square that is to the right of a small black triangle. There is also a small blue square far above the small black triangle. In C, there is a large black triangle that is near and above a small blue circle. The small blue circle is also near and above a small black triangle. To the left of the small black triangle is a medium yellow circle.",Does B have any yellow objects inside of it?,YN,"['Yes', 'No', 'DK']",['No'],['Quantifier'],no,['no'],'no',no,"**step 1:** identify the key objects and their attributes:
+
+- b:
+    - small black square
+    - small black triangle
+    - small blue square
+- a:
+    - small blue circle
+- c:
+    - large black triangle
+    - small blue circle
+    - small black triangle
+
+**step 2:** based on the context, we can conclude the following:
+
+- b has a small black square, a small black triangle, and a"
+"There are three blocks called A, B, and C. A is to the left of B, and B is to the left of C. In A, there is a large blue triangle to the left of and below a large black square. Far above the square is a large black circle. In B, there is a large blue circle near and below a small blue circle. The small blue circle is near and below a large yellow square. There is a medium blue square far to the left of the yellow square. In C, there is a large blue square.",What block does not have a circle inside of it?,FB,"['A', 'B', 'C']",['C'],"['Negation', ' Quantifier']",b,[a],"'dk' (don't know) - the question does not provide information about whether block c contains a circle inside it. however, we can determine that both a and b have circles within them based on the given context. in a, there is a large black circle far above the square, which might be considered as being inside the block, but it's not specified to be inside any shape or object. similarly, in b, there is a large blue circle near and below a",b,"**step 1:** identify the key objects and their attributes:
+
+- a: large blue triangle
+- b: large blue circle near and below a small blue circle
+- c: large blue square
+
+**step 2:** based on the context, the block that does not have a circle inside of it is **c**.
+
+**answer: c**"
+There is a block called A. It has a big blue circle and a red square. The big blue circle is below the red square. There is another block called B Which is above block A. There are a small blue circle and a yellow square in this block. The small blue circle is to the left of the yellow square.,Which object is below the yellow shape? the small blue circle  or  the big blue circle?,CO,"[' the small blue circle ', ' the big blue circle', 'both of them', 'none of them']",[' the big blue circle'],"['Lists/Sets', ' Converse']",the big blue circle,"based on step-by-step reasoning:
+
+* block a has a big blue circle below a red square.
+* the question asks which object is below the yellow shape, which is in block b.
+* since block b is above block a, any objects in block a would be above the yellow shape.
+* therefore, neither the small blue circle nor the big blue circle is below the yellow shape.
+
+answer: ['none of them']",'the big blue circle',both of them,"**step 1:** identify the key objects and their attributes.
+
+- block a:
+    - big blue circle: has a big blue circle and a red square.
+    - red square: has a big blue circle and a red square.
+
+- block b:
+    - small blue circle: is to the left of the yellow square.
+    - yellow square: has a small blue circle and a yellow square.
+
+**step 2:** based on step by step reasoning"
+"There are three blocks called A, B and C. B is to the left of A and C is to the left of B. In A, there is a large blue triangle that is near and to the right of a medium yellow circle. There is also a large black square near and to the left of the medium yellow circle. In B, there is a medium yellow triangle that is near and above a large black square. Near and below the black square is a medium blue circle. In C, there is a small blue triangle to the right of a small black triangle. Near and to the left of the of the small black triangle is a large blue triangle.","What object is not far from the large black thing in B, the medium yellow triangle or the medium blue circle? the medium yellow triangle  or  the medium blue circle ?",CO,"[' the medium yellow triangle ', ' the medium blue circle ', 'both of them', 'none of them']",['both of them'],"['Negation', ' Symmetry']",both of them,"based on step-by-step reasoning:
+
+* in b, there is a large black square near and to the left of the medium yellow triangle.
+* the medium blue circle is near and below the black square.
+
+therefore, the object that is not far from the large black thing in b (the medium yellow triangle or the medium blue circle) is:
+
+answer: ['both of them']",'the medium blue circle',both of them,"**step 1:** identify the key objects and their attributes:
+
+- b: large black square
+- a: large blue triangle
+- c: small blue triangle
+
+**step 2:** based on the context, the object that is not far from the large black thing in b is the medium yellow triangle.
+
+**answer: [the medium yellow triangle]**"
+"There are three blocks called A, B, and C. B is to the left of A and C is to the left of B. In A, there is a small blue circle near and above a medium blue circle. Far to the right of the circles is a large yellow square. In B, there is a small black square that is to the right of a small black triangle. There is also a small blue square far above the small black triangle. In C, there is a large black triangle that is near and above a small blue circle. The small blue circle is also near and above a small black triangle. To the left of the small black triangle is a medium yellow circle.",Is the large black thing to the left of the small blue thing in C?,YN,"['Yes', 'No', 'DK']",['DK'],['No Data'],yes,"based on step-by-step reasoning:
+
+* in c, there is a large black triangle that is near and above a small blue circle. the small blue circle is also near and above a small black triangle.
+* to the left of the small black triangle is a medium yellow circle.
+
+therefore, the answer is: ['yes']",yes,no,"**step 1:** identify the key objects and their attributes:
+
+- a: small blue circle near and above a medium blue circle
+- b: small black square to the right of a small black triangle
+- c: large black triangle near and above a small blue circle
+- d: medium yellow circle to the left of the small black triangle
+
+**step 2:** based on the context, the large black thing in c is to the left of the small blue thing.
+
+**"
+"There are three blocks called A, B, and C. B is to the right of A and C is to the right of B. In A, there is a small black triangle near and below a large yellow circle. Far to the right of the yellow circle is a small blue square. In B, there is a large black triangle far below a small blue circle. The small blue circle is near and below a small blue triangle. In C, there is a small blue circle.","What object is not above large black thing, the small black triangle or the small blue triangle? the small black triangle  or  the small blue triangle ?",CO,"[' the small black triangle ', ' the small blue triangle ', 'both of them', 'none of them']",[' the small black triangle '],"['Negation', ' Converse']",'the small blue triangle',"based on step-by-step reasoning:
+
+* in a, the small black triangle is near and below a large yellow circle.
+* there is no mention of a large black thing above the small black triangle in a.
+
+in b, there is a large black triangle far below a small blue circle. this implies that the large black triangle is not above the small blue triangle (which is near and below the small blue circle).
+
+therefore, the correct answer(s) are:
+
+['the small blue triangle']",'none of them',none of them,"**step 1:** identify the key objects and their attributes.
+
+- b is to the right of a.
+- c is to the right of b.
+- a has a small black triangle near and below a large yellow circle.
+- b has a large black triangle far below a small blue circle.
+- the small blue circle is near and below a small blue triangle.
+
+**step 2:** based on step by step reasoning, select the appropriate answer(s) from"
+"There is a block called A. In A there is a small blue circle. There is another block called B Which is to the right of A. In B, there is a large yellow square, Which is near and to the left of a small yellow square. Above both squares there is a black triangle. To the right of B there is a block called C. In C, there is a black square that is to the right and far from a yellow triangle.",Is C to the right of A?,YN,"['Yes', 'No', 'DK']",['Yes'],"['Transitivity', ' Converse']",yes,"based on step-by-step reasoning:
+
+* block b is to the right of block a.
+* block c is to the right of block b.
+
+therefore, block c is also to the right of block a.
+
+answer: ['yes']",'yes',yes,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- block a: small blue circle
+- block b: large yellow square
+- block c: black square
+
+**step 2:** based on step by step reasoning, select the appropriate answer(s) from the given candidate answers.
+
+- yes: the context describes c to be to the right of a, so it is yes.
+
+**answer: yes**"
+There is a block called A. It has a big blue circle and a red square. The big blue circle is below the red square. There is another block called B Which is above block A. There are a small blue circle and a yellow square in this block. The small blue circle is to the left of the yellow square.,What is the relation between the red square and the blue thing Which is below the yellow square?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']",['above'],"['Lists/Sets', ' Converse']",below,"based on step-by-step reasoning:
+
+* the red square is in block a.
+* the blue thing (big blue circle) is below the red square and also in block a.
+* the yellow square is in block b, which is above block a.
+* therefore, the blue thing (big blue circle) is below the yellow square.
+
+answer: ['below']",'below',below,"**step 1:** identify the key objects and their attributes.
+
+- red square:
+    - color: red
+    - shape: square
+- big blue circle:
+    - color: blue
+    - shape: circle
+- small blue circle:
+    - color: blue
+    - shape: circle
+- yellow square:
+    - color: yellow
+    - shape: square
+
+**step 2:** based on step by step reasoning, select the appropriate answer"
+"There is a block called A. Inside there's a red oval that is above a blue triangle. The blue triangle is touching the right edge of A and the top of a large black square. Touching the bottom edge of A is  a small orange square. The is a block called B Which is to the right and touching A. Inside B there are 5 triangles, a red one, a green one, a large yellow one, a brown one, and an orange one. The red and orange triangles are touching the left edge of B and the orange triangle is above the red triangle. The large yellow triangle is touching the top edge of B. The green triangle is touching the right edge of B. The brown triangle is below all of the other triangles and is touching the bottom of B.",What object is below the orange triangle? the red triangle  or  the yellow triangle?,CO,"[' the red triangle ', ' the yellow triangle', 'both of them', 'none of them']",[' the red triangle '],['Symmetry'],the red triangle,"the brown triangle is below all of the other triangles and is touching the bottom of b. therefore, the object that is below the orange triangle is:
+
+[ 'the brown triangle' ]",'the brown triangle',both of them,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- block a: red oval, blue triangle, large black square, small orange square.
+- block b: 5 triangles, red triangle, green triangle, brown triangle.
+
+**step 2:** based on step by step reasoning, select the appropriate answer(s) from the given candidate answers.
+
+- the red triangle is below the orange triangle.
+- the yellow triangle is below the orange"
+"There are two blocks called A and B. A is to the right of B. In A, there is a blue triangle, Which is above a orange rectangle, Which is above a black circle. The black circle is touching the bottom of A. In B there are four squares. A yellow square is above a white square and to the left of a green square. A large purple square is touching the bottom of B and is to the left and near of the white square. The green square is on top of the purple square.",What block contains all of the triangles?,FB,"['A', 'B']",['A'],['Quantifier'],a,"based on step-by-step reasoning:
+
+* block a has a blue triangle.
+* there is no mention of triangles in block b.
+
+therefore, the correct answer is:
+
+['a']",'a',a,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- a: blue triangle
+- b: four squares
+- yellow square
+- white square
+- green square
+- purple square
+
+**step 2:** based on step by step reasoning, select the appropriate answer(s) from the given candidate answers.
+
+- the answer is **a**.
+
+**answer: a**"
+"There are three blocks names A, B, and C. A is to the left of B and B is to the left of C. In A, there is a small square Which is below and to the left of a yellow circle. In B, there is a yellow circle above and to the right of a large blue square. In C, there is a small black square that is below a small yellow triangle. Near and to the right of the square is a large black triangle. The large triangle is also to the left of and near a large blue square. Far above the blue square is a small yellow circle. The small triangle is to the left and far from the small circle.",What block does not have a black object inside of it?,FB,"['A', 'B', 'C']","['A', 'B']",['Negation'],b,[a],"'dk' (don't know). the question asks for the block that does not have a black object inside of it. however, the context only mentions the positions and descriptions of objects within each block, but it does not explicitly state that there is no black object in any of them. therefore, based on the given information, we cannot definitively answer this question.",b,"**step 1:** identify the key objects and their attributes.
+
+- a: small square, yellow circle, small black square, large black triangle, large blue square, small yellow circle.
+
+- b: yellow circle, large blue square, small triangle.
+
+- c: small yellow triangle.
+
+**step 2:** based on step by step reasoning, the block that does not have a black object inside of it is **c**.
+
+**answer: c**"
+"There are three blocks A, B and C. A blue triangle is touching the right edge of block A. Block B has four objects. There is a medium black square at the top of this block. There is a big blue square at the top of this block and near to the medium square. Two big black circles are below these objects. one of the circles is touching the bottom edge of its block. block C is above A and block B is above it. Three medium blue triangles and two squares are in this block. the squares are below all triangles. two of the triangles and one of the squares are to the left of the  other square.",Which object is to the right of a square? a big black circle  or  a big blue square?,CO,"[' a big black circle ', ' a big blue square', 'both of them', 'none of them']",['none of them'],,a big blue square,"based on step-by-step reasoning:
+
+* block b has four objects: medium black square, big blue square, two big black circles.
+* the big blue square is at the top of block b and near to the medium black square.
+* one of the big black circles is touching the bottom edge of its block (block b).
+* there are no other objects mentioned that could be to the right of a square.
+
+therefore, the answer is:
+
+['a big black circle']",'a big blue square',both of them,"**step 1:** identify the key objects and their attributes.
+
+- block a:
+    - blue triangle touching the right edge.
+    - medium black square at the top.
+    - big blue square near the top.
+    - two big black circles below the objects.
+- block c:
+    - three medium blue triangles.
+    - two squares below the triangles.
+
+**step 2:** based on the context, the object to the right of a square"
+"There are three blocks called A, B, and C. B is to the right of A and C is to the right of B. In A, there is a medium blue circle Which is near and above a small blue circle. In B, there is a large yellow triangle Which is to the right and touching a large blue triangle. There is also a small yellow triangle to the left of the large blue triangle. In C, there is a small blue circle that is far above a blue triangle. The blue triangle is to the left of a black triangle.",What object is to the right of the small yellow thing? the large yellow triangle  or  the medium blue circle?,CO,"[' the large yellow triangle ', ' the medium blue circle', 'both of them', 'none of them']",[' the large yellow triangle '],"['Transitivity', ' Converse']",'the large yellow triangle',"the correct answer is:
+
+[the large yellow triangle]
+
+reasoning:
+
+1. b is to the right of a.
+2. in b, there is a large yellow triangle to the right and touching a large blue triangle.
+3. the small yellow triangle is in b, to the left of the large blue triangle.
+4. therefore, the large yellow triangle is to the right of the small yellow triangle.",'the medium blue circle',both of them,"**step 1:** identify the key objects and their attributes.
+
+- b is to the right of a.
+- c is to the right of b.
+- a contains a medium blue circle.
+- b contains a large yellow triangle.
+- c contains a small yellow triangle.
+
+**step 2:** based on step by step reasoning, we can conclude that the object to the right of the small yellow thing is the **medium blue circle**.
+
+**answer: [the"
+"There are three blocks called A, B, and C. B is to the right of and touching the right edge of A and C is above and touching the top of B. In A, there is a blue square touching the left edge of A. A red triangle is next to the blue square and is above a yellow circle is touching the bottom edge of A. In B, there is a purple rectangle and an orange oval. The orange oval is touching the right edge of B and the rectangle is near and to the left of and the oval. In C, there is a small triangle a large triangle and a pink triangle. The small triangle is above the large triangle and is touching the top of C. The pink triangle is touching the bottom of C, with the large triangle to the right of the pink triangle.",What object is near the purple thing? the orange oval  or  the small triangle?,CO,"[' the orange oval ', ' the small triangle', 'both of them', 'none of them']",[' the orange oval '],['Symmetry'],'the orange oval',the correct answer is ['the orange oval'].,the orange oval,both of them,"**step 1:** identify the key objects and their attributes:
+
+- b is to the right of and touching the right edge of a and c is above and touching the top of b.
+- a has a blue square touching the left edge of a.
+- a red triangle is next to the blue square and is above a yellow circle touching the bottom edge of a.
+- in b, there is a purple rectangle and an orange oval.
+- the orange oval is touching the"
+"There are three blocks called A, B, and C. B is to the right of A and C is to the right of B. In A, there is a small yellow circle that is near and to the left of a medium blue triangle. Touching the top of the triangle is a large yellow square. In B, there is a large blue circle near and below a small blue square. There is a large black triangle far to the right of the small blue square. In C, there is a small blue triangle that is far below a medium black triangle. The black triangle was near and below a medium blue triangle.",What is the relation between the medium blue thing in A and the large yellow thing?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']","['below', 'touching']","['Converse', ' Symmetry']",near to,"[left, near to]",'touching',left,"**step 1:** identify the key objects and their attributes:
+
+- a: small yellow circle
+- b: large blue circle
+- c: small blue triangle
+
+**step 2:** analyze the relationships between the objects:
+
+- b is to the right of a
+- c is to the right of b
+- the black triangle is far to the right of the small blue square
+
+**step 3:** based on the relationships identified, we can conclude:
+
+- the medium"
+"There are three blocks named A, B, and C. B is to the right of A and C is to the right of B. In A there is a large black square that is touching left edge of A. In B, there is a large blue square Which is near and to the right of a large blue triangle. Far below the triangle there is a large yellow circle. The large yellow circle is touching the bottom of B. In C, there is a small blue circle that is to the right of a small black triangle.",What is the relation between the small black thing and the large black thing?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']","['right', 'far from']","['List/Sets', ' Transitivity']",touching,[left],'far from',left,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- a: large black square
+- b: large blue square
+- c: small blue circle
+
+**step 2:** based on step by step reasoning, select the appropriate answer(s) from the given candidate answers.
+
+- the small black thing is to the left of the large black thing.
+
+**answer: left**"
+"There are three blocks called A, B, and C. A is to the left of B and B is to the left of C. In A, there is a small blue square near and below a medium black triangle. Near and above the medium black triangle is a large blue circle. In B, there is a large yellow circle far above a medium black square. The medium black square is to the near and to the left of a small yellow square. In C, there is a large yellow circle far above a small black circle.",Is the small yellow thing near and to the right of a medium black thing,YN,"['Yes', 'No', 'DK']",['Yes'],"['Converse', ' Symmetry']",no,"based on step-by-step reasoning:
+
+* in b, there is a small yellow square near and to the right of a medium black square.
+* since a is to the left of b, the small yellow thing cannot be in a.
+* in c, there are no medium black things mentioned.
+
+therefore, the answer is: ['yes']",'dk',no,"**step 1:** identify the key objects and their attributes:
+
+- a: small blue square near and below a medium black triangle.
+- b: large yellow circle far above a medium black square.
+- c: large yellow circle far above a small black circle.
+
+**step 2:** based on the context, the small yellow thing is near and to the right of a medium black thing.
+
+**answer: yes**"
+"There is a block called A. In A, there are four circles that are touching the bottom of A. The red circle is touching and to the left of the yellow circle. The pink circle is touching and to the right of the green circle. The yellow circle is touching and to the left of the green circle. Touching the bottom of A is a block called B. In B, there is a blue rectangle touching the top and the left of B. Near and to the right of the blue rectangle is a purple rectangle that is also touching the top of B. At the bottom of B there is a white triangle. Far to the left of B there is a block called C. In C, there is a brown oval that is to the right of an  orange square.",What is the relation between the pink objects and red objects?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']","['right', 'near to']",['Transitivity'],touching,"based on step-by-step reasoning:
+
+* the pink circle is touching and to the right of the green circle.
+* there is no mention of a red circle being related to the pink circle.
+
+therefore, the correct answer(s) are:
+
+['right']
+
+note: i did not include ""dk"" as an answer because the context provides enough information to determine the relation between the pink objects and red objects.",touching,right,"**step 1:** identify the key objects and their attributes:
+
+* pink circles
+* red circles
+
+**step 2:** analyze the relationships between the objects:
+
+* pink circles are touching the left and right sides of the red circle.
+* red circle is touching the bottom of the block a.
+
+**step 3:** based on the relationships identified, we can conclude that the pink circles are located to the left and right of the red circle.
+
+**answer: [left"
+"There are three blocks called A, B, and C. A is to the right of B and B is to the right of C. In A, there is a medium black triangle. In B, there is a small blue circle that is far below a medium yellow square. In C, there is a small yellow square near and above a small black triangle. The black triangle is near and to the right of a large black square. There is a medium blue triangle below the large black square.",Is the medium yellow thing far from the small blue thing?,YN,"['Yes', 'No', 'DK']",['Yes'],['Symmetry'],yes,"based on step-by-step reasoning:
+
+* the medium yellow square is in block b.
+* the small blue circle is also in block b and is far below the medium yellow square.
+
+therefore, the answer is:
+
+['no']",yes,no,"**step 1:** identify the key objects and their attributes:
+
+- a: medium black triangle
+- b: small blue circle below a medium yellow square
+- c: small yellow square near and above a small black triangle
+- large black square
+- medium blue triangle below the large black square
+
+**step 2:** based on the context, the medium yellow thing is far from the small blue thing.
+
+**answer: yes**"
+"There is a block called A. In A, there is a medium blue square that is to the left of a small blue triangle. There is also a large blue triangle far above the small blue triangle. There is another block called B, Which is to the right of A. In B, there is a large yellow circle. There is another block called C, Which is to the right of B. In B, there is a medium yellow circle far below a small black square. There is also a large yellow square near and above the small black square . There is a medium yellow square that is far to the right of the medium yellow circle, and there is a small yellow square above the medium yellow square.",What is the relation between the large yellow square in B and the small yellow thing?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']","['left', 'far from']","['Lists/Sets', ' Converse']",near to,"based on step-by-step reasoning:
+
+* the large yellow square is in block b.
+* the small yellow thing (square) is above the medium yellow square, which is far to the right of the medium yellow circle.
+
+considering these facts, i conclude that the relation between the large yellow square and the small yellow thing is:
+
+['above', 'far from']
+
+note: i did not include 'near to' as an option because the question asks about the relation between the two objects, not their proximity",'above',below,"**step 1:** identify the key objects and their attributes:
+
+- block a:
+    - medium blue square
+    - small blue triangle
+- block b:
+    - large blue triangle
+    - large yellow circle
+    - medium yellow circle below a small black square
+    - large yellow square near and above the small black square
+- block c:
+    - medium yellow square
+    - small yellow square above the medium yellow square
+
+**step 2:** based"
+"There are three blocks called A, B, and C. A is to the left of B and B is to the left of C. In A, there is a large blue triangle that is near and below a medium black triangle. There is also a large black triangle that is near and below the large blue triangle. In B, there are two medium blue circles that are to the left of a medium black circle. The black circle is near and above a large blue circle. In C, there is a large yellow circle that is near and to the left of a small black triangle. There is also a large blue triangle near and to the right of the small black triangle.",Are the medium blue things to the left of the small black thing?,YN,"['Yes', 'No', 'DK']",['No'],"['Lists/Sets', ' Converse']",yes,"based on step-by-step reasoning:
+
+* in b, there are two medium blue circles that are to the left of a medium black circle.
+* the small black triangle is in c and has a large blue triangle near and to its right.
+
+therefore, the answer is:
+
+['yes']",yes,yes,"**step 1:** identify the key objects and their attributes:
+
+- a: large blue triangle
+- b: two medium blue circles
+- c: large yellow circle
+
+**step 2:** based on the context, the medium blue things are to the left of the small black thing.
+
+**answer: yes**"
+"There is a block called A. In A, there are four blue circles: two small ones, a medium one, and a large one. The two small circles are below the large circle. The medium circle is far above and to the left of the large circle. There is another block called B, Which is to the right of A. In B, there is a blue triangle near the right edge of B. There is another block called C, Which is to the right of B. In C, there is a yellow circle, a large yellow triangle, and a black square. The yellow circle is near and to the left of the yellow triangle. The black square is to the right and below the yellow triangle.",Does A have any yellow things inside of it?,YN,"['Yes', 'No', 'DK']",['No'],['Quantifier'],no,"based on step-by-step reasoning:
+
+* block a has blue circles (small, medium, and large), but no yellow things mentioned.
+* no yellow objects are described inside or near block a.
+
+therefore, the answer is:
+
+['no']",'no',no,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- block a:
+    - four blue circles: two small ones, a medium one, and a large one
+    - two small circles are below the large circle
+- block b:
+    - blue triangle near the right edge of b
+- block c:
+    - yellow circle, large yellow triangle, and black square
+
+**step 2:** based on step by step reasoning, choose"
+"There are three blocks called A, B, and C. A is to the right of B and B is to the right of C. In A, there is a small blue triangle. In B, there is a large blue circle near and to the right of a small yellow square. The yellow square is near and to the right of a small black circle. In C, there is a small yellow circle near and below a medium black triangle. There is a small blue square near and above the black triangle.","What object is to the left of the small yellow thing in B, the large blue circle or the medium black triangle? the large blue circle  or  the medium black triangle ?",CO,"[' the large blue circle ', ' the medium black triangle ', 'both of them', 'none of them']",[' the medium black triangle '],"['Lists/Sets', ' Converse']",'the large blue circle',"the correct answer is:
+
+['the medium black triangle']
+
+reasoning:
+
+1. the small yellow thing in b refers to the small yellow square.
+2. according to the context, the small yellow square is near and to the right of a small black circle.
+3. therefore, the object to the left of the small yellow square is the small black circle.
+4. since the medium black triangle is mentioned as being near and below the small yellow circle in c, it must be above the small black",'the medium black triangle',both of them,"**step 1:** identify the key objects and their attributes:
+
+- a: small blue triangle
+- b: large blue circle
+- c: small yellow circle
+- b: medium black triangle
+
+**step 2:** based on the context, the object to the left of the small yellow thing in b is the large blue circle.
+
+**answer: the large blue circle**"
+"There are three blocks called A, B, and C. A is to the left of B and B is to the left of C. In A, there is a large blue triangle that is near and below a medium black triangle. There is also a large black triangle that is near and below the large blue triangle. In B, there are two medium blue circles that are to the left of a medium black circle. The black circle is near and above a large blue circle. In C, there is a large yellow circle that is near and to the left of a small black triangle. There is also a large blue triangle near and to the right of the small black triangle.",Is the medium black think in A below a large black thing?,YN,"['Yes', 'No', 'DK']",['No'],"['Transitivity', ' Converse']",yes,['yes'],'dk',yes,"**step 1:** identify the key objects and their attributes:
+
+- a: large blue triangle
+- b: two medium blue circles
+- c: large yellow circle
+
+**step 2:** based on the context, the following relationships are established:
+
+- a is to the left of b
+- b is to the left of c
+
+**step 3:** analyze the relationships between the objects:
+
+- a has a large blue triangle below a medium black triangle.
+- b"
+"There are three blocks called A, B, and C. A is to the left of B, and B is to the left of C. In A, there is a large blue triangle to the left of and below a large black square. Far above the square is a large black circle. In B, there is a large blue circle near and below a small blue circle. The small blue circle is near and below a large yellow square. There is a medium blue square far to the left of the yellow square. In C, there is a large blue square.",Is the large black square far below the other large black thing?,YN,"['Yes', 'No', 'DK']",['Yes'],"['Symmetry', ' Converse']",yes,"based on step-by-step reasoning:
+
+* a is to the left of b, and b is to the left of c.
+* in a, there is a large black square with a large black circle above it.
+* in b, there is no mention of a large black thing.
+
+therefore, the large black thing cannot be in block b. it must be either in block a or block c.
+
+* in a, the large black square has a large black circle above it, which means the large",yes,no,"**step 1:** identify the key objects and their attributes:
+
+- a: large blue triangle
+- b: large blue circle near and below a small blue circle
+- c: large blue square
+
+**step 2:** based on the context, the large black square is located above the other large black thing.
+
+**step 3:** the answer is **yes**."
+"There is a block called A. In A there is a small blue circle. There is another block called B Which is to the right of A. In B, there is a large yellow square, Which is near and to the left of a small yellow square. Above both squares there is a black triangle. To the right of B there is a block called C. In C, there is a black square that is to the right and far from a yellow triangle.",Are squares in block B near to each other?,YN,"['Yes', 'No', 'DK']",['Yes'],,yes,"based on step-by-step reasoning:
+
+* block b has a large yellow square and a small yellow square.
+* the large yellow square is near the left of the small yellow square.
+
+therefore, the squares in block b are near to each other.
+
+answer: ['yes']",'yes',no,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- block a:
+    - small blue circle
+    - block b:
+        - large yellow square
+        - small yellow square
+        - black triangle
+    - block c:
+        - black square
+
+**step 2:** based on step by step reasoning, select the appropriate answer(s) from the given candidate answers.
+
+- yes: the squares in block b are indeed near"
+"There are three blocks called A, B, and C. A is to the left of B, and B is to the left of C. In A, there is a large blue triangle to the left of and below a large black square. Far above the square is a large black circle. In B, there is a large blue circle near and below a small blue circle. The small blue circle is near and below a large yellow square. There is a medium blue square far to the left of the yellow square. In C, there is a large blue square.",Is the large black circle below a large blue thing?,YN,"['Yes', 'No', 'DK']",['No'],"['Transitivity', ' Converse']",no,"based on step-by-step reasoning:
+
+* the large black circle is in block a.
+* in block a, there is a large blue triangle below and to the left of a large black square.
+* therefore, the answer is: ['yes']",yes,no,"**step 1:** identify the key objects and their attributes:
+
+- a: large blue triangle
+- b: large blue circle near and below a small blue circle
+- c: large blue square
+
+**step 2:** based on the context, the large black circle is below a large blue thing.
+
+**answer:** yes"
+"There are three blocks called A, B, and C. In A, there is a large blue circle that is near and to the left of a large yellow circle. There is also a medium black triangle below the blue circle. In B, Which is to the right of A, there are three small blue circles far above two small black triangles. C is to the right of B. In C, there is a large blue triangle that is near and to the left of a medium black circle. There is also a large black triangle near and below the large blue triangle.",Are the small black things below the small blue things,YN,"['Yes', 'No', 'DK']",['Yes'],['Converse'],no,"based on step-by-step reasoning:
+
+* in a, there is a large blue circle near and to the left of a large yellow circle.
+* there is also a medium black triangle below the blue circle.
+
+in b, there are three small blue circles far above two small black triangles.
+
+in c, there is a large blue triangle that is near and to the left of a medium black circle. there is also a large black triangle near and below the large blue triangle.
+
+answer: ['yes']",'yes',no,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- a: large blue circle
+- b: three small blue circles
+- c: large blue triangle
+
+**step 2:** based on step by step reasoning, choose the appropriate answer(s) from the given candidate answers.
+
+- yes: the small black things are below the small blue things.
+
+**answer: yes**"
+"There is a block called A. In A, there is a small black square near and to the left of a large blue triangle. The large blue triangle is also to the left of and below a small yellow circle. In a block called B, Which is to the left of A, there a large blue square that is near and above a small blue circle. The small blue circle is near and above a medium yellow square. There is another block called C, Which is to the left of B. In C, there is a large yellow square that is near and to the left of a large yellow circle.",Is the large blue thing in B below the medium yellow thing?,YN,"['Yes', 'No', 'DK']",['No'],"['Transitivity', ' Converse']",yes,"based on step-by-step reasoning:
+
+* in block a, the large blue triangle is below a small yellow circle.
+* in block b, there is a large blue square that is near and above a small blue circle. this means the large blue thing (square) in b is above the small blue thing (circle).
+* since the medium yellow square is near and above the small blue circle in block b, it must be below the large blue square.
+* therefore, the large blue thing in b",'yes',no,"**step 1:** identify the key objects and their attributes:
+
+- a: large blue square
+- b: large blue square
+- c: large yellow square
+
+**step 2:** based on the context, the large blue thing in b is below the medium yellow thing.
+
+**answer: yes**"
+"There is a block called A. In A there is a red triangle Which is above a black circle. The black circle is touching the bottom of A. A yellow square is touching the top edge of A and below that there is a red oval is touching the right edge of A. There is a second block call B Which is to the left of A. Inside B there are 3 squares, a brown one, a green one, and a red one. The green square is above the red square and touching the left edge of B. The brown square is touching both the bottom edge and the right edge of B. The red square is touching the left edge of the brown square.",Are all of the squares in B?,YN,"['Yes', 'No', 'DK']",['No'],['Quantifier'],yes,"based on step-by-step reasoning:
+
+* the question asks about the squares inside block b.
+* inside block b, there are three squares: a brown one, a green one, and a red one.
+* the green square is above the red square, which means they are not touching each other.
+* the brown square touches both the bottom edge and the right edge of b.
+
+answer: ['yes']",'no',no,"**step 1:** identify the key objects and their attributes:
+
+- block a: red triangle, black circle, yellow square, red oval
+- block b: 3 squares (brown, green, red)
+
+**step 2:** analyze the relationships between the objects:
+
+- black circle is touching the bottom of a.
+- yellow square is touching the top edge of a and below that there is a red oval is touching the right edge of a.
+- green square is"
+"There are three blocks named A, B, and C. A is to the right of B and B is to the right of C. In A, there is a small yellow triangle that is near and to the left of a medium yellow circle. In B, there is a medium black circle Which is above a large blue triangle. The large triangle is above and near a small blue circle. There is also a large black circle far below the small blue circle. In C, there is a medium blue circle.",What block has all of the yellow objects?,FB,"['A', 'B', 'C']",['A'],['Quantifier'],a,[a],a,a,"**step 1:** identify the key objects and their attributes:
+
+- a: small yellow triangle
+- b: medium black circle
+- c: medium blue circle
+
+**step 2:** analyze the relationships between the objects:
+
+- a is to the right of b
+- b is to the right of c
+
+**step 3:** based on the relationships between the objects, we can conclude that block b has all of the yellow objects.
+
+**answer: b**"
+"There are three blocks names A, B, and C. A is to the left of B and B is to the left of C. In A, there is a small square Which is below and to the left of a yellow circle. In B, there is a yellow circle above and to the right of a large blue square. In C, there is a small black square that is below a small yellow triangle. Near and to the right of the square is a large black triangle. The large triangle is also to the left of and near a large blue square. Far above the blue square is a small yellow circle. The small triangle is to the left and far from the small circle.",Does B have any triangles?,YN,"['Yes', 'No', 'DK']",['Yes'],['Quantifier'],yes,"based on step-by-step reasoning:
+
+* in block b, there is a yellow circle above and to the right of a large blue square. no triangles are mentioned in this description.
+* there is no mention of triangles in block a or c.
+
+therefore, the answer is:
+
+['no']",'yes',no,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- a: small square below and to the left of a yellow circle.
+- b: yellow circle above and to the right of a large blue square.
+- c: small black square below a small yellow triangle.
+- large triangle: large black triangle to the left of and near a large blue square.
+- small triangle: to the left and far from the small circle.
+
+**step"
+"There are three blocks called A, B, and C. B is to the left of A and C is to the left of B. In A, there is a small blue circle near and above a medium blue circle. Far to the right of the circles is a large yellow square. In B, there is a small black square that is to the right of a small black triangle. There is also a small blue square far above the small black triangle. In C, there is a large black triangle that is near and above a small blue circle. The small blue circle is also near and above a small black triangle. To the left of the small black triangle is a medium yellow circle.","What object is not to the left of the the medium yellow thing, the small black triangle or the small blue circle in A? the small black triangle  or  the small blue circle ?",CO,"[' the small black triangle ', ' the small blue circle ', 'both of them', 'none of them']",[' the small blue circle '],"['Negation', ' Lists/Sets']",both of them,"based on step-by-step reasoning:
+
+* the medium yellow thing is to the left of the small black triangle.
+* the small blue circle is near and above the small black triangle, so it is also to the left of the small black triangle.
+* in a, there are no objects mentioned that are not to the left of the small blue circle.
+
+therefore, the correct answer is:
+
+['the small black triangle', 'the small blue circle']",'none of them',none of them,"**answer: 'both of them'**
+
+the context describes the positions of the blocks in relation to each other, but it does not specify which object is to the left of the medium yellow thing. therefore, we cannot determine which object is not to the left of the medium yellow thing from the context."
+"There are three blocks called A, B, and C. B is to the left of A and C is to the left of B. In A, there is a small blue circle near and above a medium blue circle. Far to the right of the circles is a large yellow square. In B, there is a small black square that is to the right of a small black triangle. There is also a small blue square far above the small black triangle. In C, there is a large black triangle that is near and above a small blue circle. The small blue circle is also near and above a small black triangle. To the left of the small black triangle is a medium yellow circle.","What object is to the left of the small black square, the small black triangle or the large black triangle the small black triangle  or  the large black triangle ?",CO,"[' the small black triangle ', ' the large black triangle ', 'both of them', 'none of them']",['both of them'],"['Converse', ' Lists/Sets']",both of them,"based on step-by-step reasoning:
+
+* b is to the left of a and c is to the left of b.
+* in b, there is a small black square that is to the right of a small black triangle.
+
+from these statements, we can conclude that the small black triangle is to the left of the small black square.
+
+therefore, the correct answer(s) are:
+
+['the small black triangle']",'none of them',none of them,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- small blue circle near and above a medium blue circle
+- small black square to the right of a small black triangle
+- small blue square far above the small black triangle
+- large black triangle near and above a small blue circle
+- medium yellow circle to the left of the small black triangle
+
+**step 2:** based on step by step reasoning, select the appropriate answer(s) from the"
+"There is a block called A. In A, there are four blue circles: two small ones, a medium one, and a large one. The two small circles are below the large circle. The medium circle is far above and to the left of the large circle. There is another block called B, Which is to the right of A. In B, there is a blue triangle near the right edge of B. There is another block called C, Which is to the right of B. In C, there is a yellow circle, a large yellow triangle, and a black square. The yellow circle is near and to the left of the yellow triangle. The black square is to the right and below the yellow triangle.",What block does not have a circle inside of it?,FB,"['A', 'B', 'C']",['B'],['Negation'],b,"based on step-by-step reasoning:
+
+* block a has four blue circles.
+* block b does not have a circle inside of it (only a triangle).
+* block c has a yellow circle, a large yellow triangle, and a black square.
+
+therefore, the answer is:
+
+['b']",b,b,"**step 1:** identify the key objects and their attributes.
+
+- block a:
+    - four blue circles: two small ones, a medium one, and a large one.
+    - two small circles are below the large circle.
+- block b:
+    - blue triangle near the right edge of b.
+- block c:
+    - yellow circle, large yellow triangle, and black square.
+
+**step 2:** based on step by step reasoning, choose"
+"There are three blocks called A, B, and C. A is to the left of B and B is to the left of C. In A, there is a large blue triangle that is near and below a medium black triangle. There is also a large black triangle that is near and below the large blue triangle. In B, there are two medium blue circles that are to the left of a medium black circle. The black circle is near and above a large blue circle. In C, there is a large yellow circle that is near and to the left of a small black triangle. There is also a large blue triangle near and to the right of the small black triangle.",What object is to the right of the medium blue things in B? the medium black circle  or  the large yellow circle ?,CO,"[' the medium black circle ', ' the large yellow circle ', 'both of them', 'none of them']",['both of them'],"['Converse', ' Lists/Sets']",'the large yellow circle',the correct answer is ['the medium black circle'].,'the large yellow circle',none of them,"**step 1:** identify the key objects and their attributes mentioned in the question.
+
+- a: large blue triangle
+- b: two medium blue circles
+- c: large yellow circle
+
+**step 2:** based on step by step reasoning, we can conclude the following:
+
+- the medium black circle is to the left of the large blue things in b.
+- the large yellow circle is to the right of the small black triangle.
+
+**step 3:** therefore,"
+There is a block called A. It has a big blue circle and a red square. The big blue circle is below the red square. There is another block called B Which is above block A. There are a small blue circle and a yellow square in this block. The small blue circle is to the left of the yellow square.,Where is the circle left to a square regarding to a circle below a square?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']",['above'],"['Lists/Sets', ' Converse']",left,"based on step-by-step reasoning:
+
+* the big blue circle is below the red square in block a.
+* block b is above block a, and it has a small blue circle to the left of a yellow square.
+
+considering these details, i can conclude that the circle (big or small) is left to a square (red or yellow).
+
+answer: ['left']",'near to',left,"**step 1:** identify the key objects and their attributes.
+
+- block a:
+    - big blue circle: has a big blue circle and a red square.
+    - red square: has a big blue circle and a red square.
+
+- block b:
+    - small blue circle: is to the left of a yellow square.
+    - yellow square: has a small blue circle and a yellow square.
+
+**step 2:** based on step by step reasoning"
+"There is a block named A. In A, there is a pink triangle that touches the bottom of A. There is also a white triangle that touches the left edge of A, a red triangle that touches the top of A, and a green triangle that touches the right edge of A. Below A there is a block called B. In B, there is a small square, a large square, and a yellow circle. The large square is to the right of and near the yellow circle. The yellow circe is to the right of and above the small square. Below B there is a blocked named C. In C, there is a brown oval that is on top of a blue rectangle.",Is the yellow thing near the large thing?,YN,"['Yes', 'No', 'DK']",['Yes'],['Symmetry'],yes,"based on step-by-step reasoning:
+
+* the yellow circle is in block b.
+* the large square is to the right of and near the yellow circle.
+* therefore, the answer is: ['yes']",yes,yes,"**step 1:** identify the key objects and their attributes:
+
+- block a:
+    - pink triangle touching the bottom
+    - white triangle on the left edge
+    - red triangle on the top
+    - green triangle on the right edge
+
+- block b:
+    - small square
+    - large square to the right
+    - yellow circle
+
+- block c:
+    - brown oval on top of a blue rectangle
+
+**step 2:** analyze the context"
+"There are three blocks called A, B, and C. A is to the left of B and B is to the left of C. In A, there is a large blue triangle that is near and below a medium black triangle. There is also a large black triangle that is near and below the large blue triangle. In B, there are two medium blue circles that are to the left of a medium black circle. The black circle is near and above a large blue circle. In C, there is a large yellow circle that is near and to the left of a small black triangle. There is also a large blue triangle near and to the right of the small black triangle.",What block does not have any circles inside of it?,FB,"['A', 'B', 'C']",['A'],"['Negation', ' Quantifier']",a,[a],'c',b,"**step 1:** identify the key objects and their attributes:
+
+- a: large blue triangle near and below a medium black triangle
+- b: two medium blue circles to the left of a medium black circle
+- c: large yellow circle to the left of a small black triangle
+
+**step 2:** based on the context, the block that does not have any circles inside of it is:
+
+**answer: c**
+
+**explanation:** the context describes three blocks, and c"
+"There is a block called A. In A, there are four blue circles: two small ones, a medium one, and a large one. The two small circles are below the large circle. The medium circle is far above and to the left of the large circle. There is another block called B, Which is to the right of A. In B, there is a blue triangle near the right edge of B. There is another block called C, Which is to the right of B. In C, there is a yellow circle, a large yellow triangle, and a black square. The yellow circle is near and to the left of the yellow triangle. The black square is to the right and below the yellow triangle.",What is the relation between the black thing and the small blue thing?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']","['right', 'far from']","['Lists/Sets', ' Transitivity']",dk,"based on step-by-step reasoning:
+
+* the black square is in block c, and the yellow triangle is above it.
+* the small blue circles are in block a, below the large circle.
+* there is no mention of any connection between the black thing (square) and the small blue things (circles).
+
+therefore, the correct answer(s) are:
+
+['below']",'dk',below,"**step 1:** identify the key objects and their attributes.
+
+- block a:
+    - four blue circles: two small ones, a medium one, and a large one.
+    - two small circles are below the large circle.
+- block b:
+    - blue triangle near the right edge of b.
+- block c:
+    - yellow circle, large yellow triangle, and black square.
+
+**step 2:** based on step by step reasoning, select"
+"There are three blocks called A, B, and C. B is to the left of A and C is to the left of B. In A, there is a medium blue square near and to the right of a large yellow square. The large yellow square is far to the right of a small blue circle. In B, there is a large black circle is near and above a large blue circle. Far below the blue circle is a large black square. In C, there is a small blue circle that is far below a large blue square.",What block does not have any triangles inside of it?,FB,"['A', 'B', 'C']",['C'],"['Negation', ' Quantifier']",b,[a],"'dk' (don't know). the information provided in the context does not specify whether there are any triangles inside blocks a, b, or c. the shapes mentioned are squares and circles, but no triangles are described.",b,"**step 1:** identify the key objects and their attributes:
+
+- a: large yellow square
+- b: large black circle
+- c: small blue circle
+
+**step 2:** analyze the context:
+
+- b is to the left of a.
+- c is to the left of b.
+
+**step 3:** based on the context, the block that does not have any triangles inside of it is:
+
+**answer: b**
+
+**explanation:**
+
+b"
+"There are three blocks called A, B, and C. A is to the left of B and B is to the left of C. In A, there is a large yellow square that is near and to the left of a small yellow square. Below the small square is a medium yellow circle. In B, there is a small black triangle that is to the left of a large black square. Far below the black square is a small blue circle. In C, there is a medium blue triangle.",Is the medium blue thing to the right of the small yellow thing?,YN,"['Yes', 'No', 'DK']",['Yes'],"['Lists/Sets', ' Transitivity']",no,"based on step-by-step reasoning:
+
+* a is to the left of b and b is to the left of c.
+* in a, there is a medium yellow circle below the small yellow square. this means the medium blue triangle in c cannot be to the right of the small yellow thing (square or circle).
+* therefore, the answer is: ['no']",'dk',no,"**step 1: identify the key objects and their attributes**
+
+- a: large yellow square
+- b: small black triangle
+- c: medium blue triangle
+
+**step 2: based on step by step reasoning**
+
+- the medium blue thing is located below the small yellow thing.
+- the medium blue thing is to the right of the small yellow thing.
+
+**answer: yes**"
+"There are three blocks called A, B, and C. A is to the right of B and B is to the right of C. In A, there is a medium black triangle. In B, there is a small blue circle that is far below a medium yellow square. In C, there is a small yellow square near and above a small black triangle. The black triangle is near and to the right of a large black square. There is a medium blue triangle below the large black square.",What is the relation between the medium black triangle and the medium blue triangle?,FR,"['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']","['right', 'far from']","['Lists/Sets', ' Transitivity']",near to,"[right, below]",'below',below,"**step 1:** identify the key objects and their attributes.
+
+- a: medium black triangle
+- b: small blue circle
+- c: small yellow square
+- d: large black square
+- e: medium blue triangle
+
+**step 2:** based on step by step reasoning, select the appropriate answer(s) from the given candidate answers.
+
+- the black triangle and the medium blue triangle are **right** to each other.
+
+**answer: right**"
+"There are three blocks called A, B, and C. A is to the right of B and B is to the right of C. In A, there is a medium black triangle. In B, there is a small blue circle that is far below a medium yellow square. In C, there is a small yellow square near and above a small black triangle. The black triangle is near and to the right of a large black square. There is a medium blue triangle below the large black square.",What block does not have any blue object inside of it?,FB,"['A', 'B', 'C']",['A'],"['Negation', ' Quantifier']",c,"based on step-by-step reasoning:
+
+* block a has a medium black triangle.
+* block b has a small blue circle and a medium yellow square.
+* block c has a small yellow square and a small black triangle.
+
+from this information, we can conclude that only block c does not have any blue object inside it (since there is no blue object in blocks a or c).
+
+answer: ['c']",c,b,"**step 1:** identify the key objects and their attributes.
+
+- a: large black square
+- b: small blue circle
+- c: small yellow square
+
+**step 2:** based on the context, the block that does not have any blue object inside of it is **c**.
+
+**answer: c**"
+"There are three blocks named A, B, and C. A is to the right of B and B is to the right of C. In A, there is a small yellow triangle that is near and to the left of a medium yellow circle. In B, there is a medium black circle Which is above a large blue triangle. The large triangle is above and near a small blue circle. There is also a large black circle far below the small blue circle. In C, there is a medium blue circle.",What object is not below the large blue thing? the medium black circle  or  the small blue circle?,CO,"[' the medium black circle ', ' the small blue circle', 'both of them', 'none of them']",[' the medium black circle '],['Negation'],both of them,"based on step-by-step reasoning:
+
+* the large blue triangle is above and near a small blue circle.
+* there is also a large black circle far below the small blue circle.
+
+from this, i can conclude that the small blue circle is below the large blue triangle. therefore, the object that is not below the large blue thing (the large blue triangle) is:
+
+answer: ['the medium black circle']",'none of them',both of them,"**step 1:** identify the key objects and their attributes.
+
+- a: small yellow triangle, medium yellow circle, large blue triangle, small blue circle, large black circle, medium blue circle.
+
+**step 2:** based on the context, the object that is not below the large blue thing is the medium black circle.
+
+**answer: [the medium black circle]**"

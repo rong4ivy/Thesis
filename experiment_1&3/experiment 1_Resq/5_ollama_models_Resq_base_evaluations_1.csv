@@ -1,0 +1,633 @@
+Context_id,Story,Question,Question_Type,Answer,Candidate_Answers,Steps_of_Reasoning,Is_Commonsense_Question,ollama/openchat,ollama/llama3,ollama/mistral,ollama/phi3:mini,ollama/gemma:2b
+annotations/00/818.eng,"a dark-skinned , dark-haired girl in red vest is sitting outside boulders in background",Is the red thing contain the girl?,YN,No,"Yes, No",,True,no,yes,no,no,"yes. the red thing is contain the girl.
+
+the context describes a dark-skinned , dark-haired girl in red vest sitting outside boulders in background."
+images/01/1166.jpg,"a room with light yellow walls and two single beds made of wood in a row , with different multicoloured bedcovers .",Are the wooden thinsg contain the room?,YN,No,"Yes, No",,,yes,yes,no,no,"yes.
+
+the room has wooden things, and the beds are made of wood."
+annotations/00/851.eng,"a dark-skinned , dark-haired boy wearing a white shirt underneath a black pullover is standing in a classroom other kids are working in the background",Is the boy have the white thing?,YN,No,"Yes, No",,False,yes,yes,yes,yes,"yes.
+
+the context describes a dark-skinned , dark-haired boy wearing a white shirt underneath a black pullover."
+annotations/01/1412.eng,"a room with green walls , two single beds made of wood , a night table with a lamp in between and a painting above it there is a window with a green and orange curtain on the right",Is the lamp right of the green thing?,YN,No,"Yes, No",,False,no,yes,yes,"no. the ""green thing"" likely refers to either the walls or the window with its corresponding curtain; since neither is directly mentioned as being on a bedside table next to one of the single beds made of wood (where lamps typically are), we cannot assume that it's right of the lamp without further context.","yes.
+
+the lamp is right of the green thing."
+annotations/00/805.eng,"a dark-skinned , dark-haired girl in a blue pullover",Is the blue thing inside the girl?,YN,No,"Yes, No",,True,no,yes,no,no,"yes. the context describes a dark-skinned, dark-haired girl in a blue pullover, implying that the blue thing is inside her."
+images/01/1309.jpg,"a white , two-storey building with the green writing Hostal El Ancla . a white , two-storey building with the green writing Hostal El Ancla. arched windows behind an iron fence and an green , arched entrance . there is a small , grey wall in front of the house .",Is the wrting behind the building?,YN,No,"Yes, No",2.0,,no,no,no,no,"yes.
+
+the writing behind the building is an arched phrase that reads ""hostal el ancla""."
+images/00/951.jpg,"a dark-skinned , dark-haired girl wearing a black hat , a red vest and a brown necklace , in the backyard of a house .",Is the Necklace above the house?,YN,No,"Yes, No",1.0,True,no,no,no,"no. the context does not provide information about the positioning of the necklace relative to the house; it only describes what the girl is wearing and her location in the backyard. therefore, without additional details or assumptions, a definitive answer cannot be given based on common sense reasoning alone. however, since ""no"" represents uncertainty which aligns with this scenario's lack of information about necklace positioning relative to the house, it would seem most appropriate as an answer here:
+
+candidate_answer: no","no
+
+candidate_answers: yes, no"
+images/00/949.jpg,"a dark-skinned , dark-haired girl wearing a black hat , a white cardigan and a red poncho . a dark-skinned , dark-haired girl wearing a black hat , a white cardigan and a red poncho. exterior shot . short grass and some garbage in the background .",Is the hat above the poncho?,YN,Yes,"Yes, No",,True,yes,yes,yes,"i'm sorry, but as an ai text-based model developed by microsoft, i don't have access to real-time data or images. therefore, without a specific image provided in your question for analysis, it is impossible for me to answer accurately whether the hat is above the poncho based on spatial reasoning alone from this context information. please provide an actual visual reference so that i can assist you better!","no
+
+the context does not provide any information about the hat being above the poncho, so i cannot answer this question from the provided context."
+annotations/00/859.eng,"a dark-skinned , dark-haired boy wearing a grey jacket is standing in a classroom a girl is sitting at her desk in the background comic characters on the wall at the back",Is the desk behind the grey thing?,YN,Yes,"Yes, No",2.0,False,no,yes,yes,"no. the question asks if a specific object (the girl's desk) is located in relation to another item mentioned earlier (a dark-skinned boy wearing a grey jacket). since there was no mention of any connection between the two items within the context provided, it can be reasoned that they are not related. therefore, based on common sense reasoning and spatial awareness, one could conclude that 'the desk is behind the grey thing' does not hold true in this scenario as per given information.","yes.
+
+the context describes a dark-skinned , dark-haired boy wearing a grey jacket standing in a classroom, and a girl is sitting at her desk in the background comic characters on the wall at the back."
+annotations/00/813.eng,"a dark-skinned , dark-haired boy in dark vest is standing in front of a wall made of rocks",Is the wall behind the boy?,YN,Yes,"Yes, No",1.0,False,yes,yes,yes,"yes. the context implies that there's something or someone directly ahead (or possibly to one side), and since it doesn't mention anything else in front of him except for a wall made of rocks, we can infer he is facing the rocky wall which would be behind himself as well. so yes, based on common sense reasoning, if not explicitly stated otherwise, there should indeed be something (in this case, a dark-rocked wall) directly opposite to his position or in front of him when considering typical spatial arrangements and human behavior.","yes.
+
+the context describes a dark-skinned , dark-haired boy standing in front of a wall made of rocks."
+annotations/01/1407.eng,"a three-storey building made of red bricks , with red doors and a blue jalousie on the ground level the uppermost level is still partly under construction",Is the door below the construciton?,YN,Yes,"Yes, No",,False,yes,yes,yes,no,"yes.
+
+the context describes a three-storey building with red bricks, red doors, and a blue jalousie on the ground level, and the uppermost level is still partly under construction."
+images/00/696.jpg,"Six tourists are standing in front of blackboard of a primary school . one tourist is taking a photo . local kids are sitting at their desks , singing and clapping . one kid has just opened one book . there are posters and pictures on the wall in the background .",Is the tourist behind a blackboard?,YN,Yes,"Yes, No",1.0,True,no,yes,no,"no. the context states that they are standing ""in front of"" the blackboard, not behind it.",yes. the tourist is behind a blackboard.
+annotations/01/1340.eng,"a house made of red bricks , a little veranda with a small garden in front of it",Is the veranda in front of the house?,YN,Yes,"Yes, No",,False,yes,yes,yes,candidate answer: yes,"yes.
+
+the context describes a house with a veranda in front of it, implying that the veranda is part of the house's structure."
+images/01/1029.jpg,"a man in white shirt , black jacket , grey pants and black shoes is sitting on a wooden chair and talking on the phone . on the right a wooden bed with white bedcovers . on the left ( before the man ) a wooden desk and a vase with flowers . there is a black brief-case in front of the chair , and there is also a picture hanging on the wall above the bed .",Is the bedcovers below the bed?,YN,No,"Yes, No",1.0,True,yes,yes,yes,yes,"no
+
+candidate_answers: yes, no"
+images/01/1159.jpg,"a room with white walls , a double bed made of wood with an orange and blue bedcover and a night table with a lamp to the left . there is also a window with a wooden frame and a light brown curtain on the very left .",Is the window inside the wooden thing?,YN,Yes,"Yes, No",,,no,no,no,no,"yes.
+
+the window is located inside the wooden thing, which is a bed."
+images/00/955.jpg,"a dark-haired , dark-skinned girl wearing a dark green hat , a grey pullover with blue sleeves and a light blue and yellow necklace . a grey brick wall and short grass in the background .",Is the grass far from the wall?,YN,No,"Yes, No",,True,no,yes,yes,"to provide an accurate response to this question based on common sense reasoning without additional context or visual cues is challenging. however, since we don't have specific details about distances in the provided scenario and are asked for a yes/no answer using only given information, i will lean towards ""no"" as grass typically grows near walls if they exist within an outdoor setting like short grass does not imply extreme distance from any wall present.
+
+answer: no","no
+
+candidate_answers: yes, no"
+annotations/00/851.eng,"a dark-skinned , dark-haired boy wearing a white shirt underneath a black pullover is standing in a classroom other kids are working in the background",Is the black thing in front of the kids?,YN,Yes,"Yes, No",2.0,False,no,yes,yes,"no. the context describes that there's only one dark-skinned boy wearing a white shirt underneath a black pullover standing in front of other kids who are working quietly in the background. there is no mention of any additional object or item being placed on top of these children, hence it can be concluded with common sense that there isn't another 'black thing' in front of them based solely on this context.","no
+
+candidate_answers: yes, no"
+images/01/1060.jpg,"behind it a bar with chairs and two people , and a bench with one person lying on it . behind it a bar with chairs and two people , and a bench with one person lying on it . Upper level with doors and a blue rail .",Is the bench near to the chairs?,YN,Yes,"Yes, No",,True,yes,yes,yes,"to determine if the bench is near to the chairs based on common sense reasoning, we can infer that objects in a bar setting are typically arranged for convenience and accessibility. therefore, it's reasonable to assume they would be placed relatively close together. 
+
+answer: yes","yes.
+
+the bench is located behind the bar with chairs and two people."
+images/00/704.jpg,"Pupils are sitting at their wooden desks in an open air classroom . two of them raising their hands , others smiling . three are wearing a green hat . red brick wall and windows in the background .",Is the hat above the table?,YN,Yes,"Yes, No",,True,no,no,no,"no. the context does not provide enough information to determine if the hat is directly over a specific desk or table within the classroom setting described. it only mentions that three students are wearing green hats without specifying their positions relative to tables or other objects in the room. therefore, based on common sense reasoning and given data limitations, it's not possible to definitively answer this question with either yes or no.","no
+
+candidate_answers: no"
+annotations/00/868.eng,"a dark-skinned , dark-haired boy wearing a black adidas cap , a white tee-shirt with long sleeves and a sleeveless dark grey pullover is sitting at his desk in a classroom",Is the black thing close to the desk?,YN,Yes,"Yes, No",,True,yes,yes,yes,"yes. the context implies that all items mentioned (the dark-skinned boy with long hair and his clothing including a cap, tee shirt, and pullover), are on or near him at his desk in the classroom. therefore, it is reasonable to assume that the black adidas cap he's wearing would be close to his body (and thus also likely close to his desk).","yes.
+
+the context describes a dark-skinned , dark-haired boy wearing a black adidas cap , a white tee-shirt with long sleeves and a sleeveless dark grey pullover is sitting at his desk in a classroom."
+annotations/00/823.eng,"a dark-skinned , dark-haired girl is wearing a red vest and a red hair band",Is the red vest near the band?,YN,Yes,"Yes, No",2.0,True,yes,yes,yes,"without specific context or visual cues indicating their proximity in space, it's impossible to definitively determine if they are close together. therefore, based on common sense reasoning and lack of explicit information provided about spatial arrangement, my answer is 
+candidate_answer: no",yes. the red vest is near the red hair band.
+images/01/1125.jpg,"a wooden house with green window frames , a small balcony on the left and a green Unmittelbare Treffer corrugated sheet roof above it . there are plants in front of the house and trees behind it .",Is the roof over the window?,YN,Yes,"Yes, No",,,no,no,yes,"no. the context does not indicate that any part of the green unmittelbare treffer corrugated sheet roof is directly above a window; it simply states there are windows with green frames and trees behind the house. roofs typically cover all sides of a structure except for where walls or other architectural features may interrupt this coverage, which isn't mentioned in your context.","yes.
+
+the roof is over the window."
+annotations/01/1361.eng,"a white house with two large windows with wooden frames , two wooden pillars at the terrace with wooden benches and a wooden table there are mountains in the background on the right",Is the mountains behind the windows?,YN,Yes,"Yes, No",,False,no,no,no,no,yes. the mountains are behind the windows.
+annotations/00/856.eng,"a dark-skinned boy is wearing a black cap with an A on it , a grey and purple pullover and a black jacket which is red on the inside grass , stones and some garbage in the background",Is the garbage behind the grey thing?,YN,Yes,"Yes, No",2.0,False,no,no,yes,"based on common sense reasoning with limited context provided, it's not possible to definitively determine if there is garbage directly behind a ""grey thing"" without visual confirmation. therefore, i would respond with 'no'. however, this question cannot be answered accurately due to insufficient information and the nature of spatial questions which typically require specific details or images for accurate responses.","no
+
+candidate_answers: yes, no"
+annotations/00/817.eng,"a dark-skinned , dark-haired girl in a blue-and-yellow jumper is sitting outside boulders in the background",Is the girl and the blue contain yellow thing?,YN,No,"Yes, No",,True,no,yes,no,"yes. the question asks if both ""the girl"" (referring to a dark-skinned, dark-haired girl in a jumper with blue and yellow colors) and ""blue contain yellow thing."" since it's stated that the girl is wearing a blue-and enduring yellow color, this implies she contains some aspect of both. therefore, based on common sense reasoning regarding visual perception (assuming no optical illusions or misinterpretations), one can conclude 'yes'.","no
+
+candidate_answers: yes, no"
+annotations/01/1352.eng,"Two single beds , made of wood , painted white , with red and orange bedcovers white door on the right window with red curtains on the left",Are the orange things to the left of the door?,YN,Yes,"Yes, No",2.0,False,no,yes,yes,no,yes. the orange things to the left of the door are bedcovers.
+images/00/686.jpg,six kids are sitting around a table and playing with toy cars . one kid is standing next to the table . a woman is holding a black plastic bag on the left . three tourists in the background are talking to each other .,Is the sanding kid touching the toys?,YN,No,"Yes, No",1.0,,no,no,yes,"without additional context or visual cues indicating that the standing child is engaged with the tabletop activity involving toy cars and a black plastic bag, it's reasonable to assume based on common sense reasoning. the answer would be 'no'. however, if there were specific details suggesting otherwise in the provided text, then we could consider an alternative response.","no
+candidate_answers: no"
+annotations/01/1400.eng,a grey car is parking in front of a grey house with brown window frames and plants on the balcony,Are the plants behind the car?,YN,Yes,"Yes, No",2.0,False,no,no,no,no,"yes.
+
+the context describes a grey car parking in front of a grey house with brown window frames and plants on the balcony."
+images/01/1086.jpg,a room with two single beds and a lamp above one bed . half of the walls is covered by wood . a table with two chairs at the back ( next to a window ) . a vase with flowers on the table :,Is the wood in front of the walls?,YN,Yes,"Yes, No",,,no,no,yes,no,"yes.
+
+the context describes a room with furniture and a table, so the wood in front of the walls is part of the furniture."
+images/00/708.jpg,"Tourists are visiting an old people's home . each tourist is leading one old lady , arm in arm . the old ladies are wearing traditional dresses and a hat . the room is decorated with balloons . there is a picture on the wall in the background , and also an old lady carrying a green balloon .",Is the balloons below the tourists?,YN,No,"Yes, No",1.0,,no,yes,no,no,"no
+
+candidate_answers: no"
+images/01/1122.jpg,"a room with white and orange walls and a brown ornament . there is a double bed made of iron , light brown pillows , white bedcover and towels . a night table with a bedside lamp and a phone on the right . and a window with white curtains on the very right .",Is the lamp above the bed?,YN,No,"Yes, No",,,no,no,yes,no,"no
+
+candidate_answers: yes, no"
+annotations/00/819.eng,"a dark-skinned , dark-haired girl wearing a USA pullover and red pants is standing outside a wall made of boulders in the near background USA jumper says Future USA at the front , with the Olympic rings below the letters , one sleeve shows the stars , the other one the stripes",Is the rings close to the boulders?,YN,Yes,"Yes, No",,False,no,no,yes,no,"no
+
+candidate_answers: yes, no"
+images/01/1188.jpg,"a white house with stairs , arches and columns in front of the entrance . there is a garden on the left with a lawn , flowers and little palm trees .",Is the lawn inside the house?,YN,Yes,"Yes, No",,,no,no,no,no,"no
+
+candidate_answers: yes, no"
+annotations/01/1230.eng,"a courtyard with tables , wooden chairs , a fountain on the right , several arches and columns and a bar there are potted plants and green rails on the balcony of the second floor",Are the tables to the left of the fountain?,YN,Yes,"Yes, No",2.0,False,no,no,yes,"without specific information about the placement of the tables in relation to the fountain within your context, i cannot provide a definitive answer. however, based on common courtyard layouts and spatial reasoning, it's reasonable to assume that such features are typically arranged for visual balance or flow. if we follow this logic:
+
+no","yes.
+
+the context describes a courtyard with various elements, including tables, chairs, a fountain, arches, columns, and a bar. the question specifically asks about the position of the tables relative to the fountain."
+annotations/00/783.eng,"a dark-skinned , dark-haired girl in a blue jumper and red pants is sitting on the floor .",Is the floor above the red thing?,YN,No,"Yes, No",,True,no,no,no,"no. the context does not provide information about any floors or vertical positioning of objects; it only describes a girl sitting on the floor with specific clothing colors and skin tone. therefore, we cannot determine if there is an ""above"" component in this scenario based solely on common sense reasoning without additional details regarding multiple levels within the space where she's located.","no
+
+candidate_answers: yes, no"
+images/01/1029.jpg,"a man in white shirt , black jacket , grey pants and black shoes is sitting on a wooden chair and talking on the phone . on the right a wooden bed with white bedcovers . on the left ( before the man ) a wooden desk and a vase with flowers . there is a black brief-case in front of the chair , and there is also a picture hanging on the wall above the bed .",Is the man touching the chair?,YN,Yes,"Yes, No",1.0,,no,yes,yes,"based on the context provided, it can be inferred that since there is no mention of any physical contact between the man and the chair while he's talking on the phone. therefore, my response would be ""no"". the answer to this question should ideally also include a brief explanation for clarity:
+
+answer: no, because based on common sense reasoning (and without additional context suggesting otherwise), it is reasonable to assume that when someone talks on the phone and sits in a chair, they are not touching or sitting directly on top of the wooden seat.","no
+
+candidate_answers: no"
+annotations/01/1425.eng,two single beds made of wood with white bedcovers in a room with white walls and a window with brownish green curtains,Is the bed contain the bedcovers?,YN,No,"Yes, No",,True,yes,yes,yes,yes,"yes.
+
+the context describes two beds made of wood with white bedcovers, which are clearly placed on top of each other."
+annotations/01/1412.eng,"a room with green walls , two single beds made of wood , a night table with a lamp in between and a painting above it there is a window with a green and orange curtain on the right",Is the green thing right of the painting?,YN,Yes,"Yes, No",,False,no,yes,yes,"yes. the context mentions that ""there is a window with a green and orange curtain,"" which implies there's something green on the right side relative to where we are standing in this room (assuming standard perspective). since paintings typically hang above beds or tables rather than being placed next to windows, it makes sense for the painting—which isn't described as having a specific color here—to be positioned with its artwork facing left. therefore, if there is something green on that right side of this room (the window and curtain), then yes, in relation to where we are standing or looking from within the context provided, it would appear 'right' of the painting when viewed directly ahead towards the bed area.",yes. the green thing is right of the painting.
+annotations/00/822.eng,"a dark-skinned , dark-haired boy in a blue and white chequered shirt is sitting at a desk outside",Is the desk touching the boy?,YN,Yes,"Yes, No",1.0,True,yes,no,yes,no,"no
+
+candidate_answers: yes, no"
+images/00/992.jpg,"a dark-skinned , dark-haired girl in a white shirt in front of a painted wall . the painting shows a sunset behind a hill and a tree .",Is the white thing above the wall?,YN,No,"Yes, No",1.0,True,no,yes,no,"no. the context describes that there is only one object mentioned as being ""white,"" which is the girl's shirt. there is no mention of anything white placed above the wall in this description. therefore, based on common sense reasoning and spatial understanding from the given information, we can conclude with a 'no'.","yes.
+
+the white thing is above the wall."
+annotations/01/1420.eng,"a two-storey terraced house with windows behind bars , a white painted entrance and flower pots on ground level , and a balcony on the upper level",Is the balcony above the white thing?,YN,Yes,"Yes, No",,False,yes,yes,yes,"yes. the context describes that there is an entrance which appears to be painted white and flower pots are on ground level (which would also imply a lower position than balcony). therefore, it's reasonable to conclude that the balcony is above these elements based on common spatial arrangements in buildings.","yes.
+
+the balcony is above the white thing."
+images/01/1084.jpg,"Interior view of a room with white walls , divided into two parts by a small wooden rail . there is a double bed , a night table and a bed lamp in the foreground . there is a coffee table with a sofa and chairs around and pictures are hanging on the wall in the background .",Is the lamp below the night table?,YN,No,"Yes, No",,,yes,yes,yes,no,"yes.
+
+the lamp is below the night table."
+annotations/00/833.eng,"a dark-skinned , dark-haired boy in black pullover and blue pants is standing next to a desk grey brick walls and blue sky in the background",Is the black thing in front of the grey thing?,YN,Yes,"Yes, No",,False,yes,yes,yes,"no. the context describes only one ""black"" item (the boy's pullover), and it is not specified that this object is directly in front or behind anything else described as grey (""brick walls""). therefore, we cannot confirm the relative position of these items based on the given information alone.
+
+however, if you are asking whether a black thing could be standing next to something gray (the brick walls), then yes, it's possible that this is happening in the context provided: ""a dark-skinned , dark-haired boy in black pullover and blue pants is standing next to a desk grey brick walls and blue sky in the background."" but since there isn't an explicit mention of any specific 'black thing', we cannot confirm that.",yes. the black thing is in front of the grey thing.
+annotations/00/793.eng,"a dark-skinned girl wearing a brown hat , a light shirt below a pink shirt and a dark green vest",Is the dark green thing over the light thing?,YN,Yes,"Yes, No",,False,yes,yes,yes,"yes. the context describes layers of clothing with different colors where brown (hat), pink (shirt below a shirt), and dark green (vest). since vests are typically worn over other garments like shirts, it is reasonable to conclude that the dark green vest would be placed over the light-colored layer.",yes. the dark green thing is over the light thing.
+images/01/1033.jpg,an inner courtyard with a fountain and flower pots in the centre . several arches surround the courtyard on two levels in front of the red building with a blue entrance . several arches surround the courtyard on two levels in front of the red building with a blue entrance. More flower pots below the arches .,Is the blue thing inside the red thing?,YN,No,"Yes, No",2.0,True,no,no,no,no,"yes.
+
+the blue thing is inside the red building."
+annotations/00/812.eng,"a dark-skinned , dark-haired girl in a grey T-Shirt is standing in a classroom a wall made of red bricks in the background",Is the grey thing outside of the classroom,YN,No,"Yes, No",2.0,False,no,yes,no,no,"yes.
+
+the grey thing outside of the classroom is a wall made of red bricks."
+images/00/679.jpg,"Four tourists are sitting on a bus. Four tourists are sitting on a bus. Two women in the front row with their heads turned around. another one in the second row looking out the window. and one man with sunglasses in the very last row , looking out the window too.",Is the man behind the bus?,YN,No,"Yes, No",1.0,,no,no,no,no,"no
+
+candidate_answers: yes, no"
+images/00/958.jpg,"a dark-skinned , dark-haired girl wearing a black hat , a white cardigan , a green vest and a golden necklace . two houses in the background , one with a grey roof , the other one with a light brown roof . short grass and some large stones in the background .",Is the grey thing below the brown thing?,YN,No,"Yes, No",1.0,True,no,yes,yes,"the context provided does not give enough information about specific objects being gray or brown. therefore, without additional details on what exactly is referred to as ""the grey thing"" and ""the brown thing,"" it's impossible to accurately answer the question based solely on common sense reasoning from this text snippet alone. hence:
+
+answer: no",yes. the grey thing is below the brown thing.
+images/00/692.jpg,"there are two social workers in the foreground . one wearing a red pullover and brown pants is bending over to access the blue paint . the other one in a red tee-shirt and black jeans is watching her . at the back of the room there is another worker wearing a white tee-shirt and blue jeans , acutally painting . there are many newspapers on the ground to protect the kindergarten floor . all three workers are wearing a mask .",Is the white thing behind the paint?,YN,Yes,"Yes, No",,True,no,yes,no,no,yes. the white thing behind the paint is a whiteboard.
+images/01/1090.jpg,"exterior view of a three story building . entrance and arched windows on ground floor , a coop with a rail , a balcony with several arches and columns on the second floor , balcony with columns on the third floor .",Is the coop below the balconies?,YN,Yes,"Yes, No",,,yes,yes,no,"yes. the common sense reasoning suggests that since there are multiple floors and each has a distinctive feature (entrance with arched windows on ground floor, coop with rail), it is reasonable to assume that the coop would be located below the balconies which occupy higher levels of the building.","no
+
+the context does not provide any information about the coop being below the balconies."
+images/00/971.jpg,"a dark-haired , dark-skinned boy wearing a black cap ( backwards ) and a red and green tee-shirt underneath a light blue anorak . a dark-haired , dark-skinned boy wearing a black cap ( backwards ) and a red and green tee-shirt underneath a light blue anorak. Short grass in the background .",Are the red thing and blue thing touching?,YN,Yes,"Yes, No",1.0,,no,yes,no,"without additional context or visual cues indicating proximity between objects of different colors on a person's body (like accessories), it is not possible to definitively determine if they are touching. therefore, based solely on common sense reasoning and the information provided in the question, my answer would be:
+
+no","no
+
+the context does not provide any information about the red and blue things touching, so i cannot answer this question from the provided context."
+images/00/738.jpg,Excited kids are standing at their desks in a classroom . some of them seem to be very happy and are laughing . there are pictures of trees on the wall at the back . two girls have an open book on their desk .,Is the desks inside the classroom?,YN,Yes,"Yes, No",,True,yes,yes,yes,yes,"no
+
+candidate_answers: no"
+images/00/949.jpg,"a dark-skinned , dark-haired girl wearing a black hat , a white cardigan and a red poncho . a dark-skinned , dark-haired girl wearing a black hat , a white cardigan and a red poncho. exterior shot . short grass and some garbage in the background .",Are the red thing and black thing touching?,YN,No,"Yes, No",1.0,True,no,yes,no,"without additional context or visual cues indicating proximity between the two items (black hat and red poncho), it is not possible to definitively determine if they are in contact. therefore, based on common sense reasoning without further information, my answer would be: 
+
+no","no
+
+the context does not provide any information about the red thing and black thing touching, so i cannot answer this question from the provided context."
+annotations/00/837.eng,"a dark-skinned , dark-haired boy in a blue-and-white striped jumper with a sleeveless pullover is standing in front of a red brick wall and a blue wall",Is the red thing and the blue behind white thing?,YN,Yes,"Yes, No",,False,no,yes,no,"the question seems to be asking if there are two things that match with each other in color. however, it's not clear which objects or colors we should compare because of ambiguous phrasing like ""behind white thing."" assuming the boy and his clothing (dark-skinned/haired) is being considered as one entity:
+
+candidate_answer: no",yes. the red thing and the blue thing are white.
+annotations/00/836.eng,"a dark-skinned , dark-haired boy in a black pullover is standing in front of a blue wall",Is the girl touching the black thing?,YN,Yes,"Yes, No",1.0,True,no,no,no,"the question cannot be answered with either ""yes"" or ""no"" based on the provided context. there is no mention of a 'girl' in the original scenario; therefore, it does not provide enough information to determine if she is touching anything black. 
+
+candidate_answer: no","no
+
+candidate_answers: yes, no"
+images/00/704.jpg,"Pupils are sitting at their wooden desks in an open air classroom . two of them raising their hands , others smiling . three are wearing a green hat . red brick wall and windows in the background .",Is the hat behind the windows?,YN,No,"Yes, No",,True,no,no,no,"no. the context does not provide enough information to determine if the hats are directly behind the windows or even near them; it only states that three students are wearing a green hat without specifying their location in relation to the window'static structure'. therefore, based on common sense reasoning and spatial awareness within this limited context, i cannot definitively answer yes.",yes. the hat is behind the windows.
+images/00/736.jpg,"tourists are standing in front of the blackboard in a classroom . all the kids are sitting at their desks , some of them turned around to look at the camera . there is a clock above the blackboard , and also the letters Dios es amor between the clock and the blackboard , and higiene es salud on the side wall below the windows .",Is the clock below the school?,YN,No,"Yes, No",1.0,,no,no,no,no,"no
+
+the context does not provide any information about the clock being below the school."
+annotations/01/1358.eng,"a multi-storey frame house on the left , a snowcovered mountain in the background on the right behind a couple of trees , and in the foreground a wall decorated with flowers , a garden and a lawn",Is the garden in front of the trees?,YN,Yes,"Yes, No",,False,no,yes,yes,yes,"yes.
+
+the garden is in front of the trees."
+annotations/00/791.eng,"a dark-haired , dark-skinned girl is sitting on a red couch , wearing a pink pullover with a little bear",Is the pink thing inside the girl?,YN,No,"Yes, No",,True,no,yes,no,"yes. the context states that she is ""wearing"" it, which implies that the item (the pink pullover with a little bear) is on her body and inside of her clothing layers. therefore, we can conclude that yes, the pink thing is indeed inside the girl as part of what she'ries wearing.","yes. the context describes a pink thing inside the girl, so it must be inside her."
+annotations/01/1342.eng,"a narrow , long courtyard of a brown house with wooden doors , white door frames and many pictures on the walls there are many plants , wooden chairs and flower pots",Are the pictures above the chairs?,YN,Yes,"Yes, No",2.0,True,no,no,yes,"no. the context does not provide enough information to determine a specific vertical arrangement of items in the courtyard; therefore, we cannot definitively say that the pictures are above the chairs based solely on this description.","no
+
+the context does not provide any information about the position of the pictures relative to the chairs, so i cannot answer this question from the provided context."
+images/00/737.jpg,many people are working on the bare brickwork of a house or are watching the workers from below . many wires are sticking out of the bare brickwork . one person is climbing up a ladder . many pallets are lying piled up in front of the house .,Are the brickwork touching wires?,YN,Yes,"Yes, No",1.0,True,yes,no,no,"based on common sense reasoning and spatial understanding, without specific details about wire placement or proximity to the bare brickwork in question, it is safest to assume that not all wires are touching the brickwork. therefore, my answer would be candidate_answers: no. however, if there were explicit information indicating otherwise, then yes, they could potentially be touching.","no
+
+the passage does not specify whether the brickwork is touching the wires, so i cannot answer this question from the provided context."
+annotations/01/1516.eng,a white ship at the sea a blue sky in the background,Is the blue thing behind the sea?,YN,Yes,"Yes, No",,False,yes,yes,no,candidate answer: yes,"yes.
+
+the blue sky is behind the sea in the image."
+images/01/1098.jpg,"a man in a black jacket and brown pants shovelling snow from the entrance ( with a red shovel ) . behind him a white door , a large window .",Is the shovel behind the entrance?,YN,No,"Yes, No",,,no,yes,yes,"yes. the context states that there is snow being shoveled at the entrance with a red shovel, which implies it's located behind or in front of the entrance for this activity to take place effectively. therefore, we can infer 'yes', the shovel (red one) is indeed associated with the entrance area as per common sense reasoning and spatial understanding.","yes.
+
+the shovel is behind the entrance."
+images/01/1060.jpg,"behind it a bar with chairs and two people , and a bench with one person lying on it . behind it a bar with chairs and two people , and a bench with one person lying on it . Upper level with doors and a blue rail .",Is the rail over the chairs?,YN,Yes,"Yes, No",,True,no,no,no,no,"no
+
+candidate_answers: yes, no"
+annotations/01/1361.eng,"a white house with two large windows with wooden frames , two wooden pillars at the terrace with wooden benches and a wooden table there are mountains in the background on the right",Are the benches far from the terrace?,YN,No,"Yes, No",1.0,True,no,no,no,no,"no
+
+candidate_answers: yes, no"
+annotations/01/1349.eng,Courtyard with bushes buildings with wooden poles and wooden windows are to the left and right,Is the building right of the courtyard?,YN,Yes,"Yes, No",,False,yes,yes,yes,no,"yes.
+
+the building is to the left of the courtyard."
+images/00/955.jpg,"a dark-haired , dark-skinned girl wearing a dark green hat , a grey pullover with blue sleeves and a light blue and yellow necklace . a grey brick wall and short grass in the background .",Are the yellow thing and blue thing touching?,YN,Yes,"Yes, No",1.0,True,no,no,no,"without additional context or visual cues indicating that they are part of an accessory (like a bracelet), i would infer with common sense reasoning that it is unlikely for only one yellow and blue object to be touching. therefore, my answer based on the information provided in this scenario: 
+
+no","no
+
+candidate_answers: yes, no"
+annotations/01/1419.eng,"a room with white walls , a blue and white bunk bed on the right and another single bed in front of a broad window with brown curtains",Is the brown bed right of the other bed?,YN,Yes,"Yes, No",,False,no,no,yes,"no. the context mentions ""another single bed"" which is not specified to be on a different side than the bunk bed; it's simply another bed in front of the window with brown curtains without specifying its position relative to other furniture or indicating that there are multiple sides for comparison within this room setup as implied by your question. therefore, we cannot definitively answer yes based solely on provided context and common sense reasoning tasks; hence 'no'.","yes.
+
+the brown bed is right of the other bed."
+images/01/1127.jpg,a white house with a thatched roof and a garden with a lot of vegetation behind a grey wall .,Is the garden in front of house?,YN,Yes,"Yes, No",,,no,no,no,no,"yes.
+
+the context describes a white house with a thatched roof and a garden with a lot of vegetation behind a grey wall."
+annotations/00/845.eng,"a dark-skinned , dark-haired girl in a white shirt and black pants with black suspenders is sitting at her desk in a classroom some kids in the background are sitting at their desks",Is the white thing close to the desk?,YN,Yes,"Yes, No",,True,yes,yes,yes,"to provide an accurate response, i would need more specific information about what ""white thing"" is being referred to in this context. without additional details or a clear subject for reference within the scene described, it's impossible to definitively answer whether something white near the girl' end of her desk based on common sense reasoning alone.","no
+
+candidate_answers: yes, no"
+annotations/00/813.eng,"a dark-skinned , dark-haired boy in dark vest is standing in front of a wall made of rocks",Is the vest in front of the rocks?,YN,Yes,"Yes, No",,False,yes,yes,yes,yes,"yes.
+
+the vest is in front of the rocks."
+images/00/754.jpg,Tourists are standing on a wet sidewalk and are carrying bags of food . people are wearing rain coats and jackets . a house with brick walls and two garage doors behind them .,Are people touching the raincoats?,YN,Yes,"Yes, No",1.0,,no,yes,no,"based on common sense reasoning, it is likely that tourists are wearing rain coats and jackets to protect themselves from getting wet in a rainy environment. however, without specific information about their actions or interactions with each other's clothing, the safest answer would be: 
+
+no","no
+
+candidate_answers: yes, no"
+images/01/1122.jpg,"a room with white and orange walls and a brown ornament . there is a double bed made of iron , light brown pillows , white bedcover and towels . a night table with a bedside lamp and a phone on the right . and a window with white curtains on the very right .",Is the brown thing below the orange thing?,YN,No,"Yes, No",,,no,no,no,"without specific spatial information about their positions in relation to each other within the room's description provided, it is impossible for me as a language model ai developed by microsoft with no visual perception capabilities or memory of past interactions beyond this single session. therefore, i cannot provide an accurate answer based on common sense reasoning tasks without additional contextual information about their relative positions in the described scene.
+
+however, if we assume that ""brown thing"" refers to either the iron bed (which is light brown) and pillows or just one of them being brown, while ""orange thing"" could refer to any orange-colored object within this context such as a decoration on the wall: 
+
+question: is there an orange item in the room? yes.
+context provided does not specify if all walls are only white and orange or just one of them is painted with these colors, but it's safe to assume that at least some part of the room has been described as having orange coloration since you asked about ""orange thing"". 
+
+question: is there a brown item in the room? yes.
+the bed (made from iron and light brown pillows) is clearly mentioned, so we can confirm its presence within this context. the towels are also specified as white but could potentially be of any color including brown; however, without explicit information about their colors, i cannot definitively answer that they're brown based on the provided description alone.
+
+question: is there a bed in the room? yes. 
+the double iron bed is explicitly mentioned within this context and thus we can confirm its presence.
+
+based on these answers to individual questions about color-coded items, i cannot accurately answer whether ""the brown thing"" (presumably referring to one of the previously identified brown objects) is below ""the orange thing"". this question requires specific spatial information which has not been provided in this context and thus would be considered unanswerable based on common sense reasoning tasks without additional details.
+
+candidate_answer: no",yes. the brown thing is below the orange thing.
+annotations/00/824.eng,"a dark-skinned , dark-haired boy wearing a colourful shirt and a sleeveless pullover is standing in front of a blue wall",Is the blue thing in front of the boy?,YN,No,"Yes, No",1.0,False,no,yes,yes,"yes. the context states that there's a ""blue wall"" and it specifies its color as well. therefore, based on common sense reasoning, we can infer that what is in front of the boy (the blue thing) refers to this blue wall. so, yes, the 'blue thing' or object mentioned here is indeed in front of the boy - specifically referring to a part of his surrthy environment which he cannot see through as walls are not transparent objects and they block our view when we stand directly in front of them.",yes. the blue thing is in front of the boy.
+annotations/01/1230.eng,"a courtyard with tables , wooden chairs , a fountain on the right , several arches and columns and a bar there are potted plants and green rails on the balcony of the second floor",Is the tables right of the fountain?,YN,No,"Yes, No",,False,no,no,yes,"based on common spatial arrangements in courtyards where water features like fountains are often placed as focal points and surrounded by seating areas such as tables for convenience, it is reasonable to assume that the tables could be right of the fountain. however, without explicit information about their exact positions within this context, we cannot definitively answer with certainty. therefore:
+
+candidate_answer: no",yes. the tables are right of the fountain.
+annotations/00/872.eng,"a dark-skinned , dark-haired boy in a blue jumper with a yellow zip and a light blue nametag is standing in a classroom some kids are standing behind him",Is the blue thing touching the boy?,YN,Yes,"Yes, No",1.0,True,yes,yes,yes,"no. the context only mentions that there's a light blue nametag on the boy and nothing about it being in contact with his skin or clothing. it is common sense to assume personal items like name tags are worn rather than touching directly against one’ end of them without any specific mention, thus we can conclude no based on provided context.","no
+
+candidate_answers: yes, no"
+annotations/00/794.eng,"a dark-skinned , dark-haired girl wearing a yellow blouse with a blue collar handprints on the wall behind her",Is the yellow thing below the blue thing?,YN,Yes,"Yes, No",,True,no,yes,yes,"without additional context or visual representation of their positions relative to each other, it's impossible for me as an ai with only text-based capabilities and common sense reasoning skills to definitively determine whether ""the yellow thing is below the blue thing."" therefore, based on this limitation, my answer would be:
+
+no.",yes. the yellow thing is below the blue thing.
+images/00/683.jpg,"Three women are sitting on a wooden bench in front of an about one metre high , red brick wall . they are all wearing skirts and jumpers with gilets . two of them are wearing a hat too. one man is standing behind the wall. a wooden door on the left is being held open by a red brick .",Is the man behind the hat?,YN,Yes,"Yes, No",1.0,,no,no,no,no,"yes.
+
+the context describes a man standing behind a hat, so he must be the man behind the hat."
+annotations/00/875.eng,"a dark-skinned girl with black , ear-long hair in a green pullover and sleeveless brownish jumper is standing in a classroom behind her a boy with a blue cap , white tee-shirt and red pants a blackboard and more kids sitting at their desk in the background",Is the brown thing behind the desks?,YN,No,"Yes, No",2.0,False,no,yes,yes,"the context does not provide enough information about ""the brown thing"" to definitively determine its presence or absence. therefore, based on given details only, i cannot confirm if it is behind the desks without making assumptions beyond common sense reasoning tasks and spatial understanding. 
+
+answer: cannot be determined from the provided context (no).",yes. the brown thing behind the desks is a blackboard.
+annotations/01/1522.eng,"the end of a glacier , with broken off ice floes that are floating in front of it snowcovered mountains in the background",Is the glacier in front of the mountain?,YN,Yes,"Yes, No",2.0,False,no,yes,yes,"no. the context describes a scene where there is an end of a glacier with broken off ice floes floating in front of it and snow-covered mountains in the background. this means that the mountain cannot be behind the glacier as stated; therefore, based on common sense reasoning about spatial relationships, we can conclude:
+
+the answer to whether the glacier is in front of the mountain (given this context) would logically be no.","yes.
+
+the glacier is in front of the mountains, with broken off ice floes floating in front of it."
+annotations/01/1207.eng,"view of a brown house with grey and brown rooftiles there is a meadow with flowers in front of the house and a couple of trees behind it , and a canyon in the background",Is the brown thing behind the trees?,YN,No,"Yes, No",2.0,False,no,yes,yes,"no. the context describes that there is a meadow with flowers in front of the house, and some trees are located behind it. therefore, if we assume ""brown thing"" refers to something on or near the ground level (like soil), then no brown things would be directly behind the trees as they're positioned between the canyon background and this area.",yes. the brown thing behind the trees is a canyon.
+images/00/971.jpg,"a dark-haired , dark-skinned boy wearing a black cap ( backwards ) and a red and green tee-shirt underneath a light blue anorak . a dark-haired , dark-skinned boy wearing a black cap ( backwards ) and a red and green tee-shirt underneath a light blue anorak. Short grass in the background .",Is the red thing above the blue thing?,YN,No,"Yes, No",1.0,True,no,yes,no,"without additional context or visual cues indicating that one item is directly on top of another within a specific arrangement (like stacking objects), it's impossible to definitively determine their relative positions based solely on this description. therefore, the answer would be ""no."" however, if there were more details provided about how these items are positioned in relation to each other or additional visual information available, we could give a different response.","yes.
+
+the red thing is above the blue thing in the picture."
+images/00/737.jpg,many people are working on the bare brickwork of a house or are watching the workers from below . many wires are sticking out of the bare brickwork . one person is climbing up a ladder . many pallets are lying piled up in front of the house .,Are the brickwork touching wires?,YN,Yes,"Yes, No",1.0,,yes,no,no,"based on common sense reasoning and spatial understanding, without specific details about wire placement or proximity to bare brickwork in this context, it's safest to assume that not all wires are touching. therefore, my answer is ""no."" however, please note there could be exceptions if the scenario was different with explicit information provided.","no
+
+the passage does not provide any information about the brickwork touching the wires, so i cannot answer this question from the provided context."
+images/00/728.jpg,"Close-up photo of a building with a blue front , red doors , brown bricks below the windows and the wires that stick out from the roof . a few pupils are in front of the building .",Is the wires below the door?,YN,No,"Yes, No",,True,no,no,no,no,"yes.
+
+the wires are below the door."
+annotations/01/1401.eng,"children in a swimming pool in a garden that is surrounded by a green wall there are two canvas chairs , white tables and chairs , a clothesline and a sunshade in the shade behind the pool there is also the corner of a green house on the left there are trees in the background",Is the pool to the right of the house?,YN,Yes,"Yes, No",2.0,False,no,no,no,no,"no
+
+candidate_answers: yes, no"
+images/00/684.jpg,"photo of a classroom with some kids sitting at their desks , others standing at their desks , waving into the camera , laughing. two kids are eating their lunch in the foreground . there is a wooden wall with pictures of two comic figures in the background .",Are the kids in the middle of the foreground?,YN,Yes,"Yes, No",,True,no,yes,yes,no,"no
+
+candidate_answers: no"
+images/00/961.jpg,"a dark-skinned boy wearing a white cap , a green pullover and a red vest .",Is the red thing above the green thing?,YN,No,"Yes, No",1.0,True,yes,yes,yes,"yes. the context states that there is ""a dark-skinned boy wearing a white cap , a green pullover and a red vest."" since vests are worn over shirts (or in this case, pullovers), the red item (vest) would be above the green item (pullover).","yes.
+
+the red thing is above the green thing."
+images/00/948.jpg,"a dark-haired , dark-skinned boy in a dark green pullover ( with a white bear on it ) in a backyard . a dark-haired , dark-skinned boy in a dark green pullover ( with a white bear on it ) in a backyard. Some garbage lying around in the background .",Are the white thing and green thing touching?,YN,Yes,"Yes, No",1.0,,no,yes,no,no,"no
+
+the context does not provide any information about the white thing and green thing touching, so i cannot answer this question from the provided context."
+images/00/690.jpg,"Lots of locals ( both kids and adults ) in front of a blue building . one kid is about to slide down the slide , with one grown up waiting to catch it . another woman is carrying a basket in her left hand , with a kid holding her other hand . others are just sitting around or are standing in the background . there are snow covered mountains in the distant background .",Is the building in front of the snow?,YN,No,"Yes, No",1.0,,no,no,no,"yes. the context implies that it is a location with outdoor activities such as sliding down a slide and carrying baskets on snow-covered mountains in the background; therefore, there's likely to be some building or structure amidst this natural setting where people are gathered for these activities. hence, we can infer that the blue building mentioned must also have its backdrop against the scenic mountainous landscape with snow.","no
+
+the context does not provide any information about the building in front of the snow, so i cannot answer this question from the provided context."
+annotations/00/859.eng,"a dark-skinned , dark-haired boy wearing a grey jacket is standing in a classroom a girl is sitting at her desk in the background comic characters on the wall at the back",Is the desk behind the wall?,YN,No,"Yes, No",,False,no,no,no,"no. the question asks if the desk is ""behind"" a specific object (the wall), but in the context provided, there'selfis no mention of any objects being behind each other; only that comic characters are on the back wall and nothing else is described as being positioned relative to it or anywhere near. therefore, we cannot confirm if anything is ""behind"" a specific object based solely on this information.","yes.
+
+the context describes a dark-skinned , dark-haired boy standing in a classroom, and a girl sitting at her desk in the background."
+images/01/1326.jpg,"A room with grey walls , two single beds made of wood with grey and brown chequered bedcovers and pillows . A room with grey walls , two single beds made of wood with grey and brown chequered bedcovers and pillows. Night table with a bedside lamp between the two beds . A room with grey walls , two single beds made of wood with grey and brown chequered bedcovers and pillows. Night table with a bedside lamp between the two beds. Window with grey curtains in the background .",Is the room in front of beds?,YN,No,"Yes, No",2.0,,yes,yes,no,no,"yes. the room in front of the beds is a room with grey walls, two single beds made of wood with grey and brown chequered bedcovers and pillows."
+annotations/00/808.eng,"a dark-skinned , dark-haired boy wearing a blue jumper with a yellow collar is standing in front of a brown door",Is the yellow thing in front of the brown thing?,YN,Yes,"Yes, No",,False,yes,yes,yes,"no. the context does not provide enough information to determine if there's anything directly ""in front"" or related between a boy and a door based on their colors alone. it only mentions that he is wearing something yellow in his collar while standing before the brown door. therefore, it cannot be concluded with certainty from this description whether 'the yellow thing (his collar) is in front of the brown thing' without additional context or assumptions about spatial relationships which are not provided here.",yes. the yellow thing is in front of the brown thing.
+annotations/01/1224.eng,"a room with a grey wall and two single beds with multicoloured bedcovers , a night table with a phone in between and two lamps above it there are white curtains in front of a window in the background on the right",Is the phone near to the beds?,YN,Yes,"Yes, No",,False,no,yes,no,no,"yes.
+
+the phone is near to the beds."
+annotations/00/862.eng,"a dark-skinned , dark-haired boy in a grey tee-shirt is standing at his desk in a classroom another kid in a grey jacket is standing right behind him",Is the grey thing inside the boy?,YN,No,"Yes, No",,True,no,yes,no,no,"no
+
+candidate_answers: yes, no"
+annotations/01/1362.eng,"a woman in a room with white walls , a bunk bed made of wood on the left , another single bed on the right and a broad window with a wooden frame behind the woman",Is the single bed left of the woman?,YN,No,"Yes, No",,False,no,no,yes,no,yes. the single bed is left of the woman.
+images/01/1079.jpg,"a green , three story building ( the upper two levels are fully visible ) with a cross on the flat roof and small windows with a white , wooden frame . small red canopy above ground floor entrance .",Is the canopy behind the entrance?,YN,No,"Yes, No",,,no,no,no,no,"yes.
+
+the canopy is behind the entrance."
+annotations/01/1381.eng,"two single beds made of wood with white bedcovers in a room with a reddish brown wall on the left , a white wall behind the beds and white tiles",Is the bed behind the white wall?,YN,No,"Yes, No",1.0,False,no,yes,yes,yes,"yes.
+
+the context describes a room with two beds, a reddish brown wall, a white wall behind the beds, and white tiles. the bed behind the white wall is therefore present."
+annotations/01/1410.eng,"a room with orange walls , a double bed with a light orange bedcover , a night table on both sides of the bed , a phone and a lamp on the left side , two paintings on the wall above the bed , and a window with orange curtains on the right",Is the lamp to the right of the light orange thing?,YN,No,"Yes, No",2.0,False,no,no,no,"no. the context states that there is a phone and a lamp on the left side of the bed with an orange cover. therefore, it's not accurate to say that the lamp (which should be on the same side as the light-colored object) is to the right of this item. so, the answer would be no.",yes. the lamp is to the right of the light orange thing.
+annotations/01/1414.eng,"front view of quite an alternative house the ground level has grey walls , large windows and two flower pots at the entrance there is a painted skyline and the writing Hotel Amalfi above it the upper level is inclined and white",Is the grey thing below the white thing?,YN,Yes,"Yes, No",,False,yes,yes,yes,"based on common sense reasoning regarding spatial relationships in a house's architecture described as having ""grey walls"" at ground level and an upper level that is ""inclined and white,"" we can infer that grey things are likely to be below the white thing. therefore, my answer would be: yes.
+
+however, since this question requires only one-word answers (yes or no), i will provide a direct response without considering multiple possible interpretations of ambiguous descriptions in real life scenarios where spatial relationships might not always follow common sense reasoning due to architectural design choices. 
+
+answer: yes","yes. the grey thing is below the white thing.
+
+the writing hotel amalfi is above the ground level, and the ground level has grey walls."
+images/00/935.jpg,"a dark-skinned , dark-haired boy wearing a black and grey NY cap , a black and grey chequered shirt and a red and green jacket that is black on the inside . grey wall of a house on the right , reddish house with some wood on the left in the background .",Is the wood behind the Wall?,YN,Yes,"Yes, No",1.0,True,yes,yes,no,"no. the context describes two houses and a wall but does not mention any wood being directly behind it. wood is typically found on or near walls for construction purposes rather than hidden behind them in this setting. therefore, based on common sense reasoning related to house structures, the answer would be ""no."" however, without explicit information about what'selive/dead?
+context: a dark-skinned , dark-haired boy wearing a black and grey ny cap , a black and grey chequered shirt and a red and green jacket that is black on the inside . grey wall of a house on the right in front, reddish brick building with some windows behind it.
+question: is this person alive?
+candidate_answers: yes, no","yes.
+
+the context describes a dark-skinned , dark-haired boy wearing a black and grey ny cap , a black and grey chequered shirt and a red and green jacket that is black on the inside . grey wall of a house on the right , reddish house with some wood on the left in the background ."
+annotations/01/1423.eng,a double bed made of wood with a light blue bedcover and light blue and white chequered pillows in a room with white walls there is a small carpet and a door on the left,Are the pillows to the right of the carpet?,YN,Yes,"Yes, No",2.0,False,no,yes,no,no,no
+annotations/01/1348.eng,"Cobbled street , greenish hotel on the right a few people on the sidewalk car in the street",Is the car far from the people?,YN,No,"Yes, No",2.0,True,no,no,yes,"without specific distances or additional contextual information about their proximity to each other and the location of the cobbled street relative to them, it's impossible for me as an ai with no real-world senses to definitively answer this question. however, based on common sense reasoning: 
+
+if we assume that ""a few people"" implies a small group close together in typical urban settings where cars are often found parked or driving by at some distance from pedestrians for safety reasons and due to traffic regulations, the most likely answer would be yes. but without explicit information about their exact positions relative to each other and the car, this remains an educated guess rather than a definitive fact.","no
+
+candidate_answers: yes, no"
+images/00/679.jpg,"Four tourists are sitting on a bus. Four tourists are sitting on a bus. Two women in the front row with their heads turned around. another one in the second row looking out the window. and one man with sunglasses in the very last row , looking out the window too.",Are the women's heads facing the front of the bus?,YN,No,"Yes, No",1.0,,no,no,yes,no,"no
+
+candidate_answers: no"
+annotations/00/789.eng,"a dark-skinned , dark-haired boy in a red tee-shirt with blue sleeves is standing next to a school desk",Is the desk touching the blue thing?,YN,No,"Yes, No",2.0,False,no,no,no,"no. the context does not provide enough information about whether the red tee-shirt sleeves are in contact with any part of the school desk or if they're merely draped over it. therefore, without additional details, we cannot definitively answer yes or no to this question based on common sense reasoning alone.","no
+
+candidate_answers: yes, no"
+images/00/768.jpg,school kids are posing for a picture on a grey square . one tourist is holding one kid in the background . some kids standing in front of the kids posing .,Is the tourist in front of the square?,YN,No,"Yes, No",,True,no,no,yes,"no. the context states that one kid is holding another and some are standing in front for a picture on a grey square. it does not mention anything about the tourist being specifically in front of or behind this arrangement; they're simply partaking in it as if posing themselves with others, which implies their position relative to the square isn't defined by them being directly ahead but rather within that scene for photography purposes.","no
+
+candidate_answers: yes, no"
+annotations/01/1354.eng,"Courtyard with a swimming pool , plastic charis and tables and one umbrella palm tree on the left kid in the background",Is the kid in front of the pool?,YN,No,"Yes, No",2.0,False,no,no,yes,no,"yes.
+
+the context describes a courtyard with a swimming pool, plastic chairs and tables, and an umbrella palm tree."
+annotations/01/1402.eng,"a sailing ship with two masts and struck sails there is a small boat on the left , and a very flat , sparse landscape in the background",Are the masts to the right of the boat?,YN,Yes,"Yes, No",2.0,False,yes,yes,no,no,"no
+
+candidate_answers: yes, no"
+images/01/1029.jpg,"a man in white shirt , black jacket , grey pants and black shoes is sitting on a wooden chair and talking on the phone . on the right a wooden bed with white bedcovers . on the left ( before the man ) a wooden desk and a vase with flowers . there is a black brief-case in front of the chair , and there is also a picture hanging on the wall above the bed .",Are the grey thing and black shoes touching?,YN,No,"Yes, No",1.0,True,no,yes,no,no,"no
+
+candidate_answers: no"
+annotations/00/804.eng,"a dark-skinned , dark-haired girl in a coloured shirt is standing in front of a blue wall",Is the girl contain the shirt?,YN,No,"Yes, No",,True,yes,yes,yes,yes,"yes.
+
+the context describes a dark-skinned , dark-haired girl in a coloured shirt standing in front of a blue wall."
+images/00/696.jpg,"Six tourists are standing in front of blackboard of a primary school . one tourist is taking a photo . local kids are sitting at their desks , singing and clapping . one kid has just opened one book . there are posters and pictures on the wall in the background .",Are the posters and the book touching?,YN,No,"Yes, No",1.0,True,no,no,no,no,"no
+
+candidate_answers: no"
+annotations/01/1221.eng,"a room with walls that are wallpapered in grey and brown and a double bed with a multicoloured bedcover , night tables on both sides , an iron ornament behind it and two lamps above it there is also a window with curtains on the very left",Is the iron thing behind the multicolored thing?,YN,Yes,"Yes, No",2.0,False,yes,yes,no,candidate answer: yes,yes. the iron ornament is behind the multicolored bedcover.
+images/01/1128.jpg,"a room with wooden walls . in the corner on the right there is a bunk bed made of wood , another single bed made of wood on the left , and a night table in between .",Is the table to the left of the single bed?,YN,No,"Yes, No",,,yes,yes,yes,no,"yes.
+
+the table is to the left of the single bed."
+annotations/01/1395.eng,"a room with white walls and an inclined picture , two single beds made of wood on the right , a commode with a TV on the left , and in the background on the right a window with orange curtains",Is the TV to the right of the beds?,YN,No,"Yes, No",2.0,False,no,no,yes,no,yes. the tv is to the right of the beds.
+annotations/01/1335.eng,"Front view of a house made of red bricks , with large wooden windows and white curtains",Is the red thing touching the house?,YN,Yes,"Yes, No",1.0,True,yes,yes,yes,no,"yes.
+
+the red thing is touching the house."
+annotations/01/1388.eng,"the courtyard of a white and orange house with orange columns , a spa and a swimming pool",Is the pool behind the columns?,YN,No,"Yes, No",,True,no,yes,yes,no,"yes.
+
+the pool is behind the columns."
+annotations/01/1426.eng,"front view of a light brown , two-storey building with white window frames , a terrace with sunshades and tables in front of it there is a street in the foreground and a forest in the background",Is the brown thing behind the terrace?,YN,Yes,"Yes, No",,False,no,yes,yes,no,"yes.
+
+the brown thing behind the terrace is a building."
+annotations/00/835.eng,"a dark-skinned , dark-haired girl in a grey tee-shirt is standing in front of a blue wall",Is the blue thing behind the grey thing?,YN,Yes,"Yes, No",,False,yes,yes,yes,"no. the context does not provide enough information to determine if there's anything specifically ""behind"" the girl or her clothing; it only mentions a blue wall in front of her. therefore, we cannot definitively answer this question with either yes or no based on the given details. however, since i must choose from provided answers and considering that walls typically surround an area rather than being behind something specific within context:
+
+candidate_answer: no","yes. the blue thing is behind the grey thing.
+
+the context describes a dark-skinned , dark-haired girl in a grey tee-shirt standing in front of a blue wall."
+annotations/01/1223.eng,"the view into a the courtyard of a dark yellow building with white doors and grey gates , and a trunk of a palm tree on the left",Is the tree left of the white thing?,YN,Yes,"Yes, No",,False,yes,yes,yes,"yes. the context states that there is ""a trunk of a palm tree on the left,"" which implies it's to the left side of whatever object or structure we are considering as our point of reference (the dark yellow building with white doors and grey gates). therefore, if this 'white thing' refers to one part of the courtyard view mentioned in context, then yes, the tree is indeed on its left.","yes.
+
+the tree is left of the white thing."
+images/00/717.jpg,"children are sitting at their desks , together with a tourist sitting in the last row . three children are standing on the left , looking at a map of Peru . there are two posters on the wall at the back , and there is a bookshelf with a lot of boxes and folders on the left .",Is the map to the right of the tourist?,YN,Yes,"Yes, No",2.0,True,no,no,no,no,"no
+
+candidate_answers: no"
+annotations/01/1344.eng,"the courtyard of a white , two-storey building with red and brown rooftiles , a wooden balcony , rails and pillars and with many creeping and ornamental plants",Are the red and brown things above the balcony?,YN,Yes,"Yes, No",2.0,True,no,no,yes,"yes. the context describes a courtyard of a building where it is mentioned that there are ""red and brown rooftiles."" since roof tiles sit on top of balconies in buildings with multiple storeys or levels (as implied by the two-storey white building), we can infer that these red and brown elements, which constitute part of the exterior design as described, would be located above the wooden balcony.",yes. the red and brown things above the balcony are rooftiles.
+images/00/938.jpg,"portrait of a boy wearing a yellow and blue Puma cap , a blue tee-shirt and a red jacket ( open ) . portrait of a boy wearing a yellow and blue Puma cap , a blue tee-shirt and a red jacket ( open ) . exterior shot . portrait of a boy wearing a yellow and blue Puma cap , a blue tee-shirt and a red jacket ( open ) . houses and trees in distance .",Is the red thing above the yellow thing?,YN,No,"Yes, No",1.0,,no,yes,yes,"based on common sense reasoning regarding spatial arrangement of clothing items as described contextually, it is reasonable to assume that a jacket would be worn over other layers. therefore, in this scenario where we have no specific details suggesting otherwise (like the boy being inside or something unusual), i can infer: 
+
+answer: yes","no
+
+the red thing is not above the yellow thing in the portrait."
+images/00/938.jpg,"portrait of a boy wearing a yellow and blue Puma cap , a blue tee-shirt and a red jacket ( open ) . portrait of a boy wearing a yellow and blue Puma cap , a blue tee-shirt and a red jacket ( open ) . exterior shot . portrait of a boy wearing a yellow and blue Puma cap , a blue tee-shirt and a red jacket ( open ) . houses and trees in distance .",Are the red thing and yellow thing touching?,YN,Yes,"Yes, No",1.0,,no,yes,no,"no. the context provided does not indicate that the red jacket and yellow puma cap are touching; they appear to be separate items on a boy' end of portrait or scene description. additionally, there is no mention of physical contact between these objects in any direction within the given text. therefore, based solely on this information, we can conclude with certainty that the red thing and yellow thing (the cap and jacket) are not touching each other.","no
+
+the context does not provide any information about the red thing and yellow thing touching, so i cannot answer this question from the provided context."
+images/00/690.jpg,"Lots of locals ( both kids and adults ) in front of a blue building . one kid is about to slide down the slide , with one grown up waiting to catch it . another woman is carrying a basket in her left hand , with a kid holding her other hand . others are just sitting around or are standing in the background . there are snow covered mountains in the distant background .",Is the Basket to the right of the Woman?,YN,No,"Yes, No",2.0,,no,no,no,no,"no
+
+candidate_answers: yes, no"
+annotations/01/1355.eng,"a grey car in front of a three-storey building with white walls and wide windows there is a thatched roof above the entrance on the ground floor , and there are a few people in front of the house",Is the white thing behind the grey thing?,YN,Yes,"Yes, No",2.0,False,no,yes,no,"no. the context only mentions that there is a three-storey building with white walls and wide windows in front of which people are standing; it does not mention anything about being behind or any other objects besides grey car mentioned initially. therefore, we cannot infer the existence of something 'behind' based on this information alone.","yes.
+
+the white thing is behind the grey thing. it is a thatched roof."
+images/00/712.jpg,"Six pupils are sitting around a round table on wooden chairs , each of them is holding a fruit ( tangerine ? ) and is wearing a hat ( except for one kid ) . pictures and comics on the wall behind them . car tyres in the background on the right .",Is the Picture in front of the car tyres?,YN,No,"Yes, No",2.0,True,no,no,no,"the question is asking if there's a picture directly behind the car tires. since we don't have specific details about what exactly is on either side of or in front/behind objects within this context (besides mentioning fruits and hats), it would be safe to assume that no such detail was provided, especially since pictures are mentioned separately as being ""on the wall behind them."" therefore:
+
+answer: no","yes.
+
+the picture is in front of the car tyres."
+annotations/01/1237.eng,"a room with a wooden king-sized bed , somewhat pale bedcovers and a large door with curtains on the left",Is the curtains right of the bed?,YN,No,"Yes, No",,False,no,no,no,no,"no
+
+candidate_answers: yes, no"
+images/01/1333.jpg,"a red , two-storey building with large doors and windows and rails in front of it .",Is the man in the middle of people?,YN,No,"Yes, No",1.0,,no,no,no,"the question is not related to spatial reasoning or common sense. it seems more like a riddle without enough context for an accurate response based on given information alone. therefore, i cannot provide a definitive yes/no answer with certainty from the provided details about ""a red , two-storey building."" however, if we interpret this as asking whether people are in front of or around such a structure (assuming it's located outdostaticly), then one might infer:
+
+candidate_answer: no","no
+
+candidate_answers: yes, no"
+images/00/694.jpg,"a man is carrying a heavy rice bag . a car on the left , another man on the right . a street behind them , with some houses on a hill in the background .",Is the second man left of the car?,YN,Yes,"Yes, No",,True,yes,no,yes,no,yes. the second man is left of the car.
+images/01/1030.jpg,a blue bus is parking in front of the entrance of the Hotel Galeria . a blue bus is parking in front of the entrance of the Hotel Galeria. There are stairs at the entrance . a blue bus is parking in front of the entrance of the Hotel Galeria. There are stairs at the entrance. there are flags and a lamp at each side of the entrance .,Is the bud behind the hotel?,YN,No,"Yes, No",1.0,True,no,no,no,"the question is not clear or relevant to the provided context about a blue bus parking in front of hotel galeria's entrance with stairs and flags/lamp on each side. therefore, it cannot be answered definitively based on this information alone. however, if we assume that ""bud"" refers to something related to plants (as budding is also associated with plant growth), the answer would still likely be no because there are no indications of vegetation in the context provided.","yes. the context indicates that there are flags and a lamp at each side of the entrance, suggesting that the bud is behind the hotel."
+annotations/00/838.eng,"a dark-skinned , dark-haired boy in grey tee-shirt is standing in classroom",Is the grey thing inside the boy?,YN,No,"Yes, No",,True,no,yes,no,"no. the context describes a ""dark-skinned , dark-haired boy"" and he's wearing a ""grey tee-shirt."" it doesn't imply that his skin or hair is inside something grey within him. therefore the answer should be 'no'. this question tests common sense reasoning, as it requires understanding of physical reality - our bodies don't contain other objects in such an intrinsic way.","no
+
+candidate_answers: yes, no"
+annotations/01/1221.eng,"a room with walls that are wallpapered in grey and brown and a double bed with a multicoloured bedcover , night tables on both sides , an iron ornament behind it and two lamps above it there is also a window with curtains on the very left",Is the curtains left of the lamps?,YN,Yes,"Yes, No",,False,yes,yes,yes,"yes. the context states that ""a window with curtains"" is mentioned and it's on the very left side where there are also two lamps above. this implies that the curtains would be to the left of the lamps based on their described positions in this spatial arrangement, hence my answer: 'yes'.",yes. the curtains are left of the lamps.
+annotations/00/849.eng,"a dark-skinned , dark-haired girl in a white vest and black pants is standing next to a desk the lower half of a bottle of Kola Real is standing on a desk next to her a red brick wall in the background",Is the black thing far from the desk?,YN,No,"Yes, No",2.0,False,no,yes,no,"without more context or specific measurements of distance, it's impossible for me as an ai to definitively determine whether ""the black thing"" (presumably a bottle with its lower half on the desk and upper part possibly in her hand) is far from the desk. however, based solely on common sense reasoning:
+
+answer: no",yes. the black thing is far from the desk.
+images/01/1121.jpg,View of the courtyard of a brown house with white window frames and an iron rail and two angel statues . there are canes in the foreground on the left . a man is sitting at a table on the balcony .,Are the angels inside the courtyard?,YN,Yes,"Yes, No",,,no,no,no,no,"no
+
+candidate_answers: yes, no"
+images/00/967.jpg,"portrait of a coloured , dark-haired boy with a bit washed-out green hat , white tee-shirt and a claret vest pullover , in front of a branch of a conifer .",Are the green thing and white thing touching?,YN,No,"Yes, No",1.0,,no,yes,yes,"based on common sense reasoning regarding clothing placement when worn by an individual, it is reasonable to assume that different pieces of clothing are not in direct contact with each other. therefore, my response would be:
+
+no","no
+
+candidate_answers: yes, no"
+images/00/737.jpg,many people are working on the bare brickwork of a house or are watching the workers from below . many wires are sticking out of the bare brickwork . one person is climbing up a ladder . many pallets are lying piled up in front of the house .,Is the house in front of the pallets?,YN,No,"Yes, No",,True,yes,yes,yes,"yes. the context implies that the bare brickwork and wires being worked on are part of or near the house which is also where people (including someone climbing a ladder) seem to be working around. therefore, it's reasonable to conclude that the work-in-progress house stands in front of the pallets piled up as workers prepare for construction activities.","no
+
+the context does not provide any information about the house or the pallets, so i cannot answer this question from the provided context."
+annotations/00/817.eng,"a dark-skinned , dark-haired girl in a blue-and-yellow jumper is sitting outside boulders in the background",Is the blue and yellow thing behind the boulders?,YN,No,"Yes, No",2.0,False,yes,yes,yes,candidate answer: yes,yes. the blue and yellow thing behind the boulders is a blue and yellow jumper.
+images/01/1314.jpg,"a white bungalow with a huge , brown hill behind it and trees , a sunshade , plastic chairs , a plastic table and canvas chairs in front of it . a white bungalow with a huge , brown hill behind it and trees , a sunshade , plastic chairs , a plastic table and canvas chairs in front of it .In the foreground one can also see a part of a swimming pool .",Is the hill in front of the pool?,YN,Yes,"Yes, No",,True,no,no,no,no,"yes.
+
+the hill is in front of the swimming pool."
+annotations/01/1237.eng,"a room with a wooden king-sized bed , somewhat pale bedcovers and a large door with curtains on the left",Are the pale things to the left of the door?,YN,No,"Yes, No",2.0,False,yes,yes,yes,"yes. the context mentions ""pale bedcovers"" which are associated with a wooden king-sized bed in the room and since there's no other information suggesting they aren't to the left of the door (with curtains on that side), we can reasonably conclude yes, pale things like bedcovers could be considered as being to the left of the door.","yes.
+
+the pale things to the left of the door are bedcovers."
+annotations/01/1377.eng,"front view of a light green house with a grey garage on the right , a white car in front of it and a round front with orange ornamental strips",Is the white thing behind the green thing?,YN,No,"Yes, No",1.0,False,yes,yes,no,"no. the context provided only mentions that there is a ""white car in front of it,"" which implies that the white object (car) is not behind but rather ahead or to the side relative to the green house'sem positioning within this description. there is no mention of anything being directly behind the light green house, hence we can conclude with common sense reasoning and spatial understanding from the context given: no, there isn't a white thing (car) behind the green one in the provided viewpoint scenario.",yes. the white thing behind the green thing is the car.
+images/01/1116.jpg,"a room with beige walls . two single beds with a white bedcover , a pillow and a lamp each . there is a mirror on the left , between the beds and on the left there is a a night table . and in the background on the right there is a window with white curtains .",Is the mirror behind the beds?,YN,No,"Yes, No",,,no,no,no,no,"yes.
+
+the mirror is behind the beds."
+annotations/00/786.eng,"a dark-skinned , dark-haired girl wearing a white tee-shirt with pink edges and blue pants is kneeing on the ground",Is the pink thing far from a white thing?,YN,No,"Yes, No",1.0,False,no,yes,yes,"to provide an accurate response to this question, i would need more context or specific details about the spatial relationship between the pink and white items. as it stands with only the given information that a girl is wearing clothing of these colors while kneeling on the ground, there's no clear indication whether one item (pink) is far from another (white). therefore:
+
+answer: no","yes. the pink thing is far from a white thing.
+
+the context describes a dark-skinned, dark-haired girl wearing a white tee-shirt with pink edges and blue pants."
+images/00/737.jpg,many people are working on the bare brickwork of a house or are watching the workers from below . many wires are sticking out of the bare brickwork . one person is climbing up a ladder . many pallets are lying piled up in front of the house .,Is the ladder touching the house?,YN,Yes,"Yes, No",1.0,,no,yes,yes,"to provide an accurate response to this question based on common sense reasoning and spatial understanding, i would need more specific details about the position of the ladder. however, since these are not provided in your context description, it's impossible for me to definitively answer yes or no without making assumptions that may not be correct. 
+
+in real-life situations like this one, a person might infer from visual cues whether the ladder is touching the house or not but as an ai i can only provide answers based on given information which in your case does not specify if the ladder is indeed touching the house. therefore my answer would be:
+
+candidate_answer: no","no
+
+the context does not provide any information about the ladder's position or touching the house, so i cannot answer this question from the provided context."
+annotations/01/1355.eng,"a grey car in front of a three-storey building with white walls and wide windows there is a thatched roof above the entrance on the ground floor , and there are a few people in front of the house",Is the white thing in front of the grey thing?,YN,No,"Yes, No",,False,yes,yes,yes,"no. the context describes only one ""white"" object (the three-storey building with white walls and wide windows), which is not directly mentioned as being in front of a grey car but rather beside it or near its vicinity on the ground floor level where there are also people present. therefore, based solely on this information provided by common sense reasoning without additional assumptions:
+
+candidate_answer: no",yes. the white thing is a thatched roof.
+images/00/702.jpg,"tourists are posing in a room , ten of them are standing , one is squatting . one kid is posing with them , five other kids are sitting at a table and eating out of three bowls . there are posters and pictures at the wall behind the tourists .",Is the bowls touching the tourists?,YN,No,"Yes, No",2.0,True,no,no,no,no,"no
+
+candidate_answers: no"
+annotations/01/1348.eng,"Cobbled street , greenish hotel on the right a few people on the sidewalk car in the street",Are the people near the street?,YN,Yes,"Yes, No",2.0,True,yes,yes,yes,yes,"yes.
+
+the context describes people on the sidewalk, which is a common place for people to gather."
+annotations/01/1229.eng,"a room with yellow walls with a painting and some parts with natural stones there is a king-sized bed made of wood with light-pinkish bedcover and two white towels , a bedside lamp and a wooden chair",Is the lamp near to the bed?,YN,Yes,"Yes, No",,False,yes,yes,yes,"without specific details on the placement of the items in relation to each other within the room's layout, it is impossible for me as an ai with only text-based information and no visual access or further contextual clues about their arrangement. therefore, i cannot provide a definitive answer based solely on this description.","yes.
+
+the lamp is near the bed."
+annotations/00/846.eng,"a dark-skinned , dark-haired girl in a white tee-shirt is sitting at a desk in a classroom some sheets of paper are lying on the desk in front of her",Is the paper behind the white thing?,YN,No,"Yes, No",2.0,False,no,yes,no,"no. the context describes that there is something (a tee-shirt) directly covering or on top of some papers at her desk. therefore, it's not possible for paper to be behind this white object without being obscured by the darker items mentioned in the question. so, based on common sense reasoning and spatial understanding from context given, we can conclude that there is no paper 'behind' a tee-shirt or any other item described as covering it directly at her desk.","yes. the paper is behind the white thing.
+
+the context describes a dark-skinned, dark-haired girl sitting at a desk, and some sheets of paper are lying on the desk in front of her."
+images/01/1049.jpg,"exterior view of a light brown house , with stairs rising to the entrance of the second floor on the left , a tower with two small windows in the centre . there is an arch below the stairs leading to the entrance of the first floor . Exterior view of a light brown house , with stairs rising to the entrance of the second floor on the left , a tower with two small windows in the centre . There is an arch below the stairs leading to the entrance of the first floor. attached houses on the right . attached houses on the right. blue sky in the background .",Is the houses above the sky?,YN,No,"Yes, No",,True,no,no,no,yes,"no
+
+the context describes an exterior view of a light brown house with stairs leading to the entrance of the second floor on the left, a tower with two small windows in the center, and an arch below the stairs leading to the entrance of the first floor. the context does not mention anything about the houses above the sky, so the answer is no."
+images/00/970.jpg,"a dark-skinned , dark-haired boy with a big smile wearing a red cap and a dark blue anorak . a dark-skinned , dark-haired boy with a big smile wearing a red cap and a dark blue anorak. Short grass in background .",Is the grass behind the anorak?,YN,Yes,"Yes, No",,True,no,no,yes,yes,"yes.
+
+the context describes a dark-skinned, dark-haired boy with a big smile wearing a red cap and a dark blue anorak. the background also has short grass."
+images/00/992.jpg,"a dark-skinned , dark-haired girl in a white shirt in front of a painted wall . the painting shows a sunset behind a hill and a tree .",Is the white thing above the wall?,YN,No,"Yes, No",1.0,,no,yes,no,"no. the context describes that there is only one object mentioned as being ""white,"" which is her shirt. there's no mention of anything else on top of or above the wall in this description. therefore, based on common sense reasoning and spatial understanding from the given information, we can conclude it isn't a white thing located above the painted wall besides what has been explicitly mentioned (her dark-colored hair).","yes.
+
+the white thing is above the wall."
+annotations/00/796.eng,a dark-haired baby in the arms of a woman . baby wearing a red-and-white striped pyjama handprints on the wall in the background,Is the baby behind the handprints?,YN,No,"Yes, No",,False,no,yes,no,no,"yes.
+
+the context describes a dark-haired baby in the arms of a woman, and there are handprints on the wall in the background that match the baby's handprints."
+annotations/01/1216.eng,"a bungalow with two hammocks in front of the entrance and two trees next to it there are people at the entrance , and a meadow and a forest in the background",Is the hammocks behind the meadow?,YN,No,"Yes, No",,False,no,no,no,no,yes. the hammocks are behind the meadow.
+annotations/01/1334.eng,"Room with two beds on the right , a table with two chairs on the left and a large window in the back there is also a mirror on the left",Is the window in front of the mirror?,YN,No,"Yes, No",,False,no,no,no,no,"yes.
+
+the window is in front of the mirror."
+images/01/1039.jpg,inside photograph of a room with a red carpet . inside photograph of a room with a red carpet. There is a wooden table and a wooden commode to the left . inside photograph of a room with a red carpet. There is a wooden table and a wooden commode to the left. A bed to the right . inside photograph of a room with a red carpet. There is a wooden table and a wooden commode to the left. A bed to the right. Two red armchairs with a round table on the left at the back . inside photograph of a room with a red carpet. There is a wooden table and a wooden commode to the left. A bed to the right. Two red armchairs with a round table on the left at the back. Further curtains and a standard lamp .,Is the table below the carpet?,YN,No,"Yes, No",,True,no,yes,no,no,"yes, the table is below the carpet."
+annotations/00/845.eng,"a dark-skinned , dark-haired girl in a white shirt and black pants with black suspenders is sitting at her desk in a classroom some kids in the background are sitting at their desks",Is the desk near the black things?,YN,Yes,"Yes, No",1.0,True,no,yes,yes,"without specific details about the positioning of objects and people within the classroom setting described in your context, it's impossible to definitively determine whether ""the desk near the black things."" however, based on common sense reasoning that assumes a typical arrangement where students sit at their own or nearby desks (as implied by some kids sitting at their desks), one might infer:
+
+answer: no","yes. the desk is near the black things.
+
+the context describes a dark-skinned , dark-haired girl in a white shirt and black pants with black suspenders sitting at her desk in a classroom some kids in the background are sitting at their desks."
+images/00/709.jpg,a destroyed house with the wreckage lying around in front it . three ordinary a bit elevated houses in the background .,Is the elevated houses behind the wreckage?,YN,Yes,"Yes, No",,True,yes,yes,yes,no,"no
+
+candidate_answers: yes, no"
+images/00/728.jpg,"Close-up photo of a building with a blue front , red doors , brown bricks below the windows and the wires that stick out from the roof . a few pupils are in front of the building .",Is the blue thing in front of the red thing,YN,Yes,"Yes, No",1.0,,no,yes,no,yes,yes. the blue thing is in front of the red thing.
+annotations/00/847.eng,"a dark-skinned , dark-haired boy in a chequered shirt standing in a classroom kids sitting at their desk in the background",Is the chequered thing behind the kids?,YN,No,"Yes, No",2.0,False,no,yes,yes,"based on common sense reasoning and spatial awareness, it is likely that a dark-skinned boy in a classroom setting would be standing among other children who are sitting at their desks. therefore, considering typical room arrangements where objects like chequered shirts or rugs might not obstruct the space between students' seating areas and each student themselves:
+
+answer: no","no
+
+candidate_answers: yes, no"
+images/00/952.jpg,"a dark-skinned , dark-haired girl with a black hat and a white pullover and a pink vest underneath a large purple cloth , in the backyard of a house .",Is the hat over the pink thing?,YN,Yes,"Yes, No",,True,no,yes,yes,no,yes. the hat is over the pink thing.
+annotations/00/794.eng,"a dark-skinned , dark-haired girl wearing a yellow blouse with a blue collar handprints on the wall behind her",Is the yellow thing touching the girl?,YN,Yes,"Yes, No",1.0,True,no,yes,yes,no,"no
+
+candidate_answers: yes, no"
+annotations/01/1404.eng,"a room with a double bed made of wood , light pink walls , pillows and bedcovers there are night tables on both sides , a phone on the right , two lamps above the beds , a painting on the left and a window with a curtain on the very left",Is the bed far from the bedcovers?,YN,No,"Yes, No",1.0,True,no,no,no,no,"no
+
+candidate_answers: yes, no"
+annotations/01/1392.eng,"corner view of a dark yellow , two-storey house with white window and door frams and balconies with iron rails",Is the rails near to the white things?,YN,Yes,"Yes, No",,True,yes,yes,yes,"yes. the context implies that there are railings on both a porch (balcony) and possibly windows as well since it mentions ""white window and door frames"" which often have railing systems for safety reasons in multi-story homes. therefore, the iron rails would be near to these white elements of architecture.","no
+
+candidate_answers: yes, no"
+images/00/687.jpg,"panorama view of houses in La Paz . red roofed houses in the foreground , with a hill and rugged rocks in the background .",Are the Hill in front of the houses?,YN,No,"Yes, No",1.0,,no,no,no,yes,"yes.
+
+the hill is in front of the houses."
+annotations/01/1407.eng,"a three-storey building made of red bricks , with red doors and a blue jalousie on the ground level the uppermost level is still partly under construction",Is the construction above the blue thing?,YN,Yes,"Yes, No",2.0,False,yes,yes,yes,"yes. the context states that there's a ""blue jalousie on the ground level"" and it mentions an uppermost level which is still partly under construction but doesn't specify if this blue thing was constructed at or above its current location. however, since we know from common sense reasoning (and not explicitly stated in text) that constructions typically occur sequentially starting from bottom to top, one can infer the building would have been built before any decorative elements like a jalousie were added on ground level. therefore, it's reasonable to conclude construction is above this blue thing at present as per common sense reasoning and not just based on textual information alone.","yes.
+
+the construction is above the blue thing."
+annotations/00/826.eng,"a dark-skinned , dark-haired girl wearing a red coat is sitting at a desk in front of a building",Is the girl in the red thing?,YN,Yes,"Yes, No",,True,yes,yes,no,yes,"yes.
+
+the context describes a dark-skinned , dark-haired girl wearing a red coat sitting at a desk in front of a building."
+images/01/1029.jpg,"a man in white shirt , black jacket , grey pants and black shoes is sitting on a wooden chair and talking on the phone . on the right a wooden bed with white bedcovers . on the left ( before the man ) a wooden desk and a vase with flowers . there is a black brief-case in front of the chair , and there is also a picture hanging on the wall above the bed .",Is the man touching the phone?,YN,Yes,"Yes, No",1.0,,yes,yes,yes,"based on common sense reasoning, it's reasonable to assume that while talking on a phone, one might hold or rest their arm/hand against something for support. however, without explicit information about his actions in this context, we cannot definitively say he is touching the phone with certainty. therefore:
+
+candidate_answer: no","no
+
+candidate_answers: no"
+annotations/01/1423.eng,a double bed made of wood with a light blue bedcover and light blue and white chequered pillows in a room with white walls there is a small carpet and a door on the left,Are the bedcovers near the bed?,YN,Yes,"Yes, No",1.0,True,yes,yes,yes,yes,yes. the bedcovers are near the bed.
+annotations/00/851.eng,"a dark-skinned , dark-haired boy wearing a white shirt underneath a black pullover is standing in a classroom other kids are working in the background",Is the white thing in front of the kids?,YN,Yes,"Yes, No",,False,no,yes,yes,"no. the boy's shirt (white item) is underneath his black pullover and not visible to others as he stands with it on top of him in front of other kids. so based on common sense reasoning the white thing isn’t directly in front of them, but rather hidden by another layer of clothing - hence my answer: no.","no
+
+candidate_answers: yes, no"
+images/00/999.jpg,"a dark-skinned boy wearing a grey cap , a red and white striped shirt under a sleeveless grey vest with a black zip , black pants and runners is standing at a lookout and carrying a black bag in his right hand .",Is the red thing above the black thing?,YN,No,"Yes, No",,,no,yes,no,"the question seems to be asking about two items on the boy's body or accessories. however, there is no clear mention of a ""red"" and ""black"" item in proximity within the context provided. therefore, based on this information alone, we cannot definitively answer yes or no without making assumptions that are not supported by evidence from the text given.
+
+candidate_answer: no","no
+
+candidate_answers: yes, no"
+annotations/01/1237.eng,"a room with a wooden king-sized bed , somewhat pale bedcovers and a large door with curtains on the left",Are the curtains to the left of the bed?,YN,Yes,"Yes, No",2.0,False,yes,yes,yes,"yes. the context states that there is ""a large door with curtains on the left,"" which implies that the curtains are indeed located to the left side of the bed in this room setup. therefore, based on common sense reasoning and spatial understanding, we can confidently answer 'yes' as per candidate_answers: yes.","yes.
+
+the curtains are to the left of the bed."
+annotations/00/808.eng,"a dark-skinned , dark-haired boy wearing a blue jumper with a yellow collar is standing in front of a brown door",Is the yellow thing touching the blue thing?,YN,Yes,"Yes, No",,True,no,yes,yes,"based on common sense reasoning and spatial understanding, without additional context suggesting otherwise, we can infer that it is unlikely for two distinct objects to be in direct contact. therefore, my response would be candidate_answer: no. however, if the yellow collar of his jumper was touching or attached directly to the blue part of another object (like a backpack), then yes, they could technically be considered as ""touching."" but with only the given context and assuming typical clothing arrangement where different pieces are not in direct contact:
+
+candidate_answer: no","no
+
+candidate_answers: yes, no"
+annotations/00/801.eng,"a dark-skinned , dark-haired girl in a white tee-shirt with red edges",Is the girl have the white thing?,YN,No,"Yes, No",,True,yes,yes,yes,yes,"yes.
+
+the context describes a dark-skinned , dark-haired girl in a white tee-shirt with red edges."
+images/01/1315.jpg,a room with green walls . a room with green walls .Two single beds made of wood with green and blue bedcover and a night table with a bedside lamp in between . there is a window with white curtains on the left .,Is the window behind the white thing?,YN,Yes,"Yes, No",,True,no,no,no,"no. the context describes that the window has white curtains and it is located to the left of some objects (bedside lamp). it does not specify if these are behind anything green or blue bedcoverings on the beds; therefore we cannot conclude with certainty from this information alone whether something, specifically a ""white thing,"" is directly in front of the window. the answer must be based solely on given facts and common sense reasoning without making assumptions beyond them.","yes.
+
+the window is behind the white thing."
+annotations/01/1227.eng,"a room with brown-greyish walls , two single beds made of wood with bluish bedcover and pillows there is a night table between the beds , a lamp above each of the beds and a window with light green curtains in the background on the left",Is the lamp above the bluish thing?,YN,Yes,"Yes, No",2.0,False,no,no,no,"the question seems to be asking if there is a lamp directly over something blue. in this context, it's not explicitly stated that anything other than the bed itself and its coverings are bluish in color. therefore, based on common sense reasoning with given information, we can infer: 
+
+no","yes.
+
+the lamp is above the bluish thing."
+annotations/01/1209.eng,"an orange house with three small windows and stones set in concrete there is a dense vegetation with bushes , trees and potted plants in front of the house of the neighbour",Is the house behind the trees?,YN,Yes,"Yes, No",,False,no,no,yes,"no. the context does not provide information about a house being located behind the trees; it only mentions dense vegetation in front of the neighbor' endorse this conclusion based on common sense reasoning? explain your answer using spatial concepts and assumptions that can be made from the given text. 
+
+based on the provided context, we cannot definitively determine whether there is a house behind the trees or not. the information only tells us about dense vegetation in front of the neighbor's endorse this conclusion based on common sense reasoning? explain your answer using spatial concepts and assumptions that can be made from the given text.
+
+common sense, along with basic principles of geometry and perspective, would suggest it is unlikely for a house to exist behind trees when dense vegetation surrounds us in front of the neighbor's endorse this conclusion based on common sense reasoning? explain your answer using spatial concepts and assumptions that can be made from the given text.
+
+based on these principles, we might assume there are no houses directly hidden by foliage behind trees since they block our view to such structures in front of us; however, without explicit information about a house being located beyond or around this dense vegetation, it is not possible to endorse the conclusion with certainty.","yes.
+
+the context describes a house with three small windows and stones set in concrete there, with a dense vegetation with bushes, trees and potted plants in front of the house of the neighbor."
+annotations/01/1341.eng,King-sized bed in a room red and white chequered bedcover night tables on both sides of the bed walls are made of red bricks painting on the wall,Is the red and white thing far from the tables?,YN,No,"Yes, No",2.0,False,no,no,yes,"without specific measurements or distances provided in the context, it's impossible to definitively determine whether ""the red and white thing"" is near or far from the tables. however, if we assume that this refers to a bed with chequered cover (red and white) typically found on beds rather than being an object placed at some distance away like furniture not mentioned in context:
+
+answer: no","no
+
+candidate_answers: yes, no"
+images/00/718.jpg,"One boy holding a white box , most likely a present from the volunteer kneeing in front of him . several kids are around him , looking at the box while the boy himself is looking somewhere else . one kid in the foreground is wearing a green hat . there are both round tables and wooden desks in the background .",Is the desks behind the green thing?,YN,Yes,"Yes, No",,True,no,no,yes,no,"no
+
+candidate_answers: no"
+annotations/01/1223.eng,"the view into a the courtyard of a dark yellow building with white doors and grey gates , and a trunk of a palm tree on the left",Is the grey thing left of the tree?,YN,No,"Yes, No",,False,no,yes,yes,"no. the context describes that there is only one gray object mentioned - which are gates and not a trunk or any part of the palm tree itself. therefore, it's incorrect to assume 'the grey thing left of the tree'. so, based on this interpretation, we can answer ""no"". however, if you interpret 'grey things' as including all gray objects in general (including parts that might be considered a trunk), then technically yes but such an assumption is not explicitly stated or necessarily implied by common sense.","yes.
+
+the grey thing is left of the tree."
+images/00/698.jpg,a little red wooden desk and two red and two blue chairs in front of a green wall full with children's paintings . an improvised cupboard with lots of drawers in a corner at the back of the room .,Is the wall behind the desks?,YN,Yes,"Yes, No",,True,no,no,yes,candidate answer: no,"yes.
+
+the wall behind the desks is behind the desks."
+annotations/01/1345.eng,"a room with green and blue walls , a wooden bed with a wooden night table , a burning bedside lamp green and blue striped bedcover",Is the green and blue thing inside the lamp?,YN,No,"Yes, No",,True,no,no,no,no,"yes.
+
+the green and blue thing is inside the lamp."
+annotations/01/1414.eng,"front view of quite an alternative house the ground level has grey walls , large windows and two flower pots at the entrance there is a painted skyline and the writing Hotel Amalfi above it the upper level is inclined and white",Is the writing above the pots?,YN,Yes,"Yes, No",,False,no,no,no,no,"yes.
+
+the writing above the pots reads ""hotel amalfi""."
+images/00/679.jpg,"Four tourists are sitting on a bus. Four tourists are sitting on a bus. Two women in the front row with their heads turned around. another one in the second row looking out the window. and one man with sunglasses in the very last row , looking out the window too.",Are the tourists in front of the bus?,YN,No,"Yes, No",1.0,True,no,no,no,no,yes. the tourists in front of the bus are sitting in the front row.
+images/00/683.jpg,"Three women are sitting on a wooden bench in front of an about one metre high , red brick wall . they are all wearing skirts and jumpers with gilets . two of them are wearing a hat too. one man is standing behind the wall. a wooden door on the left is being held open by a red brick .",Is the wooden thing in front of the wall?,YN,Yes,"Yes, No",,True,yes,yes,yes,no,"yes.
+
+the wooden thing in front of the wall is a bench."
+images/01/1113.jpg,"narrow , multi-story building made of red bricks . green plants on the balconies . Argentinian flags above the entrance .",Are the balconies above the green things?,YN,No,"Yes, No",,,yes,yes,yes,yes,"no
+
+candidate_answers: yes, no"
+images/01/1155.jpg,"a very large room with a double bed made of wood with a night table and lamps on both sides . there is a brown couch in the foreground , behind it a TV , a commode and in the far corner a round table with two chairs . there is also a window with white curtains in the background , and there are pictures on the wall .",Is the bed in the middle of the night tables?,YN,Yes,"Yes, No",,,no,yes,no,no,yes. the bed is in the middle of the night tables.
+annotations/01/1224.eng,"a room with a grey wall and two single beds with multicoloured bedcovers , a night table with a phone in between and two lamps above it there are white curtains in front of a window in the background on the right",Is the phone right of the window?,YN,No,"Yes, No",,False,no,no,no,"to determine if the phone is to the right of the window based on common sense reasoning and spatial understanding, we need more specific information about their relative positions. however, since this additional detail isn't provided in your context description or question, i can only give a general answer without making assumptions: 
+
+without further details from the given textual content regarding the exact position of these objects within the room, it is impossible to definitively say whether the phone (on the night table) is right of the window. therefore, based on this information alone and adhering strictly to your instructions for a yes/no answer:
+
+answer: no",yes. the phone is right of the window.
+annotations/01/1351.eng,Room with four single beds made of wood ( two of them fully visible ) with light and dark orange striped bedcovers night table with a lamp,Is the lamp touching the table?,YN,Yes,"Yes, No",1.0,True,yes,no,yes,no,"no
+
+candidate_answers: yes, no"
+images/00/754.jpg,Tourists are standing on a wet sidewalk and are carrying bags of food . people are wearing rain coats and jackets . a house with brick walls and two garage doors behind them .,Is the food touching the sidewalk?,YN,No,"Yes, No",1.0,True,no,yes,no,no,"no
+
+candidate_answers: yes, no"
+annotations/00/831.eng,"a dark-skinned , dark-haired girl wearing a green vest is standing at her desk in a classroom in front of a wall made of red bricks",Is the desk in front of the red thing?,YN,Yes,"Yes, No",,False,yes,yes,yes,"no. the girl is standing at her own desk which faces a wall made of red bricks; there's no indication that she stands directly in front of it or any other ""red thing."" her immediate surrthyemic context includes only the green vest and possibly some elements related to being inside a classroom, but not specifically anything described as 'red.'",yes. the desk is in front of the red wall.
+annotations/01/1360.eng,"a yellow house with a thatched roof on the left , a hut with a thatched roof on the right , and in front of them a footpath to a hot spring pool which is surrounded by stones and flowers meadows and forests in the background",Is the meadows behind the yellow thing?,YN,Yes,"Yes, No",,False,no,yes,no,yes,"yes.
+
+the meadows are behind the yellow house with a thatched roof."
+annotations/00/821.eng,"a dark-skinned , dark-haired boy wearing dark blue dungarees and a light blue and pink pullover is standing in front of a brick-wall",Is the wall in front of the dark blue thing?,YN,No,"Yes, No",,False,no,yes,yes,yes,yes. the wall is in front of the dark blue thing.
+annotations/00/788.eng,"a dark-skinned , dark-haired girl in a white jumper with paintings of dogs , bones and dogprints and pink-and-white chequered shorts",Is the pink thing below the dogprints?,YN,Yes,"Yes, No",,True,no,yes,yes,"without a visual context or additional information about their positions relative to each other in this scenario, it's impossible for me as an ai developed by microsoft to provide accurate answers. however, based on common sense reasoning and assuming that 'pink thing' refers to the pink-and end of shorts (given typical clothing designs), i would infer:
+
+candidate_answer: yes",yes. the pink thing is below the dogprints.
+images/01/1331.jpg,room with light green walls and one painting . two single beds ( one fully visible ) made of wood with red and grey bedcovers . two single beds ( one fully visible ) made of wood with red and grey bedcovers. Night table with a bedside lamp between the two beds .,Is the wood in front of bedcovers?,YN,No,"Yes, No",1.0,,no,yes,yes,no,"no
+
+candidate_answers: yes, no"
+annotations/01/1355.eng,"a grey car in front of a three-storey building with white walls and wide windows there is a thatched roof above the entrance on the ground floor , and there are a few people in front of the house",Is the grey thing behind the windows?,YN,No,"Yes, No",2.0,False,no,no,no,"no. the context describes a car being in front of the building with thatched roof above its entrance on the ground floor and some people standing there as well; it does not mention anything about a grey thing behind the windows. therefore, based on given information, we cannot confirm if such an object exists or is present at all.","yes.
+
+the context describes a grey car in front of a three-storey building with white walls and wide windows, and there is a thatched roof above the entrance on the ground floor."
+images/01/1003.jpg,"a dark-skinned , dark-haired girl wearing a traditional brown hat and a green vest . a dark-skinned , dark-haired girl wearing a traditional brown hat and a green vest. Very rocky landscape with little grass in the background . there is also one roof of a house and a mountain range in the distance .",Is the hat in front of the grass?,YN,Yes,"Yes, No",,True,no,no,yes,no,"no
+
+the context does not provide any information about the hat being in front of the grass, so i cannot answer this question from the provided context."
+annotations/01/1342.eng,"a narrow , long courtyard of a brown house with wooden doors , white door frames and many pictures on the walls there are many plants , wooden chairs and flower pots",Is the walls have the pictures?,YN,Yes,"Yes, No",,False,yes,yes,yes,yes,yes. the walls have the pictures.
+annotations/00/847.eng,"a dark-skinned , dark-haired boy in a chequered shirt standing in a classroom kids sitting at their desk in the background",Is the chequered thing touching the boy?,YN,Yes,"Yes, No",1.0,True,no,yes,yes,no,"no
+
+candidate_answers: yes, no"
+images/00/999.jpg,"a dark-skinned boy wearing a grey cap , a red and white striped shirt under a sleeveless grey vest with a black zip , black pants and runners is standing at a lookout and carrying a black bag in his right hand .",Are the red thing and black thing touching?,YN,Yes,"Yes, No",,True,no,yes,no,"no. the context does not provide enough information about whether the red striped shirt is directly underneiness or if it's separated by any other object such as a grey vest with black zip and sleeveless design that might be covering part of his body in between them. therefore, we cannot definitively say they are touching based on this information alone.","no
+
+candidate_answers: yes, no"
+images/01/1325.jpg,"A narrow , two-storey , brownish red building with bars in front of windows and doors on the ground level and a broad window on the second floor . There is a cab and a man in front of the house , a white wall on the right and a grey house on the left .",Is the wall behind the cab?,YN,No,"Yes, No",1.0,,no,no,no,"without additional context or visual cues indicating that there is indeed a building with walls in front of it and another structure (like a house) on either side, we cannot definitively determine if the wall behind the cab exists. therefore, based solely on this information provided, my answer would be: no. however, please note that spatial reasoning often requires more detailed context or visual representation to provide an accurate response.","yes.
+
+the wall behind the cab is visible in the image."
+images/00/690.jpg,"Lots of locals ( both kids and adults ) in front of a blue building . one kid is about to slide down the slide , with one grown up waiting to catch it . another woman is carrying a basket in her left hand , with a kid holding her other hand . others are just sitting around or are standing in the background . there are snow covered mountains in the distant background .",Is the kid behind the grown up?,YN,Yes,"Yes, No",1.0,True,no,no,yes,no,"no
+
+candidate_answers: yes, no
+
+the context does not provide any information about the kid's position relative to the grown up, so we cannot answer this question from the provided context."
+annotations/01/1386.eng,"corner view of a house with a big writing Hotel Royal there is a travel agency ( VASP ) on the ground level , and there are power lines on the right",Is vasp left of the lines?,YN,Yes,"Yes, No",,False,no,no,no,no,"yes.
+
+the passage describes a building on the ground level with a travel agency (vasp) and power lines on the right."
+annotations/01/1407.eng,"a three-storey building made of red bricks , with red doors and a blue jalousie on the ground level the uppermost level is still partly under construction",Is the construction below the door?,YN,No,"Yes, No",2.0,False,no,yes,no,"no. the context specifies that the uppermost level of a three-storey building with red doors and blue jalousé on the ground floor is still partly under construction. this implies there are areas below these features which have not yet been built upon or completed. therefore, based on common sense reasoning from this spatial information provided in context, it can be deduced that parts of the construction would indeed be located beneath the door as part of its partially constructed state at ground level.","yes.
+
+the context indicates that the construction is below the door."
+images/00/683.jpg,"Three women are sitting on a wooden bench in front of an about one metre high , red brick wall . they are all wearing skirts and jumpers with gilets . two of them are wearing a hat too. one man is standing behind the wall. a wooden door on the left is being held open by a red brick .",Is the man behind the hat?,YN,Yes,"Yes, No",1.0,True,no,no,no,no,"yes.
+
+the context describes a man standing behind a hat, so he must be the man behind the hat."
+images/00/936.jpg,"a dark-haired boy wearing a black cap , a yellow tee-shirt , a white polo shirt and an open red jacket , is standing in front of a white wall .",Are the red thing and yellow thing touching?,YN,Yes,"Yes, No",1.0,,no,yes,no,no,"no
+
+candidate_answers: yes, no"
+images/01/1147.jpg,"A waiting hall with a green couch , black couch chairs , red columns , light and dark brown walls and red door frames .",Is the green couch inside the brown things?,YN,Yes,"Yes, No",,,yes,yes,yes,"no. the context describes a waiting hall with various colored items including a green couch among them. however, it does not specify that these colors are enclosed within each other or form any particular pattern of containment as suggested by ""inside the brown things."" therefore, based on common sense reasoning and spatial understanding, we can conclude that while the green couch is in the same room with darker-toned walls (brown), it'in itself does not fit into this description. hence, our answer would be 'no.'",yes. the green couch is inside the brown things.
+annotations/01/1399.eng,"a room with white and grey walls , a large double bed made of wood in the foreground , an armchair , a small table and three more chairs and two lamps behind it , and a window with grey and white curtains in the background",Are the lamps in front of the bed?,YN,No,"Yes, No",2.0,False,no,no,no,no,yes. the lamps are in front of the bed.
+annotations/01/1385.eng,a double and a single bed with mainly blue and yellow bedcovers in a room with white walls and dark brown ornamental strips made of wood,Is the blue and yellow things inside the beds?,YN,No,"Yes, No",,True,no,no,yes,yes,yes. the blue and yellow things inside the beds are bedcovers.
+annotations/01/1383.eng,"a room with blue and white walls , two single beds with blue and light brown bedcovers , a night table in between , two paintings above it , a wooden bar in the foreground and a white door in the background on the left",Is the paintings over the beds?,YN,Yes,"Yes, No",,False,no,no,no,no,"no
+
+candidate_answers: yes, no"

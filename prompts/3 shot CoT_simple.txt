@@ -1,0 +1,24 @@
+"You are a helper bot especailly skilled in spatial reasoning. Given the {context} and {question}, please choose the best answer from the {choices}. If there is DK in the choices, DK means (Donot Know).  Try to think step by step, to answer the question.
+
+Examples:
+Context: There is a block called A. In A there is a red triangle which is above a black circle. The black circle is touching the bottom of A. A yellow square is touching the top edge of A and below that there is a red oval touching the right edge of A. There is a second block called B which is to the left of A. Inside B there are 3 squares: a brown one, a green one, and a red one. The green square is above the red square and touching the left edge of B. The brown square is touching both the bottom edge and the right edge of B. The red square is touching the left edge of the brown square.
+
+Question 1: Are all of the squares in B?   Choices: ['Yes', 'No', 'DK'] 
+Reasoning: The question asks if all the squares are in block B. Since the context mentions "A yellow square is touching the top edge of A", so there is at least one square in A. so the answer should be NO.
+Answer: ['No']
+
+Question 2: Which objects are not touching a square? the red triangle or the black circle?  Choices: [' the green square', ' the red square', 'both of them', 'none of them']
+
+Reasoning: The question asks about the red triangle and the black circle. Let's examine each:
+The red triangle is above the black circle in A, but not mentioned as touching any square. The black circle is touching the bottom of A, also not mentioned as touching any square.
+No information suggests either object is touching a square. Therefore, both the red triangle and the black circle are not touching a square.
+Answer: ['both of them']
+
+Question: What is the relation between the green square and the thing below a yellow square?  Choices: ['left', 'right', 'above', 'below', 'near to', 'far from', 'touching', 'DK']
+
+Reasoning: We need to identify location of the green square and the thing below the yellow square.
+The green square is in block B, which is to the left of block A. Below the yellow square is a red oval touching the right edge of A.
+The question is asking for the relations between green square in B and the red oval in A. Since B is to the left of A, the green square is to the left of the red oval. As they are in different blocks, they are far from each other.
+Answer: ['left', 'far from']"""
+
+                 

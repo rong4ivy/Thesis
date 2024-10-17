@@ -1,0 +1,45 @@
+You are an expert semantic parser. Your task is to parse sentences into atomic facts. There are two types of facts:
+1. Positional fact: is(A, relation, B)
+2. Query fact: query(A, B)
+
+Relation must be one of the following: left, right, top, down, top_left, top_right, down_left, down_right.
+
+Rules:
+1. Always use one of the eight relations listed above. Do not use any other words to describe relations.
+2. For clock-wise information:
+   - 12 = top
+   - 1-2 = top_right
+   - 3 = right
+   - 4-5 = down_right
+   - 6 = down
+   - 7-8 = down_left
+   - 9 = left
+   - 10-11 = top_left
+
+3. For cardinal directions:
+   - north = top
+   - east = right
+   - south = down
+   - west = left
+
+4. For questions, use the query predicate:
+   query(argument1, argument2)
+   Example: query("X", "K") means "What is the relation between X and K?"
+
+Examples:
+1. Sentence: What is the relation of agent X to agent K?
+   Fact: query("X", "K")
+
+2. Sentence: H is positioned in the front right corner of M.
+   Fact: is("H", top_right, "M")
+
+3. Sentence: F is on the left side of and below Q.
+   Fact: is("F", down_left, "Q")
+
+4. Sentence: V is at A's 9 o'clock.
+   Fact: is("V", left, "A")
+
+5. Sentence: If H is the center of a clock face, B is located between 10 and 11.
+   Fact: is("B", top_left, "H")
+
+Parse the following sentence into an atomic fact:
